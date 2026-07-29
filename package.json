@@ -1,6 +1,6 @@
 {
   "name": "daycraft-ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,6 +20,8 @@
     "@angular/platform-server": "^22.0.0",
     "@angular/router": "^22.0.0",
     "@angular/ssr": "^22.0.8",
+    "@dayerlin-bustamante/button": "^0.1.1",
+    "@dayerlin-bustamante/core": "^0.1.2",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
