@@ -1,0 +1,87 @@
+<aside class="bg-white border-r border-slate-300 w-full h-screen fixed top-0 left-0 max-w-[264px] py-6 px-4 overflow-auto scrollbar">
+    <div class="min-w-12 mb-8 px-3">
+        <img src="images/logo-daydev.png" alt="Company logo" class="h-12 w-auto" />
+    </div>
+    <nav aria-label="Primary sidebar navigation">
+        <div>
+            <a  href="/information" aria-controls="sub-menu-1" aria-expanded="true"
+                class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800 0 font-medium text-left group collapsible-toggle hover:text-slate-900  hover:bg-slate-100  rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-[18px] fill-current overflow-visible"
+                    viewBox="0 0 512 512" aria-hidden="true">
+                    <path
+                        d="M256 0C114.497 0 0 114.507 0 256c0 141.503 114.507 256 256 256 141.503 0 256-114.507 256-256C512 114.497 397.492 0 256 0m0 472c-119.393 0-216-96.615-216-216 0-119.393 96.615-216 216-216 119.393 0 216 96.615 216 216 0 119.393-96.616 216-216 216"
+                        data-original="#000000" />
+                    <path
+                        d="M256 214.33c-11.046 0-20 8.954-20 20v128.793c0 11.046 8.954 20 20 20s20-8.955 20-20.001V234.33c0-11.046-8.954-20-20-20"
+                        data-original="#000000" />
+                    <circle cx="256" cy="162.84" r="27" data-original="#000000" />
+                </svg>
+                Getting Started
+            </a>
+        </div>
+        <div class="menuItems-wrap">
+            <button (click)="isOpen.set(!isOpen())" type="button" class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800 0 font-medium text-left group collapsible-toggle hover:text-slate-900  hover:bg-slate-100  rounded-md px-3 py-2 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-[18px] fill-current overflow-visible"
+                    viewBox="0 0 512 512" aria-hidden="true">
+                    <path
+                        d="M256 0C114.497 0 0 114.507 0 256c0 141.503 114.507 256 256 256 141.503 0 256-114.507 256-256C512 114.497 397.492 0 256 0m0 472c-119.393 0-216-96.615-216-216 0-119.393 96.615-216 216-216 119.393 0 216 96.615 216 216 0 119.393-96.616 216-216 216"
+                        data-original="#000000" />
+                    <path
+                        d="M256 214.33c-11.046 0-20 8.954-20 20v128.793c0 11.046 8.954 20 20 20s20-8.955 20-20.001V234.33c0-11.046-8.954-20-20-20"
+                        data-original="#000000" />
+                    <circle cx="256" cy="162.84" r="27" data-original="#000000" />
+                </svg>
+                <span class="flex-1">Components</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow size-3 fill-current transition-all"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9a1.506 1.506 0 0 1 2.13-2.13l7.935 7.95L19.95 6.45a1.5 1.5 0 0 1 2.115 2.115l-9 9a1.5 1.5 0 0 1-1.05.435"
+                        data-name="16" data-original="#000000" />
+                </svg>
+            </button>
+
+            <ul [hidden]="isOpen()" class="space-y-1 text-sm text-slate-600 font-medium px-4 my-1 max-h-[500px] overflow-auto scrollbar transition-all duration-300">
+                @for(menuItem of menuItemsComponents(); track $index) {
+                    <li>
+                        <a href="{{ menuItem.url }}"
+                            class="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100  rounded-md px-3 py-2 transition-colors">
+                            {{ menuItem.name }}
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+          <div class="menuItems-wrap">
+            <button (click)="isOpen.set(!isOpen())" type="button" class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800 0 font-medium text-left group collapsible-toggle hover:text-slate-900  hover:bg-slate-100  rounded-md px-3 py-2 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-[18px] fill-current overflow-visible"
+                    viewBox="0 0 512 512" aria-hidden="true">
+                    <path
+                        d="M256 0C114.497 0 0 114.507 0 256c0 141.503 114.507 256 256 256 141.503 0 256-114.507 256-256C512 114.497 397.492 0 256 0m0 472c-119.393 0-216-96.615-216-216 0-119.393 96.615-216 216-216 119.393 0 216 96.615 216 216 0 119.393-96.616 216-216 216"
+                        data-original="#000000" />
+                    <path
+                        d="M256 214.33c-11.046 0-20 8.954-20 20v128.793c0 11.046 8.954 20 20 20s20-8.955 20-20.001V234.33c0-11.046-8.954-20-20-20"
+                        data-original="#000000" />
+                    <circle cx="256" cy="162.84" r="27" data-original="#000000" />
+                </svg>
+                <span class="flex-1">Icons</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow size-3 fill-current transition-all"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9a1.506 1.506 0 0 1 2.13-2.13l7.935 7.95L19.95 6.45a1.5 1.5 0 0 1 2.115 2.115l-9 9a1.5 1.5 0 0 1-1.05.435"
+                        data-name="16" data-original="#000000" />
+                </svg>
+            </button>
+
+            <ul [hidden]="isOpen()" class="space-y-1 text-sm text-slate-600 font-medium px-4 my-1 max-h-[500px] overflow-auto scrollbar transition-all duration-300">
+                @for(menuItem of menuItemsIcons(); track $index) {
+                    <li>
+                        <a href="{{ menuItem.url }}"
+                            class="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100  rounded-md px-3 py-2 transition-colors">
+                            {{ menuItem.name }}
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+</aside>

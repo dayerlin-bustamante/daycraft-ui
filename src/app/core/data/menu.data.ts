@@ -1,6 +1,6 @@
 import { IMenuItem } from "../interfaces/menu-item.interface";
 
-export const MENU: IMenuItem[] = [
+export const MENU_COMPONENTS: IMenuItem[] = [
     {
         id: 1,
         name: 'autocomplete',
@@ -132,3 +132,16 @@ export const MENU: IMenuItem[] = [
         url: '/components/tree'
     }
 ];
+
+export const MENU_ICONS: IMenuItem[] = [
+    {
+        id: 1,
+        name: 'Daycraft Icons',
+        url: '/icons'
+    },
+    {
+        id: 2,
+        name: 'Custom Icons',
+        url: '/customicons'
+    }
+]

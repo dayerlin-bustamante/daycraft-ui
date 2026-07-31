@@ -1,1 +1,15 @@
-<day-button size="big">Click Here</day-button>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+        <button-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <button-examples />
+    </ng-template>
+</day-tabs>
