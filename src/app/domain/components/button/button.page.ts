@@ -6,6 +6,7 @@ import { ButtonOverviewComponent } from "./components/button-overview/button-ove
 @Component({
     selector: 'button-page',
     templateUrl: './button.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabsComponent, DAYTabComponent, ButtonOverviewComponent, ButtonExamplesComponent]
 })
 

@@ -1,0 +1,205 @@
+<section class="overview-section">
+    <h2>DAYButtonComponent</h2>
+    <p>
+        <code>DAYButtonComponent</code> is a standalone Angular component that renders a styled <code>&lt;button&gt;</code> element.
+        It is part of the <code>@dayerlin-bustamante/button</code> library and supports multiple visual types, sizes, and content projection.
+    </p>
+
+    <h3>Installation</h3>
+    <pre><code>npm install @dayerlin-bustamante/button</code></pre>
+
+    <h3>Import</h3>
+    <pre><code>import {{ '{' }} DAYButtonComponent {{ '}' }} from '@dayerlin-bustamante/button';</code></pre>
+
+    <h3>Usage</h3>
+    <pre><code>&lt;day-button type="primary" size="medium"&gt;
+    Click me
+&lt;/day-button&gt;</code></pre>
+    <p>
+        The component uses content projection (<code>&lt;ng-content&gt;</code>), so any content
+        (text, icons, or other elements) can be placed inside the button.
+    </p>
+
+    <h3>API</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>size</code></td>
+                <td><code>'big' | 'medium' | 'small'</code></td>
+                <td><code>'medium'</code></td>
+                <td>Controls the button dimensions (height, min-width, padding, font-size).</td>
+            </tr>
+            <tr>
+                <td><code>type</code></td>
+                <td><code>'primary' | 'secondary' | 'tertiary' | 'action' | 'clear' | 'neutral'</code></td>
+                <td><code>'primary'</code></td>
+                <td>Controls the visual style (colors, borders, background).</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Both properties are Angular signal inputs and can be bound dynamically.</p>
+
+    <h3>Sizes</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Size</th>
+                <th>Height</th>
+                <th>Min-width</th>
+                <th>Padding</th>
+                <th>Font-size</th>
+                <th>Font-weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>'big'</code></td>
+                <td>50px</td>
+                <td>220px</td>
+                <td>12px 24px</td>
+                <td><code>--font-size-p</code></td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td><code>'medium'</code></td>
+                <td>40px</td>
+                <td>160px</td>
+                <td>12px 24px</td>
+                <td><code>--font-size-p-s</code></td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td><code>'small'</code></td>
+                <td>32px</td>
+                <td>120px</td>
+                <td>6px 12px</td>
+                <td><code>--font-size-p-xs</code></td>
+                <td>500</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Types</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Background</th>
+                <th>Text color</th>
+                <th>Border</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>'primary'</code></td>
+                <td><code>--color-primary</code></td>
+                <td><code>--color-bg-000</code></td>
+                <td>None</td>
+                <td>Filled background, used for main call-to-action elements.</td>
+            </tr>
+            <tr>
+                <td><code>'secondary'</code></td>
+                <td>Transparent</td>
+                <td><code>--color-primary</code></td>
+                <td><code>--color-secondary</code></td>
+                <td>Outlined style, fills on hover.</td>
+            </tr>
+            <tr>
+                <td><code>'tertiary'</code></td>
+                <td><code>--color-tertiary</code></td>
+                <td><code>--color-bg-000</code></td>
+                <td>None</td>
+                <td>Alternative filled style for secondary actions.</td>
+            </tr>
+            <tr>
+                <td><code>'action'</code></td>
+                <td><code>--color-secondary</code></td>
+                <td><code>--color-bg-000</code></td>
+                <td>None</td>
+                <td>Emphasized action button with secondary color.</td>
+            </tr>
+            <tr>
+                <td><code>'clear'</code></td>
+                <td>Transparent</td>
+                <td><code>--color-primary</code></td>
+                <td>None</td>
+                <td>Underlined text link style, no fixed dimensions.</td>
+            </tr>
+            <tr>
+                <td><code>'neutral'</code></td>
+                <td>Transparent</td>
+                <td><code>--color-primary</code></td>
+                <td><code>--color-turquoise-300</code></td>
+                <td>Subtle outlined style with neutral appearance.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>All types support a <code>disabled</code> state via the native HTML <code>disabled</code> attribute, which applies muted colors and disables pointer events.</p>
+
+    <h3>CSS Custom Properties</h3>
+    <p>The following CSS custom properties can be overridden to customize the button appearance:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>--button-border-radius</code></td>
+                <td>Border radius of the button. Defaults to <code>--radius-s</code>.</td>
+            </tr>
+            <tr>
+                <td><code>--button-transition</code></td>
+                <td>Transition for background-color and border-color changes.</td>
+            </tr>
+            <tr>
+                <td><code>--button-border-size</code></td>
+                <td>Width of the button border.</td>
+            </tr>
+            <tr>
+                <td><code>--button-padding</code></td>
+                <td>Inner padding of the button.</td>
+            </tr>
+            <tr>
+                <td><code>--button-min-width</code></td>
+                <td>Minimum width of the button.</td>
+            </tr>
+            <tr>
+                <td><code>--button-height</code></td>
+                <td>Height of the button.</td>
+            </tr>
+            <tr>
+                <td><code>--button-font-size</code></td>
+                <td>Font size of the button text.</td>
+            </tr>
+            <tr>
+                <td><code>--button-font-weight</code></td>
+                <td>Font weight of the button text.</td>
+            </tr>
+            <tr>
+                <td><code>--button-color</code></td>
+                <td>Text color of the button.</td>
+            </tr>
+            <tr>
+                <td><code>--button-background-color</code></td>
+                <td>Background color of the button.</td>
+            </tr>
+            <tr>
+                <td><code>--button-border-color</code></td>
+                <td>Border color of the button.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>These properties are set automatically based on the <code>type</code> and <code>size</code> inputs, but can be overridden via CSS to create custom button variants.</p>
+</section>
