@@ -1,3 +1,15 @@
-<section>
-    HOLA AUTOCOMPLETE
-</section>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+        <autocomplete-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <autocomplete-examples />
+    </ng-template>
+</day-tabs>

@@ -1,0 +1,51 @@
+<h2>Custom CSS properties</h2>
+
+@for (table of tables; let i = $index; track i) {
+    <h3>{{ table.title }}</h3>
+    <day-table [data]="table.data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+        <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)" />
+        </ng-template>
+        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+        <day-table-column [width]="250" name="description" title="Description" />
+        <day-table-column name="default" title="Default">
+            <ng-template DAYTableCellTmpl let-item="item">
+                <span [innerHTML]="item.default"></span>
+            </ng-template>
+        </day-table-column>
+    </day-table>
+    @if (i < tables.length - 1) { 
+        <div> - - - </div>
+    }
+}
+    
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>
+
+<h2>Card type</h2>
+<h3>Primary</h3>
+<day-card>
+    <day-card-header>
+        <h2>Title card primary</h2>
+        <h3>Subtitle card primary</h3>
+    </day-card-header>
+    <day-card-body>
+        <p>Content card primary</p>
+    </day-card-body>
+    <day-card-footer>
+        <day-button>Click card primary button</day-button>
+    </day-card-footer>
+</day-card>
+
+<h3>Secondary</h3>
+<day-card [type]="'secondary'">
+    <day-card-header>
+        <h2>Title card secondary</h2>
+        <h3>Subtitle card secondary</h3>
+    </day-card-header>
+    <day-card-body>
+        <p>Content card secondary</p>
+    </day-card-body>
+    <day-card-footer>
+        <day-button>Click card secondary button</day-button>
+    </day-card-footer>
+</day-card>

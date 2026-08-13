@@ -1,0 +1,97 @@
+<p>
+    <code>&lt;day-autocomplete&gt;</code> is a form control that provides the same functionality as a native input, enhanced with day Design styling and autocomplete capabilities.
+</p>
+
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;dayerlin-bustamante/core'</code>  <code>'&#64;dayerlin-bustamante/popover'</code>  <code>'&#64;dayerlin-bustamante/input'</code>
+</p>
+
+
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #html>
+            <pre ngNonBindable>
+
+    &#60;day-autocomplete 
+        [data]="availableColours" 
+        [filterFn]="filterColoursSimple" 
+        [minCharacters]="3" 
+        [keyText]="'name'" 
+        [keyValue]="'code'" 
+        [placeholder]="'Busca un color...'" 
+        [(ngModel)]="selectedColourCodeSimple"&#62;
+        &#60;ng-template DAYAutocompleteLoaderTmpl&#62;
+            &#60;div&#62;
+                &#60;p&#62;Cargando colores...&#60;/p&#62;
+            &#60;/div&#62;
+        &#60;/ng-template&#62;
+
+        &#60;ng-template DAYAutocompleteNoItemsTmpl&#62;
+            &#60;div&#62;
+                &#60;p&#62;No se encontraron colores &#60;/p&#62;
+            &#60;/div&#62;
+        &#60;/ng-template&#62;
+
+        &#60;ng-template DAYAutocompleteItemTmpl let-item="item"&#62;
+            &#60;div class="autocomplete-item"&#62;
+                &#60;span&#62;{{ item.name }}&#60;/span&#62;
+                &#60;span&#62; ({{ item.code }})&#60;/span&#62;
+            &#60;/div&#62;
+        &#60;/ng-template&#62;
+    &#60;/day-autocomplete&#62;
+
+    </pre>
+        </ng-template>
+        <ng-template style="margin-bottom: 10px;" #demo>
+            <day-autocomplete [data]="availableColours" [filterFn]="filterColoursSimple" [minCharacters]="3" [keyText]="'name'" [keyValue]="'code'" [placeholder]="'Busca un color...'" [(ngModel)]="selectedColourCodeSimple">
+                <ng-template DAYAutocompleteLoaderTmpl>
+                    <div>
+                        <p>Cargando colores...</p>
+                    </div>
+                </ng-template>
+
+                <ng-template DAYAutocompleteNoItemsTmpl>
+                    <div>
+                        <p>No se encontraron colores </p>
+                    </div>
+                </ng-template>
+
+                <ng-template DAYAutocompleteItemTmpl let-item="item">
+                    <div class="autocomplete-item">
+                        <span>{{ item.name }}</span>
+                        <span> ({{ item.code }})</span>
+                    </div>
+                </ng-template>
+            </day-autocomplete>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<h2>Description</h2>
+<p>The <code>autocomplete</code> component is an input field that provides suggestions as the user types, improving the search and selection experience. Its functionality relies on the <code>popover</code> component to display the list of options.</p>
+<p>The popover will open downwards by default, but it will adjust upwards if there is not enough space at the bottom of the screen. The popover's behavior will always be of type 'dropdown,' which means it will close when the user clicks outside of it.</p>
+<p>The animation used to show and hide the list of options is of the 'dissolve' type, for a smooth transition. The overlay color is completely transparent so as not to interfere with the visibility of the page.</p>
+
+<h2>Inputs</h2>
+<day-table [data]="inputsData" [displayedColumns]="inputsDisplayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column [width]="700" name="description" title="Description">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.description"></span>
+        </ng-template>
+    </day-table-column>
+    <day-table-column [width]="120" name="default" title="Default" />
+</day-table>
+<div class="line-divider"></div>
+
+<h2>Directives</h2>
+<day-table [data]="directivesData" [displayedColumns]="directivesDisplayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="250" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>

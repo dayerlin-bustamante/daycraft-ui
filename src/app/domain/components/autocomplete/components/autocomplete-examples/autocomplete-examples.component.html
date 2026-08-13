@@ -1,0 +1,48 @@
+<h1>Autocomplete Examples</h1>
+<h2>Default</h2>
+<day-autocomplete [data]="availableColours" [filterFn]="filterColoursSimple" [minCharacters]="3" [keyText]="'name'"
+    [keyValue]="'code'" [placeholder]="'Busca un color...'" [(ngModel)]="selectedColourCodeSimple">
+    <ng-template DAYAutocompleteLoaderTmpl>
+        <div>
+            <p>Cargando colores...</p>
+        </div>
+    </ng-template>
+
+    <ng-template DAYAutocompleteNoItemsTmpl>
+        <div>
+            <p>No se encontraron colores </p>
+        </div>
+    </ng-template>
+
+    <ng-template DAYAutocompleteItemTmpl let-item="item">
+        <div class="autocomplete-item">
+
+            <span>{{ item.name }}</span>
+            <span> ({{ item.code }})</span>
+        </div>
+    </ng-template>
+</day-autocomplete>
+
+<h2>Disabled</h2>
+<day-autocomplete [data]="availableColours" [filterFn]="filterColoursSimple" [minCharacters]="3" [keyText]="'name'"
+    [keyValue]="'code'" [placeholder]="'Busca un color...'" [(ngModel)]="selectedColourCodeSimple" disabled>
+    <ng-template DAYAutocompleteLoaderTmpl>
+        <div>
+            <p>Cargando colores...</p>
+        </div>
+    </ng-template>
+
+    <ng-template DAYAutocompleteNoItemsTmpl>
+        <div>
+            <p>No se encontraron colores </p>
+        </div>
+    </ng-template>
+
+    <ng-template DAYAutocompleteItemTmpl let-item="item">
+        <div class="autocomplete-item">
+
+            <span>{{ item.name }}</span>
+            <span> ({{ item.code }})</span>
+        </div>
+    </ng-template>
+</day-autocomplete>

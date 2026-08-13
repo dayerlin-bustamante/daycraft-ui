@@ -1,0 +1,34 @@
+<p>The component <code>&lt;day-avatar&gt;</code> is used to display user avatars.</p>
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;dayerlin-bustamante/core'</code>
+</p>
+
+<day-avatar size="small">MR</day-avatar>
+<day-avatar size="medium">MR</day-avatar>
+<day-avatar size="big">MR</day-avatar>
+
+
+<h2>Description</h2>
+<p>The component <code>&lt;day-avatar&gt;</code> is used to display user avatars. It allows you to easily show user images or initials in your application.</p>
+<p>It supports different sizes, such as <code>small</code>, <code>medium</code>, and <code>big</code>, which can be set using the <code>size</code> input property.</p>
+<p>You can also customize the content of the avatar, such as using initials or images.</p>
+<p>You can change the background color and text color of the avatar using the <code>bgColor</code> and <code>color</code> input properties.</p>
+
+<h2>Inputs</h2>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="200" name="name" title="Name" />
+    <day-table-column [width]="200" name="description" title="Description" />
+    <day-table-column [width]="240" name="default" title="Default" />
+</day-table>
+
+<h2>Custom properties style</h2>
+<day-table [data]="styleData" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" icon="copy" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="200" name="name" title="Name" />
+    <day-table-column [width]="200" name="description" title="Description" />
+    <day-table-column [width]="240" name="default" title="Default" />
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>
