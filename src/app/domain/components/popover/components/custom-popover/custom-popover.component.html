@@ -1,0 +1,22 @@
+<div class="test-class">
+    <day-popover-content>
+        <day-popover-header>
+            <h5 class="day-heading-5">Configuration</h5>
+        </day-popover-header>
+        <day-popover-body>
+            @for(configItem of configurationItems; track configItem) {
+                <p class="day-paragraph-s-regular item">{{ configItem }}</p>
+            }
+        </day-popover-body>
+    </day-popover-content>
+    <day-popover-content>
+        <day-popover-header>
+            <h5 class="day-heading-5">Admin</h5>
+        </day-popover-header>
+        <day-popover-body>
+            @for(adminItem of adminItems; track adminItem) {
+                <p class="day-paragraph-s-regular item">{{ adminItem }}</p>
+            }
+        </day-popover-body>
+    </day-popover-content>
+</div>

@@ -1,0 +1,52 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-card {
+        width: 660px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &.big { 
+            width: 750px;
+        }
+    }
+
+    code.code-html {
+        margin-top: var(--spacing-sm);
+    }
+
+    day-paginator:nth-of-type(2) {
+        ::ng-deep .paginator-wrapper {
+            .paginator-copy {
+                order: 2;
+                margin-left: var(--spacing-s);
+            }
+        }
+    }
+
+    day-paginator:nth-of-type(3) {
+        ::ng-deep .paginator-wrapper {
+            .paginator-copy {
+                display: none;
+            }
+        }
+    }
+
+    .paginator-container {
+        display: flex;
+        flex-direction: column;
+        padding: var(--spacing-sm);
+        margin-top: var(--spacing-s);
+        background-color: var(--color-bg-300);
+        gap: 24px;
+    }
+}

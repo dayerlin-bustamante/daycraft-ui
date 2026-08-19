@@ -1,0 +1,38 @@
+:host {
+    width: 100%;
+}
+
+day-modal-header {
+    h1, h3 {
+        margin: 0;
+        color: var(--color-primary-500);}
+    img {
+        object-fit: contain;
+    }
+    day-icon {
+        font-size: 24px;
+        color: var(--color-primary-500);
+    }
+}
+
+day-close-button {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}
+
+day-modal-body {
+    p {
+        margin: 0;
+        color: var(--color-primary-500);
+    }
+    .inputs-wrapper {
+        display: flex;
+        justify-content: space-between
+    }
+}
+
+day-modal-footer {
+    display: flex;
+    gap: var(--spacing-s);
+}

@@ -1,0 +1,148 @@
+<day-card class="big" shadow="small">
+    <day-card-body>
+        <day-tabs class="light" [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="default">Default</day-tab>
+            <day-tab [tabTmpl]="custom">Custom component</day-tab>
+            <day-tab [tabTmpl]="directive">Directive</day-tab>
+        </day-tabs>
+
+        <ng-template #default>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDefault">Html</day-tab>
+                <day-tab [tabTmpl]="tsDefault">Ts</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #custom>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlCustom">Html</day-tab>
+                <day-tab [tabTmpl]="tsCustom">Ts</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoCustom">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #directive>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDirective">Html</day-tab>
+                <day-tab [tabTmpl]="tsDirective">Ts</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDirective">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlDefault>
+            <pre><code>
+    &lt;day-button (click)="showToast()" size="big"&gt;Show Toast&lt;/day-button&gt;   
+    &lt;day-toast #dayToast&gt;
+        Prueba de toast
+        &lt;day-close-button [DAYCloseDialog]="dialogRef"&gt;
+            &lt;day-icon [icon]="'day-circle-close-solid'" /&gt;
+        &lt;/day-close-button&gt;
+    &lt;/day-toast&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #tsDefault>
+            <pre><code>
+    dialogRef?: DAYDialogRef;
+    private readonly toastService = inject(DAYToastService);
+
+    showToast() &lcub;
+        const toastConfig: IDAYToastConfiguration = &lcub;
+            verticalPosition: 'top',
+            gap: 100
+        &rcub;;
+        this.dialogRef = this.toastService.create(this.toastComponent(), toastConfig);   
+    &rcub;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDefault>
+            <day-button (click)="showToast()">Default Toast</day-button>
+            <day-toast #dayToast>
+                Prueba de toast
+                <day-close-button [DAYCloseDialog]="dialogRef">
+                    <day-icon [icon]="'day-circle-close-solid'" />
+                </day-close-button>
+            </day-toast>
+        </ng-template>
+
+        <ng-template #htmlCustom>
+            <pre><code>
+    &lt;div class="custom-toast-example"&gt;
+        &lt;p&gt;Custom component&lt;/p&gt;
+        &lt;day-icon [icon]="'day-content-copy'" (click)="showToastComponent()" /&gt;
+    &lt;/div&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #tsCustom>
+            <pre><code>
+    private readonly toastService = inject(DAYToastService);   
+
+    showToastComponent() &lcub;
+        this.toastService.create(CustomToastComponent);
+    &rcub;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoCustom>
+            <div class="custom-toast-example">
+                <p>Custom component</p>
+                <day-icon [icon]="'day-content-copy'" (click)="showToastComponent()" />
+            </div>
+        </ng-template>
+
+        <ng-template #htmlDirective>
+            <pre><code>
+    &lt;day-button [DAYToast]="dayToastDirective" [DAYToastConfig]="toastConfig"&gt;   
+    Directive toast
+    &lt;/day-button&gt;
+
+    &lt;day-toast #dayToastDirective&gt;
+        &lt;day-icon [icon]="'circle-check'" scope="duotone" /&gt;
+        Prueba de toast directiva
+    &lt;/day-toast&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #tsDirective>
+            <pre><code>
+    toastConfig: IDAYToastConfiguration =  &lcub;
+        verticalPosition: 'bottom',
+        cssClasses: ['toast-directive'],
+        timeOut: 5000,
+     &rcub;;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDirective>
+            <day-button [DAYToast]="dayToastDirective" [DAYToastConfig]="toastConfig">Directive toast</day-button>
+            <day-toast class="toast-directive" #dayToastDirective>
+                <day-icon [icon]="'circle-check'" scope="duotone" />
+                Prueba de toast directiva
+            </day-toast>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-toast can be customized overriding some of its CSS properties.
+</p>
+@for (table of tables; let i = $index; track i) {
+    <h3>{{ table.title }}</h3>
+    <day-table [data]="table.data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+        <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+            <day-icon [DAYToast]="dayToastDirective" class="details-icon show" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        </ng-template>
+        <day-table-column name="name" title="Name" [hasActions]="true" [width]="200" />
+        <day-table-column [width]="400" name="description" title="Description" />
+        <day-table-column name="default" title="Default" />
+    </day-table>
+    @if (i < tables.length - 1) {
+        <div> - - - </div>
+    }
+}
+
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

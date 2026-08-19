@@ -1,0 +1,44 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-card {
+        width: 660px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    day-button {
+        margin-top: var(--spacing-sm);
+    }
+
+    .custom-toast-example {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-s);
+        color: var(--color-secondary);
+
+        day-icon {
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+}
+
+::ng-deep day-toast-container.toast-directive {
+    --toast-shadow-color: var(--color-tertiary-500);
+
+    background-color: var(--color-tertiary-200);
+    color: var(--color-tertiary-500);
+}

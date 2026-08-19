@@ -1,0 +1,35 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-skeleton-loader {
+
+        &.day-skeleton-loader-type-block {
+            --skeleton-block-height: 120px;
+        }
+
+        &.day-skeleton-loader-type-table {
+            --skeleton-table-height: 200px;
+        }
+    }
+
+    day-card {
+        width: 660px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+                gap: var(--spacing-xs);
+                margin: var(--spacing-xs);
+            }
+        }
+
+        &.big {
+            width: 800px;
+        }
+    }
+}

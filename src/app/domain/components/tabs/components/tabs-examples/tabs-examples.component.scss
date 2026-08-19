@@ -1,0 +1,39 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-card {
+        width: 560px;
+
+        day-tabs {
+            margin-top: var(--spacing-s);
+            width: 100%;
+
+            day-tab {
+                day-icon {
+                    margin-right: var(--spacing-xs);
+                }
+            }
+
+            ::ng-deep .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+
+                h3 {
+                    margin: var(--spacing-xs) 0;
+                }
+            }
+
+            &.has-tabs-light {
+                day-tab.active.has-tab-light {
+                    --tab-background-color: var(--color-secondary);
+                }
+            }
+        }
+
+        &.big {
+            width: 750px;
+        }
+    }
+}

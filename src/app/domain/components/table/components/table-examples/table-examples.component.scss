@@ -1,0 +1,39 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-card {
+        width: 980px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    day-icon {
+        &.details-icon {
+            transition: transform 0.2s ease;
+            transform: rotate(0);
+
+            &.show {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+.actions-grouped {
+    day-icon {
+        color: var(--color-neutral-300);
+
+        &:hover {
+            color: var(--color-secondary);
+        }
+    }
+}

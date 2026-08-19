@@ -1,0 +1,239 @@
+<h2>Radio button type</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light" [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="default">Default</day-tab>
+            <day-tab [tabTmpl]="error">Error</day-tab>
+            <day-tab [tabTmpl]="disabled">Disabled</day-tab>
+            <day-tab [tabTmpl]="labelPosition">LabelPosition</day-tab>
+        </day-tabs>
+
+        <ng-template #default>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDefault">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #error>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlError">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoError">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #disabled>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDisabled">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDisabled">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+         <ng-template #labelPosition>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlLabelPosition">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoLabelPosition">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlDefault>
+            <pre><code class="code-html">
+    &lt;day-radio-group class="radio-group" [(ngModel)]="selected"&gt;
+        &lt;day-radio-button value="option1"&gt;
+            &lt;day-label&gt;Radio button option 1&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+        &lt;day-radio-button value="option2"&gt;
+            &lt;day-label&gt;Radio button option 2&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+    &lt;/day-radio-group&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDefault>
+            <day-radio-group class="radio-group" [(ngModel)]="selected">
+                <day-radio-button value="option1">
+                    <day-label>Radio button option 1</day-label>
+                </day-radio-button>
+                <day-radio-button value="option2">
+                    <day-label>Radio button option 2</day-label>
+                </day-radio-button>
+            </day-radio-group>
+        </ng-template>
+
+        <ng-template #htmlError>
+            <pre><code class="code-html">
+    &lt;form [formGroup]=&quot;formError&quot;&gt;
+        &lt;day-radio-group formControlName=&quot;radioError&quot;&gt;
+            &lt;day-radio-button value=&quot;error1&quot;&gt;
+                &lt;day-label&gt;Radio button error&lt;/day-label&gt;
+            &lt;/day-radio-button&gt;
+        &lt;/day-radio-group&gt;
+    &lt;/form&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoError>
+            <form [formGroup]="formError">
+                <day-radio-group formControlName="radioError">
+                    <day-radio-button value="error1">
+                        <day-label>Radio button error</day-label>
+                    </day-radio-button>
+                </day-radio-group>
+            </form>
+        </ng-template>
+
+        <ng-template #htmlDisabled>
+            <pre><code class="code-html">
+    &lt;day-radio-group class=&quot;radio-group&quot; [(ngModel)]=&quot;selected2&quot; [disabled]=&quot;true&quot;&gt;
+        &lt;day-radio-button value=&quot;option1&quot;&gt;
+            &lt;day-label&gt;Radio button option 1&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+        &lt;day-radio-button value=&quot;option2&quot;&gt;
+            &lt;day-label&gt;Radio button option 2&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+    &lt;/day-radio-group&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDisabled>
+            <day-radio-group class="radio-group" [(ngModel)]="selected2" [disabled]="true">
+                <day-radio-button value="option1">
+                    <day-label>Radio button option 1</day-label>
+                </day-radio-button>
+                <day-radio-button value="option2">
+                    <day-label>Radio button option 2</day-label>
+                </day-radio-button>
+            </day-radio-group>
+        </ng-template>
+
+        <ng-template #htmlLabelPosition>
+            <pre><code class="code-html">
+    &lt;day-radio-group class="radio-group" [(ngModel)]="selected4"&gt;
+        &lt;day-radio-button [labelPosition]="'before'" [value]="'option1'"&gt;
+            &lt;day-label&gt;Radio button option 1&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+        &lt;day-radio-button [labelPosition]="'before'" [value]="'option2'"&gt;
+            &lt;day-label&gt;Radio button option 2&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+    &lt;/day-radio-group&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoLabelPosition>
+            <day-radio-group class="radio-group" [(ngModel)]="selected4">
+                <day-radio-button [labelPosition]="'before'" [value]="'option1'">
+                    <day-label>Radio button option 1</day-label>
+                </day-radio-button>
+                <day-radio-button [labelPosition]="'before'" [value]="'option2'">
+                    <day-label>Radio button option 2</day-label>
+                </day-radio-button>
+            </day-radio-group>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>FormGroup radio buttons</h2>
+<p>
+    Use of ReactiveFormsModule to create a form with radio buttons. An example of disabling a radio button via the isDisabled input is also shown.
+</p>
+<day-card class="big" shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [active]="true" [tabTmpl]="htmlFormGroup">Html</day-tab>
+            <day-tab [tabTmpl]="demoFormGroup">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #htmlFormGroup>
+            <pre><code class="code-html">
+    &lt;form [formGroup]=&quot;form&quot;&gt;
+        &lt;day-radio-group formControlName=&quot;choice&quot;&gt;
+            &lt;day-radio-button class=&quot;day-radio-grey&quot; [value]=&quot;'option1'&quot;&gt;
+                &lt;day-label&gt;Option 1&lt;/day-label&gt;
+            &lt;/day-radio-button&gt;
+            &lt;day-radio-button class=&quot;day-radio-grey&quot; [value]=&quot;'option2'&quot;&gt;
+                &lt;day-label&gt;Option 2&lt;/day-label&gt;
+            &lt;/day-radio-button&gt;
+            &lt;day-radio-button class=&quot;day-radio-grey&quot; [value]=&quot;'option3'&quot; [isDisabled]=&quot;true&quot;&gt;
+                &lt;day-label&gt;Option 3&lt;/day-label&gt;
+            &lt;/day-radio-button&gt;
+        &lt;/day-radio-group&gt;
+    &lt;/form&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoFormGroup>
+           <form [formGroup]="form">
+                <day-radio-group formControlName="choice">
+                    <day-radio-button class="day-radio-grey" [value]="'option1'">
+                        <day-label>Option 1</day-label>
+                    </day-radio-button>
+                    <day-radio-button class="day-radio-grey" [value]="'option2'">
+                        <day-label>Option 2</day-label>
+                    </day-radio-button>
+                    <day-radio-button class="day-radio-grey" [value]="'option3'" [isDisabled]="true">
+                        <day-label>Option 3</day-label>
+                    </day-radio-button>
+                </day-radio-group>
+            </form>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>NgModel radio buttons</h2>
+<p>
+    Use of FormsModule [(ngModel)] to create a form with radio buttons.
+</p>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [active]="true" [tabTmpl]="htmlNgModel">Html</day-tab>
+            <day-tab [tabTmpl]="demoNgModel">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #htmlNgModel>
+            <pre><code class="code-html">
+    &lt;day-radio-group [(ngModel)]=&quot;selected3&quot;&gt;
+        &lt;day-radio-button [labelPosition]=&quot;'before'&quot; [value]=&quot;'option1'&quot;&gt;
+            &lt;day-label&gt;First option&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+        &lt;day-radio-button [labelPosition]=&quot;'before'&quot; [value]=&quot;'option2'&quot;&gt;
+            &lt;day-label&gt;Second option&lt;/day-label&gt;
+        &lt;/day-radio-button&gt;
+    &lt;/day-radio-group&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoNgModel>
+           <day-radio-group [(ngModel)]="selected3">
+                <day-radio-button [labelPosition]="'before'" [value]="'option1'">
+                    <day-label>First option</day-label>
+                </day-radio-button>
+                <day-radio-button [labelPosition]="'before'" [value]="'option2'">
+                    <day-label>Second option</day-label>
+                </day-radio-button>
+            </day-radio-group>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-radio-button can be customized overriding some of its CSS properties.<br>
+    The invalid and disabled button styles come from the form control.
+</p>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column name="name" title="Name" [hasActions]="true" [width]="200" />
+    <day-table-column [width]="400" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+    <day-toast #dayToastDirective>Text copied to clipboard</day-toast>
+</day-table>

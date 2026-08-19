@@ -1,0 +1,159 @@
+<p>
+    <code>import &#123; DAYCompoundInputComponent, DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableGroupTmplDirective, DAYTableHeaderTmplDirective, DAYTableRowDetailsTmplDirective&#125; from '&#64;day/table';</code>
+</p>
+<div class="line-divider"></div>
+
+<h2>Selector</h2>
+<p>Table:<code> day-table</code></p>
+<p>Table column:<code> day-table-column</code></p>
+
+<div class="line-divider"></div>
+<h2>Inputs</h2>
+<h3>Table component</h3>
+<day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="250" name="name" title="Name" />
+    <day-table-column [width]="400" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<h3>Table column component</h3>
+<day-table [data]="dataInputsColumn" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="250" name="name" title="Name" />
+    <day-table-column [width]="430" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+<div class="line-divider"></div>
+
+<h2>Outputs</h2>
+<day-table [data]="dataOutputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="250" name="name" title="Name" />
+    <day-table-column [width]="500" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+<div class="line-divider"></div>
+
+<h2>Directives</h2>
+<day-table [data]="dataDirectives" [displayedColumns]="displayedColumnsTwo" [resizableColumns]="true">
+    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+<div class="line-divider"></div>
+
+<h2>Public methods</h2>
+<day-table [data]="dataPublicMethods" [displayedColumns]="displayedColumnsTwo" [resizableColumns]="true">
+    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+<div class="line-divider"></div>
+
+<p>
+    The <code>&lt;day-table&gt;</code> component is a powerful and customizable table that supports features like
+    sortable columns, row selection, and expandable groups.
+</p>
+
+<div class="line-divider"></div>
+<h2>Dependencies</h2>
+<p><code>'&#64;day/core'</code>, <code>'&#64;day/icon'</code>, <code>'&#64;day/checkbox'</code>, <code>'&#64;day/resize'</code>, <code>'&#64;day/skeleton-loader'</code></p>
+
+<div class="line-divider"></div>
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #html>
+            <pre><code class="code-html">
+    &lt;day-table [data]="data2" [displayedColumns]="displayedColumns" 
+    [orderableColumns]="false" [checkeableRows]="false"&gt;   
+        &lt;day-table-column name="name" title="Name"&gt;
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Name
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                &#123; &#123; item.name &#125; &#125;
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableFooterTmpl&gt;
+                Footer names
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+        &lt;day-table-column name="code" title="Code"&gt;
+            &lt;ng-template DAYTableCellTmpl="code" let-item="item"&gt;
+                &#123; &#123; item.code &#125; &#125;
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+        &lt;day-table-column name="color" title="Color" /&gt;  
+        &lt;day-table-column name="brand"&gt;
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Brand
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                &#123; &#123; item.brand &#125; &#125;
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableFooterTmpl&gt;
+                Footer brand
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+        &lt;day-table-column name="year" title="Year" /&gt;
+    &lt;/day-table&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demo>
+            <day-table [data]="data2" [displayedColumns]="displayedColumns"
+                [orderableColumns]="false" [checkeableRows]="false">
+                <day-table-column name="name" title="Name">
+                    <ng-template DAYTableHeaderTmpl>
+                        Name
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.name }}
+                    </ng-template>
+                    <ng-template DAYTableFooterTmpl>
+                        Footer names
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="code" title="Code">
+                    <ng-template DAYTableCellTmpl="code" let-item="item">
+                        {{ item.code }}
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="color" title="Color" />
+                <day-table-column name="brand">
+                    <ng-template DAYTableHeaderTmpl>
+                        Brand
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.brand }}
+                    </ng-template>
+                    <ng-template DAYTableFooterTmpl>
+                        Footer brand
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="year" title="Year" />
+            </day-table>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Description</h2>
+<ul>
+    <li>Custom Angular table component supporting locked and sortable columns.</li>
+    <li>Allows row selection with checkboxes, including a select-all option.</li>
+    <li>Supports grouping of columns and rows, with expandable and collapsible groups.</li>
+    <li>Resizable columns with configurable minimum and maximum widths.</li>
+    <li>Emits events for selected rows, checked rows, and column sorting changes.</li>
+    <li>Includes dynamic templates for row actions and details, customizable via directives.</li>
+    <li>Manages reactive internal states using signals and computed properties for better performance.</li>
+    <li>Supports animations to enhance visual experience.</li>
+    <li>Automatically handles widths and sticky columns with support for locked (sticky-left) columns.</li>
+    <li>Detects viewport size changes and adjusts widths and positions for responsiveness.</li>
+    <li>Dynamically updates sorting icons based on the current sorted column and order.</li>
+    <li>Allows showing/hiding additional details per row with animation and internal control.</li>
+    <li>Includes observers to detect header and footer height changes and adjust styles accordingly.</li>
+    <li>Configurable via inputs to control visibility, features, and table behavior.</li>
+    <li>Integrates with other custom components like checkbox, icon, and resize for specific functionalities.</li>
+</ul>

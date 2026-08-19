@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-card {
+        width: 680px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    day-button {
+        margin-top: var(--spacing-sm);
+    }
+}
+
+::ng-deep day-popover-container.first-popover {
+    --popover-width: 200px;
+}

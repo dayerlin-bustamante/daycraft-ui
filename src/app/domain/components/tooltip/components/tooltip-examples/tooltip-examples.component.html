@@ -1,0 +1,59 @@
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="default">Tooltip</day-tab>
+            <day-tab [tabTmpl]="title">Title</day-tab>
+        </day-tabs>
+        <ng-template #default>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDefault">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #title>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlTitle">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoTitle">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlDefault>
+            <pre><code>
+    &lt;day-button [DAYTooltip]="tooltipString" [DAYTooltipConfig]="tooltipConfig"&gt;   
+    Tooltip&lt;/day-button&gt;
+            </code></pre>
+        </ng-template>     
+    
+        <ng-template #demoDefault>
+            <day-button [DAYTooltip]="tooltipString" [DAYTooltipConfig]="tooltipConfig">Tooltip</day-button>
+        </ng-template>
+
+        <ng-template #htmlTitle>
+            <pre><code>
+    &lt;day-icon [icon]="'day-content-copy'" [DAYTooltip]="dayTitle" 
+    [DAYTooltipConfig]="tooltipConfigTitle"/&gt;
+    &lt;day-tooltip #dayTitle&gt;Esto es un texto para el title que se va a    
+    pintar donde esté el ratón&lt;/day-tooltip&gt;
+            </code></pre>
+        </ng-template>     
+
+        <ng-template #demoTitle>
+            <day-icon [icon]="'day-content-copy'" [DAYTooltip]="dayTitle" [DAYTooltipConfig]="tooltipConfigTitle"/>
+            <day-tooltip #dayTitle>Esto es un texto para el title que se va a pintar donde esté el ratón</day-tooltip>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<h2>Custom CSS properties</h2>
+<p>Styles of day-tooltip can be customized overriding some of their CSS properties.</p>
+<div class="line-divider"></div>
+
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" class="details-icon show" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column name="name" title="Name" [hasActions]="true" [width]="250" />
+    <day-table-column [width]="300" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+    <day-toast #dayToastDirective>Text copied to clipboard</day-toast>
+</day-table>

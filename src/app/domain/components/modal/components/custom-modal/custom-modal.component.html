@@ -1,0 +1,23 @@
+<day-modal-header>
+    <img width="auto" height="auto" src="images/modal.png" alt="">
+    <day-close-button>
+        <day-icon [icon]="'day-circle-close-solid'" />
+    </day-close-button>
+    <h1>{{title}}</h1>
+    <h3>{{subTitle}}</h3>
+</day-modal-header>
+<day-modal-body>
+    <p>{{description}}</p>
+    <div [formGroup]="formGroup" class="inputs-wrapper">
+        <day-input formControlName="formControlValue" placeholder="Enter text">
+            <day-label>Label example</day-label>
+        </day-input>
+        <day-input formControlName="formControlValue" placeholder="Enter text">
+            <day-label>Label example</day-label>
+        </day-input>
+    </div>
+</day-modal-body>
+<day-modal-footer>
+    <day-button [size]="'small'">first button</day-button>
+    <day-button [size]="'small'">Second Button</day-button>
+</day-modal-footer>

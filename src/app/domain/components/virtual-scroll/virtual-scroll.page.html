@@ -1,0 +1,32 @@
+<h2>RIPPLE</h2>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <day-tab [tabTmpl]="api">
+        API
+    </day-tab>
+    <day-tab [tabTmpl]="styling">
+        Styling
+    </day-tab>
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+</day-tabs>
+<div class="content">
+    <ng-template #overview>
+        Overview
+    </ng-template>
+    
+    <ng-template #api>
+        API
+    </ng-template>
+
+    <ng-template #styling>
+        Styling
+    </ng-template>
+
+    <ng-template #examples>
+        Examples
+    </ng-template>
+</div>
