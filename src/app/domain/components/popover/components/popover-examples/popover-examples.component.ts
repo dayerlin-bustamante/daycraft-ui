@@ -3,10 +3,10 @@ import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYPopoverBodyComponent, DAYPopoverComponent, DAYPopoverContentComponent, DAYPopoverFooterComponent, DAYPopoverHeaderComponent, DAYPopoverService, DAYPopoverTriggerDirective, IDAYPopoverConfiguration } from '@dayerlin-bustamante/popover';
+import { DAYPopoverBodyComponent, DAYPopoverComponent, DAYPopoverContentComponent, DAYPopoverFooterComponent, DAYPopoverHeaderComponent, DAYPopoverService, DAYPopoverTriggerDirective, IPopoverConfiguration } from '@dayerlin-bustamante/popover';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
+import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 import { CustomPopoverComponent } from '../custom-popover/custom-popover.component';
 
@@ -57,7 +57,7 @@ export class PopoverExamplesComponent {
         }
     ];
 
-    popoverConfig: IDAYPopoverConfiguration = {
+    popoverConfig: IPopoverConfiguration = {
         behavior: 'inject',
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
@@ -71,13 +71,13 @@ export class PopoverExamplesComponent {
         cssClasses: ['first-popover', 'popover-class']
     };
 
-    popoverConfigFill: IDAYPopoverConfiguration = {
+    popoverConfigFill: IPopoverConfiguration = {
         behavior: 'fill',
         horizontalPosition: 'center',
         verticalPosition: 'bottom'
     };
 
-    popoverConfigDropdown: IDAYPopoverConfiguration = {
+    popoverConfigDropdown: IPopoverConfiguration = {
         behavior: 'dropdown',
         horizontalPosition: 'center',
         verticalPosition: 'bottom'
@@ -89,7 +89,7 @@ export class PopoverExamplesComponent {
     readonly popoverService = inject(DAYPopoverService);
 
     showPopover(event: any) {
-        const popoverConfig: IDAYPopoverConfiguration = {
+        const popoverConfig: IPopoverConfiguration = {
             behavior: 'inject',
             horizontalPosition: 'right',
             cssClasses: ['first-popover', 'popover-class']
@@ -115,7 +115,7 @@ export class PopoverExamplesComponent {
     }
 
     showPopover2(event: any) {
-        const popoverConfig: IDAYPopoverConfiguration = {
+        const popoverConfig: IPopoverConfiguration = {
             behavior: 'inject',
             horizontalPosition: 'center',
             verticalPosition: 'bottom',
@@ -126,7 +126,7 @@ export class PopoverExamplesComponent {
     }
 
     showPopoverComponent(event: any) {
-        const popoverConfig: IDAYPopoverConfiguration = {
+        const popoverConfig: IPopoverConfiguration = {
             customPosition: {
                 top: 50,
                 left: 100

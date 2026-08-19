@@ -6,7 +6,6 @@ import { ToastOverviewComponent } from './components/toast-overview/toast-overvi
 @Component({
     selector: 'toast-page',
     templateUrl: './toast.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabsComponent, DAYTabComponent, ToastExamplesComponent, ToastOverviewComponent]
 })
 export class ToastPage { }

@@ -2,7 +2,7 @@ import { Component, inject, viewChild } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
-import { DAYSlideBodyComponent, DAYSlideComponent, DAYSlideFooterComponent, DAYSlideHeaderComponent, DAYSlideService, IDAYSlideConfiguration } from '@dayerlin-bustamante/slide';
+import { DAYSlideBodyComponent, DAYSlideComponent, DAYSlideFooterComponent, DAYSlideHeaderComponent, DAYSlideService, ISlideConfiguration } from '@dayerlin-bustamante/slide';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
@@ -45,7 +45,7 @@ export class SlideOverviewComponent {
     ];
 
     showSlideTmpl() {
-        const slideConfig: IDAYSlideConfiguration = {
+        const slideConfig: ISlideConfiguration = {
             cssClasses: ['component-slide'],
             resize: false,
             overlay: false,

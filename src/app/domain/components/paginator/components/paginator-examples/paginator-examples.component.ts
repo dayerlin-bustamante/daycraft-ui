@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
-import { DAYPaginatorComponent, IDAYPaginatorChangeEvent } from '@dayerlin-bustamante/paginator';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
+import { DAYPaginatorComponent, IPaginatorChangeEvent } from '@dayerlin-bustamante/paginator';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
@@ -46,7 +46,7 @@ export class PaginatorExamplesComponent {
             .catch(err => err);
     }
 
-    changePagination(paginatorConfig: IDAYPaginatorChangeEvent, paginator: number) {
+    changePagination(paginatorConfig: IPaginatorChangeEvent, paginator: number) {
         this.itemsPerPage.set(paginatorConfig.itemsPerPage);
         if (paginator === 1) this.page.set(paginatorConfig.page);
         else if (paginator === 2) this.page2.set(paginatorConfig.page);

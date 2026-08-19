@@ -3,9 +3,9 @@ import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYModalBodyComponent, DAYModalComponent, DAYModalFooterComponent, DAYModalHeaderComponent, DAYModalService, IDAYModalConfiguration } from '@dayerlin-bustamante/modal';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
+import { DAYModalBodyComponent, DAYModalComponent, DAYModalFooterComponent, DAYModalHeaderComponent, DAYModalService, IModalConfiguration } from '@dayerlin-bustamante/modal';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 import { CustomModalComponent } from '../custom-modal/custom-modal.component';
@@ -64,7 +64,7 @@ export class ModalExamplesComponent {
     }
 
     showModalComponent() {
-        const modalConfig: IDAYModalConfiguration = {
+        const modalConfig: IModalConfiguration = {
             size: "small",
             cssClasses: ['component-modal']
         };
@@ -72,7 +72,7 @@ export class ModalExamplesComponent {
     }
 
     showModalSmallTmpl() {
-        const modalConfig: IDAYModalConfiguration = {
+        const modalConfig: IModalConfiguration = {
             size: "small"
         };
 
@@ -80,7 +80,7 @@ export class ModalExamplesComponent {
     }
 
     showModalMediumTmpl() {
-        const modalConfig: IDAYModalConfiguration = {
+        const modalConfig: IModalConfiguration = {
             size: "medium"
         };
 
@@ -88,7 +88,7 @@ export class ModalExamplesComponent {
     }
 
     showModalLargeTmpl() {
-        const modalConfig: IDAYModalConfiguration = {
+        const modalConfig: IModalConfiguration = {
             size: "large"
         };
 

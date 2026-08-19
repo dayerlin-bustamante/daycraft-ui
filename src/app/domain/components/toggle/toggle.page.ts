@@ -6,7 +6,6 @@ import { ToggleOverviewComponent } from './components/toggle-overview/toggle-ove
 @Component({
     selector: 'toggle-page',
     templateUrl: './toggle.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, ToggleOverviewComponent, ToggleExamplesComponent]
 })
 export class TogglePage { }

@@ -6,7 +6,6 @@ import { DatepickerOverviewComponent } from "./components/datepicker-overview/da
 @Component({
     selector: 'datepicker-page',
     templateUrl: './datepicker.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, DatepickerExamplesComponent, DatepickerOverviewComponent]
 })
 export class DatepickerPage { }

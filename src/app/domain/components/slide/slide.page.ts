@@ -6,7 +6,6 @@ import { SlideOverviewComponent } from './components/slide-overview/slide-overvi
 @Component({
     selector: 'slide-page',
     templateUrl: './slide.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, SlideOverviewComponent, SlideExamplesComponent]
 })
 export class SlidePage { }

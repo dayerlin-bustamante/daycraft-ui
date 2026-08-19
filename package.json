@@ -26,7 +26,7 @@
         "@dayerlin-bustamante/overlay": "^0.1.0",
         "@dayerlin-bustamante/modal": "^0.1.0",
         "@dayerlin-bustamante/icon": "^0.1.0",
-        "@dayerlin-bustamante/tabs": "^0.1.0",
+        "@dayerlin-bustamante/tabs": "^0.1.2",
         "@dayerlin-bustamante/popover": "^0.1.0",
         "@dayerlin-bustamante/input": "^0.1.0",
         "@dayerlin-bustamante/checkbox": "^0.1.0",

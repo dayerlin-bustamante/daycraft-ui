@@ -6,7 +6,6 @@ import { TabsOverviewComponent } from './components/tabs-overview/tabs-overview.
 @Component({
     selector: 'tabs-page',
     templateUrl: './tabs.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabsComponent, DAYTabComponent, TabsExamplesComponent, TabsOverviewComponent]
 })
 export class TabsPage { }

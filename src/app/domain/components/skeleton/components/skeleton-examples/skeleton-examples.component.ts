@@ -1,9 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
-import { DAYSkeletonLoaderComponent, DAYSkeletonLoaderDirective } from '@dayerlin-bustamante/skeleton-loader';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
+import { DAYSkeletonLoaderComponent, DAYSkeletonLoaderDirective } from '@dayerlin-bustamante/skeleton';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 

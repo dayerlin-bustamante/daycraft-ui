@@ -4,10 +4,10 @@ import { DAYCardBodyComponent, DAYCardComponent } from "@dayerlin-bustamante/car
 import { DAYIconComponent } from "@dayerlin-bustamante/icon";
 import { DAYInputComponent } from "@dayerlin-bustamante/input";
 import { DAYLabelComponent } from "@dayerlin-bustamante/label";
-import { DAYTabComponent, DAYTabsComponent } from "@dayerlin-bustamante/tabs";
-import { DAYTooltipTriggerDirective, IDAYTooltipConfiguration } from "@dayerlin-bustamante/tooltip";
 import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
+import { DAYTabComponent, DAYTabsComponent } from "@dayerlin-bustamante/tabs";
 import { DAYToastComponent, DAYToastTriggerDirective } from "@dayerlin-bustamante/toast";
+import { DAYTooltipTriggerDirective, ITooltipConfiguration } from "@dayerlin-bustamante/tooltip";
 import { IApiProperties } from "../../../../../core/interfaces/api-properties.interface";
 
 @Component({
@@ -43,7 +43,7 @@ export class InputExamplesComponent implements OnInit {
         formControl: new FormControl(null, Validators.required)
     });
 
-    tooltipConfig: IDAYTooltipConfiguration = {
+    tooltipConfig: ITooltipConfiguration = {
         verticalPosition: 'top',
         horizontalPosition: 'center',
         cssClasses: ['error']

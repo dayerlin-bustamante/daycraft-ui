@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
-import { DAYSkeletonLoaderComponent } from '@dayerlin-bustamante/skeleton-loader';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
+import { DAYSkeletonLoaderComponent } from '@dayerlin-bustamante/skeleton';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({

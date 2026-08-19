@@ -2,15 +2,13 @@ import { Component } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableHeaderTmplDirective } from '@dayerlin-bustamante/table';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
-import { ITableDummyData } from '../../../../../core/interfaces/table/table-dummy-data.interface';
 
 @Component({
     selector: 'table-overview',
     templateUrl: './table-overview.component.html',
     styleUrls: ['./table-overview.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabsComponent, DAYTabComponent, DAYTableComponent, DAYTableHeaderTmplDirective, DAYTableCellTmplDirective, DAYTableFooterTmplDirective, DAYTableColumnComponent, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabsComponent, DAYTabComponent, DAYTableComponent, DAYTableHeaderTmplDirective, DAYTableCellTmplDirective, DAYTableFooterTmplDirective, DAYTableColumnComponent]
 })
 export class TableOverviewComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];
@@ -58,7 +56,7 @@ export class TableOverviewComponent {
         { name: 'showDetails: (index: number) => void', description: 'Shows or hides additional details for a specific row.' }
     ];
 
-    data2: ITableDummyData[] = [
+    data2: any[] = [
         { name: 'Plane', code: 'A100', year: 2012, color: '#FF5733', brand: 'Boeing' },
         { name: 'Helicopter', code: 'B200', year: 2015, color: '#33FF57', brand: 'Airbus' },
         { name: 'Jet', code: 'C300', year: 2018, color: '#3357FF', brand: 'Lockheed Martin' },

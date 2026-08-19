@@ -3,7 +3,7 @@ import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYCloseButtonComponent, DAYCloseDialogDirective, DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYModalBodyComponent, DAYModalComponent, DAYModalFooterComponent, DAYModalHeaderComponent, DAYModalService, IDAYModalConfiguration } from '@dayerlin-bustamante/modal';
+import { DAYModalBodyComponent, DAYModalComponent, DAYModalFooterComponent, DAYModalHeaderComponent, DAYModalService, IModalConfiguration } from '@dayerlin-bustamante/modal';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 
 @Component({
@@ -19,7 +19,7 @@ export class ModalOverviewComponent {
     private modalService = inject(DAYModalService);
 
     showModalTmpl() {
-        const modalConfig: IDAYModalConfiguration = {
+        const modalConfig: IModalConfiguration = {
             size: "small",
             cssClasses: ['component-modal']
         };

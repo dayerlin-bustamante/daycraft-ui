@@ -60,7 +60,7 @@
     &#60;day-tree [data]="data" [childProperty]="'children'" (nodeSelected)="onNodeSelected($event)"&#62;
         &#60;ng-template DAYTreeItemTmpl let-node="item" let-level="level"&#62;
             &#60;div&#62;
-                &#60;day-icon&#62; [scope]="'day-kit'" [icon]="node.icon" /&#62;
+                &#60;day-icon&#62; [icon]="node.icon" /&#62;
                 &#60;span&#62;{{ node.name }}&#60;/span&#62;
             &#60;/div&#62;
         &#60;/ng-template&#62;
@@ -72,7 +72,7 @@
             <day-tree [data]="data" [childProperty]="'children'" (nodeSelected)="onNodeSelected($event)">
                 <ng-template DAYTreeItemTmpl let-node="item" let-level="level">
                     <div>
-                        <day-icon [scope]="'day-kit'" [icon]="node.icon" />
+                        <day-icon [icon]="node.icon" />
                         <span>{{ node.name }}</span>
                     </div>
                 </ng-template>

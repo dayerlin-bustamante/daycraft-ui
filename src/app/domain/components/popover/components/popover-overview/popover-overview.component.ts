@@ -2,9 +2,8 @@ import { Component, inject, viewChild } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
-import { DAYPopoverBodyComponent, DAYPopoverComponent, DAYPopoverContentComponent, DAYPopoverFooterComponent, DAYPopoverHeaderComponent, DAYPopoverService, IDAYPopoverConfiguration } from '@dayerlin-bustamante/popover';
+import { DAYPopoverBodyComponent, DAYPopoverComponent, DAYPopoverContentComponent, DAYPopoverFooterComponent, DAYPopoverHeaderComponent, DAYPopoverService, IPopoverConfiguration } from '@dayerlin-bustamante/popover';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
@@ -24,7 +23,7 @@ export class PopoverOverviewComponent {
 
     dataInputs: IApiProperties[] = [
         { name: "DAYPopover: IDAYDialogTmpl | any", description: "Template or component reference to be rendered inside the popover.", default: "—" },
-        { name: "DAYPopoverConfig: IDAYPopoverConfiguration", description: "Optional configuration object that controls behavior, positioning, spacing, customPosition, styling and receive data of the popover.", default: "{}" }
+        { name: "DAYPopoverConfig: IPopoverConfiguration", description: "Optional configuration object that controls behavior, positioning, spacing, customPosition, styling and receive data of the popover.", default: "{}" }
     ];
 
     dataComputedsEvent: IApiProperties[] = [
@@ -32,7 +31,7 @@ export class PopoverOverviewComponent {
     ];
 
     showPopover(event: any) {
-        const popoverConfig: IDAYPopoverConfiguration = {
+        const popoverConfig: IPopoverConfiguration = {
             behavior: 'inject',
             horizontalPosition: 'right',
             verticalPosition: 'top',

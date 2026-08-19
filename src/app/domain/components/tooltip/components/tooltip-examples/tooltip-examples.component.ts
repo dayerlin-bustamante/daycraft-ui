@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
+import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
-import { DAYTooltipComponent, DAYTooltipTriggerDirective, IDAYTooltipConfiguration } from '@dayerlin-bustamante/tooltip';
+import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
+import { DAYTooltipComponent, DAYTooltipTriggerDirective, ITooltipConfiguration } from '@dayerlin-bustamante/tooltip';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'tooltip-examples',
     templateUrl: './tooltip-examples.component.html',
     styleUrls: ['./tooltip-examples.component.scss'],
-    imports: [DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYTooltipComponent, DAYTooltipTriggerDirective, DAYCardBodyComponent, DAYCardComponent, DAYIconComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYTooltipComponent, DAYTooltipTriggerDirective, DAYCardBodyComponent, DAYCardComponent, DAYIconComponent, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class TooltipExamplesComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];
@@ -30,12 +30,12 @@ export class TooltipExamplesComponent {
         { name: '--tooltip-font-size', description: 'Font size of the tooltip text.', default: 'var(--font-size-p-xxs)' }
     ];
 
-    tooltipConfig: IDAYTooltipConfiguration = {
+    tooltipConfig: ITooltipConfiguration = {
         verticalPosition: 'bottom',
         cssClasses: ['info']
     }
 
-    tooltipConfigTitle: IDAYTooltipConfiguration = {
+    tooltipConfigTitle: ITooltipConfiguration = {
         verticalPosition: 'bottom',
         behavior: 'title',
     }

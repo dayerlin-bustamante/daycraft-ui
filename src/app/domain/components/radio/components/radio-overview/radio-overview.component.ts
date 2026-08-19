@@ -4,7 +4,6 @@ import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/car
 import { DAYLabelComponent } from "@dayerlin-bustamante/label";
 import { DAYRadioButtonComponent, DAYRadioGroupComponent } from "@dayerlin-bustamante/radio";
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
@@ -12,7 +11,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'radio-overview',
     templateUrl: './radio-overview.component.html',
     styleUrls: ['./radio-overview.component.scss'],
-    imports: [DAYRadioButtonComponent, DAYRadioGroupComponent, FormsModule, DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYLabelComponent, DAYTableComponent, DAYTableColumnComponent, DAYToastComponent, DAYToastTriggerDirective]
+    imports: [DAYRadioButtonComponent, DAYRadioGroupComponent, FormsModule, DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYLabelComponent, DAYTableComponent, DAYTableColumnComponent]
 })
 export class RadioOverviewComponent {
     selected: string = 'option2';

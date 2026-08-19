@@ -4,8 +4,6 @@ import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableGroupActionsTmplDirective, DAYTableGroupTmplDirective, DAYTableHeaderTmplDirective, DAYTableRowDetailsTmplDirective } from '@dayerlin-bustamante/table';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
-import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
-import { ITableDummyData } from '../../../../../core/interfaces/table/table-dummy-data.interface';
 
 @Component({
     selector: 'table-examples',
@@ -20,7 +18,7 @@ export class TableExamplesComponent {
 
     displayedColumns: string[] = ['name', 'description', 'default'];
 
-    data: ITableDummyData[] = [
+    data: any[] = [
         { name: 'Car kasjdlas sdfj sdf sñdfsdñf ', code: 'A100', year: 2012, color: '#FF5733', brand: 'Toyota' },
         { name: 'Bike', code: 'B200', year: 2015, color: '#33FF57', brand: 'Honda' },
         { name: 'Bus', code: 'C300', year: 2018, color: '#3357FF', brand: 'Ford' },
@@ -39,7 +37,7 @@ export class TableExamplesComponent {
         { name: 'Roadster', code: 'P1600', year: 2008, color: '#95A5A6', brand: 'Tesla' }
     ];
 
-    data2: ITableDummyData[] = [
+    data2: any[] = [
         { name: 'Plane', code: 'A100', year: 2012, color: '#FF5733', brand: 'Boeing' },
         { name: 'Helicopter', code: 'B200', year: 2015, color: '#33FF57', brand: 'Airbus' },
         { name: 'Jet', code: 'C300', year: 2018, color: '#3357FF', brand: 'Lockheed Martin' },
@@ -47,7 +45,7 @@ export class TableExamplesComponent {
         { name: 'Drone', code: 'E500', year: 2021, color: '#9B59B6', brand: 'DJI' }
     ];
 
-    dataGrouped: ITableDummyData[] = [
+    dataGrouped: any[] = [
         { name: 'Car kasjdlas sdfj sdf sñdfsdñf ', code: 'A100', year: 2012, color: '#FF5733', brand: 'Toyota', plate: '1234ABC' },
         { name: 'Bike', code: 'B200', year: 2015, color: '#33FF57', brand: 'Honda', plate: '1234ABC' },
         { name: 'Bike', code: 'C300', year: 2018, color: '#3357FF', brand: 'Ford', plate: '1234ABC' },

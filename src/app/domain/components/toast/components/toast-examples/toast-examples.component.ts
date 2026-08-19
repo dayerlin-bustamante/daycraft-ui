@@ -3,9 +3,9 @@ import { DAYButtonComponent } from "@dayerlin-bustamante/button";
 import { DAYCardBodyComponent, DAYCardComponent } from "@dayerlin-bustamante/card";
 import { DAYCloseButtonComponent, DAYDialogRef } from "@dayerlin-bustamante/core";
 import { DAYIconComponent } from "@dayerlin-bustamante/icon";
+import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
 import { DAYTabComponent, DAYTabsComponent } from "@dayerlin-bustamante/tabs";
-import { DAYToastComponent, DAYToastService, DAYToastTriggerDirective, IDAYToastConfiguration } from "@dayerlin-bustamante/toast";
-import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
+import { DAYToastComponent, DAYToastService, DAYToastTriggerDirective, IToastConfiguration } from "@dayerlin-bustamante/toast";
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 import { CustomToastComponent } from "../custom-toast/custom-toast.component";
 
@@ -13,12 +13,12 @@ import { CustomToastComponent } from "../custom-toast/custom-toast.component";
     selector: 'toast-examples',
     templateUrl: './toast-examples.component.html',
     styleUrls: ['./toast-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYToastComponent, DAYIconComponent, DAYToastTriggerDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYCloseButtonComponent]
+    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYToastComponent, DAYIconComponent, DAYToastTriggerDirective, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYCloseButtonComponent]
 })
 export class ToastExamplesComponent {
     toastComponent = viewChild.required<DAYToastComponent>('dayToast');
 
-    toastConfig: IDAYToastConfiguration = {
+    toastConfig: IToastConfiguration = {
         verticalPosition: 'bottom',
         cssClasses: ['toast-directive'],
         timeOut: 5000,
@@ -44,7 +44,7 @@ export class ToastExamplesComponent {
     ];
 
     showToast() {
-        const toastConfig: IDAYToastConfiguration = {
+        const toastConfig: IToastConfiguration = {
             verticalPosition: 'top',
             gap: 100
         };

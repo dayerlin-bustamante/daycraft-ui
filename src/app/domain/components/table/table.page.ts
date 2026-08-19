@@ -6,7 +6,6 @@ import { TableOverviewComponent } from './components/table-overview/table-overvi
 @Component({
     selector: 'table-page',
     templateUrl: './table.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, TableExamplesComponent, TableOverviewComponent]
 })
 export class TablePage { }

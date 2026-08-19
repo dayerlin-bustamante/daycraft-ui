@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule }
 import { DAYCheckboxComponent } from "@dayerlin-bustamante/checkbox";
 import { DAYIconComponent } from "@dayerlin-bustamante/icon";
 import { DAYLabelComponent } from "@dayerlin-bustamante/label";
-import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
+import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
 import { DAYToastComponent, DAYToastTriggerDirective } from "@dayerlin-bustamante/toast";
 import { IApiProperties } from "../../../../../core/interfaces/api-properties.interface";
 
@@ -11,7 +11,7 @@ import { IApiProperties } from "../../../../../core/interfaces/api-properties.in
     selector: 'checkbox-examples',
     templateUrl: './checkbox-examples.component.html',
     styleUrls: ['./checkbox-examples.component.scss'],
-    imports: [DAYCheckboxComponent, ReactiveFormsModule, FormsModule, DAYLabelComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYCheckboxComponent, ReactiveFormsModule, FormsModule, DAYLabelComponent, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class checkboxExamplesComponent implements OnInit {
     form = inject(FormBuilder);

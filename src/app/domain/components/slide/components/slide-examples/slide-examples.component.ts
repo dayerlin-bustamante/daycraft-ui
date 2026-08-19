@@ -3,10 +3,10 @@ import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYSlideBodyComponent, DAYSlideComponent, DAYSlideFooterComponent, DAYSlideHeaderComponent, DAYSlideService, IDAYSlideConfiguration } from '@dayerlin-bustamante/slide';
+import { DAYSlideBodyComponent, DAYSlideComponent, DAYSlideFooterComponent, DAYSlideHeaderComponent, DAYSlideService, ISlideConfiguration } from '@dayerlin-bustamante/slide';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
+import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
@@ -33,7 +33,7 @@ export class SlideExamplesComponent {
     ];
 
     showSlideWithOverlayTmpl() {
-        const slideConfig: IDAYSlideConfiguration = {
+        const slideConfig: ISlideConfiguration = {
             cssClasses: ['component-slide'],
             resize: false,
             overlay: true,
@@ -46,7 +46,7 @@ export class SlideExamplesComponent {
     }
 
     showSlideWithoutOverlayTmpl() {
-        const slideConfig: IDAYSlideConfiguration = {
+        const slideConfig: ISlideConfiguration = {
             cssClasses: ['component-slide'],
             resize: false,
             overlay: false,
@@ -59,7 +59,7 @@ export class SlideExamplesComponent {
     }
 
     showSlideWithResizeTmpl() {
-        const slideConfig: IDAYSlideConfiguration = {
+        const slideConfig: ISlideConfiguration = {
             cssClasses: ['component-slide'],
             resize: true,
             overlay: false,
@@ -72,7 +72,7 @@ export class SlideExamplesComponent {
     }
 
     showSlideWithoutResizeTmpl() {
-        const slideConfig: IDAYSlideConfiguration = {
+        const slideConfig: ISlideConfiguration = {
             cssClasses: ['component-slide'],
             resize: false,
             overlay: true,

@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
-import { DAYPaginatorComponent, IDAYPaginatorChangeEvent } from '@dayerlin-bustamante/paginator';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
+import { DAYPaginatorComponent } from '@dayerlin-bustamante/paginator';
 import { DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
@@ -34,7 +34,7 @@ export class PaginatorOverviewComponent {
     ];
 
     outputsData: IApiProperties[] = [
-        { name: 'paginationChanged: IDAYPaginatorChangeEvent', description: 'Event emitted when the page or items per page changes, including page number, items per page, and skip count.' }
+        { name: 'paginationChanged: IPopoverConfiguration', description: 'Event emitted when the page or items per page changes, including page number, items per page, and skip count.' }
     ];
 
     dataComputeds: IApiProperties[] = [
@@ -49,7 +49,7 @@ export class PaginatorOverviewComponent {
         { name: 'goToFirstPageOnPageChange', description: 'Indicates whether to go to the first page when the page changes.', returns: 'Boolean indicating if the paginator should reset to the first page on page change.', param: '' }
     ];
 
-    changePagination(paginatorConfig: IDAYPaginatorChangeEvent) {
+    changePagination(paginatorConfig: any) {
         this.itemsPerPage.set(paginatorConfig.itemsPerPage);
         this.page.set(paginatorConfig.page);
     }

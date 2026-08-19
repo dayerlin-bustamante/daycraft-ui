@@ -6,7 +6,6 @@ import { TooltipOverviewComponent } from './components/tooltip-overview/tooltip-
 @Component({
     selector: 'tooltip-page',
     templateUrl: './tooltip.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, TooltipExamplesComponent, TooltipOverviewComponent]
 })
 export class TooltipPage { }

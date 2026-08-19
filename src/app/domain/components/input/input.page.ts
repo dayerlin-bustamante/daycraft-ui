@@ -6,7 +6,6 @@ import { InputOverviewComponent } from './components/input-overview/input-overvi
 @Component({
     selector: 'input-page',
     templateUrl: './input.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, InputOverviewComponent, InputExamplesComponent]
 })
 export class InputPage { }

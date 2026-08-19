@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'tabs-overview',
     templateUrl: './tabs-overview.component.html',
     styleUrls: ['./tabs-overview.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYIconComponent, DAYTableComponent, DAYTableColumnComponent, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYIconComponent, DAYTableComponent, DAYTableColumnComponent]
 })
 export class TabsOverviewComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];

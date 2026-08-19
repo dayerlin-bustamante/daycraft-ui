@@ -6,7 +6,6 @@ import { CompoundInputOverviewComponent } from './components/compound-input-over
 @Component({
     selector: 'compound-input-page',
     templateUrl: './compound-input.page.html',
-    styleUrls: ['../../../shared/component-page/component-page.component.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, CompoundInputExamplesComponent, CompoundInputOverviewComponent]
 })
 export class CompoundInputPage {
