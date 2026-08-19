@@ -1,0 +1,42 @@
+<p>The component <code>&lt;day-icon&gt;</code> makes it easier to use Font Awesome icons in your app.</p>
+
+<day-card [shadow]="'small'">
+    <day-card-body>
+        <day-icon [icon]="'day-error'" [iconHover]="'day-error-solid'" class="error" />
+        <day-icon [icon]="'day-circle-chevron-right'" [iconHover]="'day-circle-chevron-right-solid'" class="check" />
+        <day-icon [scope]="'duotone'" [icon]="'home'" />
+        <day-icon [scope]="'classic'" [icon]="'home'" />
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;day/core'</code>
+</p>
+<div class="line-divider"></div>
+
+<h2>Description</h2>
+<p>The component <code>&lt;day-icon&gt;</code> is a wrapper for the <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> icons. It allows you to easily use icons in your application without having to worry about the underlying implementation.</p>
+<p>It supports different icon scopes, such as <code>classic</code> and <code>duotone</code>, which can be set using the <code>scope</code> input property.</p>
+<p>You can also use custom kits, using the scope <code>kit</code>.</p>
+
+<div class="line-divider"></div>
+<h2>Inputs</h2>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="200" name="name" title="Name" />
+    <day-table-column [width]="200" name="description" title="Description" />
+    <day-table-column [width]="140" name="default" title="Default" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Output</h2>
+<div>Not included</div>
+
+<div class="line-divider"></div>
+<h2>Directives</h2>
+<div>Not included</div>
+
+<div class="line-divider"></div>
+<h2>Public methods</h2>
+<div>Not included</div>

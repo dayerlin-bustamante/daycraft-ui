@@ -1,0 +1,130 @@
+<p>
+    <code>&lt;day-dropdown&gt;</code> is a form control for selecting a value from a set of options, similar to the native <code>&lt;select&gt;</code> element.
+</p>
+<p>
+    It supports single and multiple selections, custom templates for items, selection value, header and 'no-item' value, and can be used with reactive forms.
+</p>
+<div class="line-divider"></div>
+
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;day/button'</code>
+</p>
+<p>
+    <code>'&#64;day/core'</code>
+</p>
+<p>
+    <code>'&#64;day/icon'</code>
+</p>
+<p>
+    <code>'&#64;day/checkbox'</code>
+</p>
+<p>
+    <code>'&#64;day/input'</code>
+</p>
+<p>
+    <code>'&#64;day/radio'</code>
+</p>
+<p>
+    <code>'&#64;day/popover'</code>
+</p>
+<p>
+    <code>'&#64;day/skeleton-loader'</code>
+</p>
+<div class="line-divider"></div>
+
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #html>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="keyValue" 
+        [data]="data" 
+        [placeholder]="'Choose a vegetable'" 
+        [keyText]="keyText" 
+        [type]="'dropdown'" 
+        [multiple]="true"
+        [showInputs]="false"
+        [autoclose]="false"
+        [hasSearch]="false"
+        [size]="'small'" /&#62;
+    </pre>
+        </ng-template>                
+                    
+        <ng-template #demo>
+            <div [formGroup]="formGroup">
+                <day-dropdown formControlName="formControl" 
+                    [keyValue]="keyValue" 
+                    [data]="data" 
+                    [placeholder]="'Choose a vegetable'" 
+                    [keyText]="keyText" 
+                    [type]="'dropdown'" 
+                    [multiple]="true"
+                    [showInputs]="false"
+                    [autoclose]="false"
+                    [hasSearch]="false"
+                    [size]="'small'" />
+            </div>
+        </ng-template>
+
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Description</h2>
+<p>The dropdown component depends on the popover component, which will appear when clicked. It will be of type 'fill' when the dropdown type is 'select' and of type 'dropdown' when the dropdown component is of type 'dropdown'.</p>
+<p>By default, the popover will open downward, unless there is not enough space, in which case it will open upward. The animation will be of 'accordion' type for dropdowns of type 'dropdown', and of 'dissolve' type for dropdowns of type 'select'.</p>
+<p>The overlay color depends on the type of dropdown. For the 'select' type, the overlay is <code>rgba(0, 0, 0, 0.3);</code>, while for the 'dropdown' type it is transparent.</p>
+
+<div class="line-divider"></div>
+<h2>Import</h2>
+<p>
+    <code>import &#123; DAYDropdownComponent &#125; from '&#64;dayerlin-bustamante/dropdown';</code>
+</p>
+
+<div class="line-divider"></div>
+<h2>Selector</h2>
+<p>Dropdown:<code> day-dropdown</code></p>
+
+<div class="line-divider"></div>
+<h2>Inputs</h2>
+<day-table [data]="inputsData" [displayedColumns]="inputsDisplayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column name="description" title="Description">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.description"></span>
+        </ng-template>
+    </day-table-column>
+    <day-table-column [width]="120" name="default" title="Default" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Outputs</h2>
+<day-table [data]="outputsData" [displayedColumns]="outputsDisplayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Directives</h2>
+<day-table [data]="directivesData" [displayedColumns]="directivesDisplayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Public methods</h2>
+<h3>DAYDropdownAdapter</h3>
+<day-table [data]="adaptersData" [displayedColumns]="adaptersDisplayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="150" name="name" title="Name" />
+    <day-table-column [width]="340" name="description" title="Description" />
+    <day-table-column [width]="300" name="returns" title="Returns" />
+    <day-table-column [width]="300" name="param" title="Params" />
+</day-table>

@@ -1,0 +1,103 @@
+<p>
+    The component <code>&lt;day-compound-input&gt;</code> is the combination of two form controls (day-dropdown and day-input).
+</p>
+
+<div class="line-divider"></div>
+
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;day/core'</code>
+</p>
+<div class="line-divider"></div>
+
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #html>
+            <pre>
+
+    &#60;day-compound-input&#62;
+        &#60;day-label size="medium"&#62;Phone&#60;/day-label&#62;
+        &#60;day-dropdown [ngModel]="dropdownValue()"
+            [data]="dropdownOptions" 
+            keyValue="id" 
+            keyText="value"
+            type="dropdown" 
+            size="small"
+            [hasSearch]="false"
+            [showInputs]="false"
+            [placeholder]="'...'"&#62;
+            &#60;ng-template DAYDropdownItemTmpl let-item="item"&#62;
+                &#60;day-icon [icon]="item.icon" class="dropdown-icon" /&#62;
+                &#60;span&#62; &#123; &#123; item.value &#125; &#125; &#60;/span&#62;
+            &#60;/ng-template&#62;
+            &#60;ng-template DAYDropdownSelectionTmpl let-item="item"&#62;
+                &#60;day-icon [icon]="item.icon" class="dropdown-icon" /&#62;
+                &#60;span&#62; &#123; &#123; item.value &#125; &#125; &#60;/span&#62;
+            &#60;/ng-template&#62;
+        &#60;/day-dropdown&#62;
+        &#60;day-input [placeholder]="'Phone'" [type]="'number'" [ngModel]="inputValue()" /&#62;
+    &#60;/day-compound-input&#62;
+    </pre>
+        </ng-template>
+
+        <ng-template #demo>
+            <day-compound-input>
+                <day-label size="medium">Phone</day-label>
+                <day-dropdown [ngModel]="dropdownValue()"
+                    [data]="dropdownOptions" 
+                    keyValue="id" 
+                    keyText="value"
+                    type="dropdown" 
+                    size="small"
+                    [hasSearch]="false"
+                    [showInputs]="false"
+                    [placeholder]="'...'">
+                    <ng-template DAYDropdownItemTmpl let-item="item">
+                        <day-icon [icon]="item.icon" class="dropdown-icon" />
+                        <span> {{ item.value }}</span>
+                    </ng-template>
+                    <ng-template DAYDropdownSelectionTmpl let-item="item">
+                        <day-icon [icon]="item.icon" class="dropdown-icon" />
+                        <span>{{ item.value }}</span>
+                    </ng-template>
+                </day-dropdown>
+                <day-input [placeholder]="'Phone'" [type]="'number'" [ngModel]="inputValue()" />
+            </day-compound-input>
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Description</h2>
+<p>The compound-input component combines a day-input field and a day-dropdown selector into a single, cohesive UI element.</p>
+<p>Both the day-input and day-dropdown are implemented as ControlValueAccessor components, enabling seamless integration with Angular's reactive and template-driven forms.</p>
+<p>Additionally, the component can optionally include a day-label component to provide identification for the control.</p>
+<p>This compound structure is particularly useful for scenarios requiring combined input, such as entering a value with a selectable unit or prefix.</p>
+
+<div class="line-divider"></div>
+<h2>Import</h2>
+<p>
+    <code>import &#123; DAYCompoundInputComponent &#125; from '&#64;dayerlin-bustamante/compound-input';</code>
+</p>
+
+<div class="line-divider"></div>
+<h2>Inputs</h2>
+<p>Not included</p>
+
+<div class="line-divider"></div>
+<h2>Outputs</h2>
+<p>Not included</p>
+
+<div class="line-divider"></div>
+<h2>Directives</h2>
+<p>Not included</p>
+
+<div class="line-divider"></div>
+<h2>Public methods</h2>
+<p>Not included</p>

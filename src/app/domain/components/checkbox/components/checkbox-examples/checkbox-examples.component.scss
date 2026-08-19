@@ -1,0 +1,52 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    form {
+        display: flex;
+        gap: var(--spacing-m);
+        margin-top: var(--spacing-m);
+
+        &.form-group-section {
+            flex-direction: column;
+
+            .content-wrapper {
+                display: flex;
+                gap: var(--spacing-m);
+                justify-content: center;
+            }
+        }
+
+        .toggle-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+        }
+    }
+
+    day-checkbox.long-label { 
+        width: 60%;
+    }
+
+    day-card {
+        width: 660px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &.big { 
+            width: 750px;
+        }
+    }
+
+    code.code-html {
+        margin-top: var(--spacing-sm);
+    }
+}

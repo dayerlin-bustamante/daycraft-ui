@@ -41,9 +41,9 @@ export class AutocompleteOverviewComponent {
     ];
 
     directivesData: IApiProperties[] = [
-        { name: 'QBIAutocompleteItemTmplDirective', description: 'Template directive to customize the autocomplete item.' },
-        { name: 'QBIAutocompleteNoItemsTmplDirective', description: 'Template directive to customize the no items message.' },
-        { name: 'QBIAutocompleteLoaderTmplDirective', description: 'Template directive to customize the loading state.' }
+        { name: 'DAYAutocompleteItemTmplDirective', description: 'Template directive to customize the autocomplete item.' },
+        { name: 'DAYAutocompleteNoItemsTmplDirective', description: 'Template directive to customize the no items message.' },
+        { name: 'DAYAutocompleteLoaderTmplDirective', description: 'Template directive to customize the loading state.' }
     ];
 
     selectedColourCodeSimple = signal<string | null>(null);

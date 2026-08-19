@@ -1,0 +1,216 @@
+<h2>Inline calendar examples</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light" [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="default">Default</day-tab>
+            <day-tab [tabTmpl]="rangeDate">Range dates</day-tab>
+            <day-tab [tabTmpl]="disabledDatesTmpl">Disabled dates</day-tab>
+            <day-tab [tabTmpl]="highlightDatesTmpl">Highlight dates</day-tab>
+        </day-tabs>
+
+        <ng-template #default>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDefault">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #rangeDate>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlRangeDate">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoRangeDate">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #disabledDatesTmpl>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDisabledDates">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDisabledDates">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #highlightDatesTmpl>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlHighlightDates">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoHighlightDates">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlDefault>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" 
+    [formControl]="dateControl" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDefault>
+            <day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [formControl]="dateControl" />
+        </ng-template>
+
+        <ng-template #htmlRangeDate>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'"
+    [rangeDate]="true" [formControl]="dateControl1" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoRangeDate>
+            <day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl1" />
+        </ng-template>
+
+        <ng-template #htmlDisabledDates>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'datetime'" [disabledDates]="disabledDate" [autoclose]="true" 
+    [placeholder]="'selected date'" [formControl]="dateControl2" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDisabledDates>
+            <day-datepicker [type]="'datetime'" [disabledDates]="disabledDate" [autoclose]="true" [placeholder]="'selected date'" [formControl]="dateControl2" />
+        </ng-template>
+
+        <ng-template #htmlHighlightDates>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'"
+    [highlightDates]="highlightDates" [formControl]="dateControl3" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoHighlightDates>
+            <day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [highlightDates]="highlightDates" [formControl]="dateControl3" />
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Autoclose or not datepicker</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light" [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="autoclose">Autoclose</day-tab>
+            <day-tab [tabTmpl]="notAutoclose">Not Autoclose</day-tab>
+        </day-tabs>
+
+        <ng-template #autoclose>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlAutoclose">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoAutoclose">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #notAutoclose>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlNotAutoclose">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoNotAutoclose">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+
+        <ng-template #htmlAutoclose>
+            <pre><code class="code-html">
+  &lt;day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'"
+  [rangeDate]="true" [formControl]="dateControl4" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoAutoclose>
+            <day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl4" />   
+        </ng-template>
+
+        <ng-template #htmlNotAutoclose>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'datetime'" [autoclose]="false" [placeholder]="'selected date'" 
+    [formControl]="dateControl5" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoNotAutoclose>
+            <day-datepicker [type]="'datetime'" [autoclose]="false" [placeholder]="'selected date'" [formControl]="dateControl5" />
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Type datepicker examples</h2>
+<day-card class="big" shadow="small">
+    <day-card-body>
+        <day-tabs class="light" [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="date">Date</day-tab>
+            <day-tab [tabTmpl]="datetime">Datetime</day-tab>
+            <day-tab [tabTmpl]="time">Time</day-tab>
+        </day-tabs>
+
+        <ng-template #date>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDate">Html</day-tab>   
+                <day-tab [active]="true" [tabTmpl]="demoDate">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #datetime>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDatetime">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDatetime">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #time>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlTime">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoTime">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlDate>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'date'" [autoclose]="true" [placeholder]="'selected date'" 
+    [formControl]="dateControl6" /&gt;  
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDate>
+            <day-datepicker [type]="'date'" [autoclose]="true" [placeholder]="'selected date'" [formControl]="dateControl6" />      
+        </ng-template>
+        
+        <ng-template #htmlDatetime>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'datetime'" [autoclose]="false" [placeholder]="'selected date'" 
+    [formControl]="dateControl7" /&gt; 
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDatetime>
+            <day-datepicker [type]="'datetime'" [autoclose]="false" [placeholder]="'selected date'" [formControl]="dateControl7" />      
+        </ng-template>
+
+         <ng-template #htmlTime>
+            <pre><code class="code-html">
+    &lt;day-datepicker [type]="'time'" [autoclose]="true" [placeholder]="'selected date'" 
+    [rangeDate]="true" [formControl]="dateControl8" /&gt; 
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoTime>
+            <day-datepicker [type]="'time'" [autoclose]="true" [rangeDate]="true" [placeholder]="'selected date'" [formControl]="dateControl8" />      
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-datepicker can be customized overriding some of its CSS properties.
+</p>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="250" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

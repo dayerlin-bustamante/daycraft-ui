@@ -1,0 +1,41 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    .input-wrapper {
+        margin-top: var(--spacing-xs);
+    }
+    
+    .inputs-container {
+        margin: 16px 0;
+        display: flex;
+        gap: 8px;
+        align-items: baseline;
+    }
+
+    .label {
+        margin-right: 8px;
+    }
+
+    day-card {
+        width: 660px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &.big { 
+            width: 850px;
+        }
+    }
+
+    code.code-html {
+        margin-top: var(--spacing-sm);
+    }
+}
