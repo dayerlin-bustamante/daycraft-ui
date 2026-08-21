@@ -6,6 +6,7 @@ import { TreeOverviewComponent } from './components/tree-overview/tree-overview.
 @Component({
     selector: 'tree-root',
     templateUrl: './tree.component.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [TreeOverviewComponent, TreeExamplesComponent, DAYTabComponent, DAYTabsComponent]
 })
 export class TreePage { }

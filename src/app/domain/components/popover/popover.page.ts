@@ -6,6 +6,7 @@ import { PopoverOverviewComponent } from './components/popover-overview/popover-
 @Component({
     selector: 'popover-page',
     templateUrl: './popover.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, PopoverOverviewComponent, PopoverExamplesComponent]
 })
 export class PopoverPage { }

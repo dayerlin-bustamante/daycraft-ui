@@ -6,6 +6,7 @@ import { DropdownOverviewComponent } from './components/dropdown-overview/dropdo
 @Component({
     selector: 'dropdown-page',
     templateUrl: './dropdown.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, DropdownOverviewComponent, DropdownExamplesComponent]
 })
 export class DropdownPage { }

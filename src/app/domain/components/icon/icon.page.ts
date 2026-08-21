@@ -6,6 +6,7 @@ import { IconOverviewComponent } from './components/icon-overview/icon-overview.
 @Component({
     selector: 'icon-page',
     templateUrl: './icon.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, IconOverviewComponent, IconExamplesComponent]
 })
 export class IconPage { }

@@ -8,7 +8,11 @@ import { IApiProperties } from "../../../core/interfaces/api-properties.interfac
 @Component({
     selector: 'avatar-page',
     templateUrl: './avatar.page.html',
-    imports: [DAYAvatarComponent, DAYTableComponent, DAYTableColumnComponent, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    styleUrls: ['./../../../shared/page-style.scss'],
+    imports: [DAYAvatarComponent, DAYTableComponent, DAYTableColumnComponent, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent],
+    host: {
+        '[class]': "'wrapper-container'"
+    }
 })
 export class AvatarPage {
     displayedColumns: string[] = ['name', 'description', 'default'];

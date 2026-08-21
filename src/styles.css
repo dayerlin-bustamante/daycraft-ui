@@ -14,3 +14,16 @@ body {
 app-root {
   display: block;
 }
+    
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 30px 0 12px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}

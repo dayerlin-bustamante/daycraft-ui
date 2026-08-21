@@ -3,8 +3,8 @@ import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 
 @Component({
     selector: 'progress-bar-page',
-    imports: [DAYTabComponent, DAYTabsComponent],
     templateUrl: './progress-bar.page.html',
-    styleUrls: ['./progress-bar.page.scss',]
+    styleUrls: ['../../../shared/page-style.scss'],
+    imports: [DAYTabComponent, DAYTabsComponent],
 })
 export class ProgressBarPage { }

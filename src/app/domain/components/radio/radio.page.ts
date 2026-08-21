@@ -6,6 +6,7 @@ import { RadioOverviewComponent } from './components/radio-overview/radio-overvi
 @Component({
     selector: 'radio-page',
     templateUrl: './radio.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [RadioOverviewComponent, RadioExamplesComponent, DAYTabComponent, DAYTabsComponent]
 })
 export class RadioPage { }

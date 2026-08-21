@@ -6,6 +6,7 @@ import { CheckboxOverviewComponent } from "./components/checkbox-overview/checkb
 @Component({
     selector: 'checkbox-page',
     templateUrl: './checkbox.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabsComponent, DAYTabComponent, CheckboxOverviewComponent, checkboxExamplesComponent]
 })
 export class CheckboxPage { }

@@ -6,6 +6,7 @@ import { TextareaOverviewComponent } from './components/textarea-overview/textar
 @Component({
     selector: 'textarea-page',
     templateUrl: './textarea.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, TextareaOverviewComponent, TextareaExamplesComponent]
 })
 export class TextareaPage { }

@@ -6,6 +6,7 @@ import { SkeletonOverviewComponent } from './components/skeleton-overview/skelet
 @Component({
     selector: 'skeleton-page',
     templateUrl: './skeleton.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, SkeletonOverviewComponent, SkeletonExamplesComponent]
 })
 export class SkeletonPage { }

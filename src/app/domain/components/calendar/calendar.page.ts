@@ -6,6 +6,7 @@ import { CalendarOverviewComponent } from "./components/calendar-overview/calend
 @Component({
     selector: 'calendar-page',
     templateUrl: './calendar.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, CalendarExamplesComponent, CalendarOverviewComponent]
 })
 export class CalendarPage { }

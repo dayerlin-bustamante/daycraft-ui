@@ -6,6 +6,7 @@ import { AutocompleteOverviewComponent } from "./components/autocomplete-overvie
 @Component({
     selector: 'autocomplete-page',
     templateUrl: './autocomplete.page.html',
+    styleUrls: ['./../../../shared/page-style.scss'],
     imports: [DAYTabsComponent, DAYTabComponent, AutocompleteOverviewComponent, AutocompleteExamplesComponent]
 })
 export class AutocompletePage { }

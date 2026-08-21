@@ -2,15 +2,13 @@
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DAYAutocompleteComponent, DAYAutocompleteItemTmplDirective, DAYAutocompleteLoaderTmplDirective, DAYAutocompleteNoItemsTmplDirective } from '@dayerlin-bustamante/autocomplete';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'autocomplete-overview',
     templateUrl: './autocomplete-overview.component.html',
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYAutocompleteComponent, DAYAutocompleteItemTmplDirective, DAYAutocompleteLoaderTmplDirective, DAYAutocompleteNoItemsTmplDirective, FormsModule, DAYTableComponent, DAYTableColumnComponent]
+    imports: [DAYAutocompleteComponent, DAYAutocompleteItemTmplDirective, DAYAutocompleteLoaderTmplDirective, DAYAutocompleteNoItemsTmplDirective, FormsModule, DAYTableComponent, DAYTableColumnComponent]
 })
 export class AutocompleteOverviewComponent {
 

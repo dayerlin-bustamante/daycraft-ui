@@ -5,6 +5,6 @@ import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
     selector: 'virtual-scroll-page',
     imports: [DAYTabComponent, DAYTabsComponent],
     templateUrl: './virtual-scroll.page.html',
-    styleUrls: ['./virtual-scroll.page.scss']
+    styleUrls: ['../../../shared/page-style.scss'],
 })
 export class VirtualScrollPage { }

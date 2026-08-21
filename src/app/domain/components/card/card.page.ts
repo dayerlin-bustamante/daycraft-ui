@@ -6,6 +6,7 @@ import { CardOverviewComponent } from './components/card-overview/card-overview.
 @Component({
     selector: 'card-page',
     templateUrl: './card.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, CardExamplesComponent, CardOverviewComponent]
 })
 export class CardPage { }

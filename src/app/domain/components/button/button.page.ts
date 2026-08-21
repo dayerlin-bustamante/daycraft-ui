@@ -9,5 +9,4 @@ import { ButtonOverviewComponent } from "./components/button-overview/button-ove
     styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabsComponent, DAYTabComponent, ButtonOverviewComponent, ButtonExamplesComponent]
 })
-
 export class ButtonPage { }

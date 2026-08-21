@@ -6,6 +6,7 @@ import { ModalOverviewComponent } from './components/modal-overview/modal-overvi
 @Component({
     selector: 'modal-page',
     templateUrl: './modal.page.html',
+    styleUrls: ['../../../shared/page-style.scss'],
     imports: [DAYTabComponent, DAYTabsComponent, ModalOverviewComponent, ModalExamplesComponent]
 })
 export class ModalPage { }
