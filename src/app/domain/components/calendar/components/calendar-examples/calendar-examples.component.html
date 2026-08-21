@@ -1,0 +1,60 @@
+<h3>Calendar CSS properties</h3>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="300" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>
+
+<h2>Calendar Examples</h2>
+<h3>Default</h3>
+<day-calendar [config]="calendarConfigOne" (selectedEvent)="onDateSelectedCalendarOne($event)" />    
+
+<h3>Range dates</h3> 
+<day-calendar [config]="calendarConfigTwo" [date]="{start: startDate, end: endDate}" (selectedEvent)="onDateSelectedCalendarTwo($event)" />    
+
+<h3>Disabled dates</h3>
+<day-calendar [config]="calendarConfigThree" [disabledDates]="disabledDate" (selectedEvent)="onDateSelectedCalendarThree($event)" /> 
+
+<h3>Highlight dates</h3>
+<day-calendar [config]="calendarConfigFour" [highlightDates]="highlightDates" (selectedEvent)="onDateSelectedCalendarFour($event)" /> 
+
+<h2>View calendar examples</h2>
+<h3>Days</h3>
+<day-calendar [config]="calendarConfigViewOne" (selectedEvent)="onDateSelectedCalendarViewOne($event)" />  
+
+<h3>Months</h3>
+<day-calendar [config]="calendarConfigViewTwo" (selectedEvent)="onDateSelectedCalendarViewTwo($event)" />   
+
+<h3>Years</h3>
+<day-calendar [config]="calendarConfigViewThree" (selectedEvent)="onDateSelectedCalendarViewThree($event)" />
+
+<h3>Time</h3>
+<day-calendar [config]="calendarConfigViewFour" (selectedEvent)="onDateSelectedCalendarViewFour($event)" />
+
+<h2>Size calendar examples</h2>
+<h3>Small</h3>
+<day-calendar [config]="calendarConfigSmall" (selectedEvent)="onDateSelectedCalendarSmall($event)" />       
+
+<h3>Medium</h3>
+<day-calendar [config]="calendarConfigMedium" (selectedEvent)="onDateSelectedCalendarMedium($event)" />       
+
+<h3>Large</h3>
+<day-calendar [config]="calendarConfigLarge" (selectedEvent)="onDateSelectedCalendarLarge($event)" />       
+
+
+<h2>Modal calendar example</h2>
+<day-button (click)="showModal()">Show modal</day-button>
+
+<day-modal #dayModal>
+    <day-modal-body>
+        <day-calendar [config]="calendarConfigModal" (selectedEvent)="onDateSelectedCalendarModal($event)" />
+    </day-modal-body>
+</day-modal>

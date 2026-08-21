@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-radio-group {
+        display: flex;
+        gap: var(--spacing-m);
+        margin-top: var(--spacing-m);
+    }
+
+    day-card {
+        width: 560px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &.big {
+            width: 700px;
+        }
+    }
+
+    code.code-html {
+        margin-top: var(--spacing-sm);
+    }
+}

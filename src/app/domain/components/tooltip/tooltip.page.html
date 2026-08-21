@@ -1,0 +1,16 @@
+<h2>TOOLTIP</h2>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+        <tooltip-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <tooltip-examples />
+    </ng-template>
+</day-tabs>

@@ -1,0 +1,51 @@
+<p>The component <code>&lt;day-card&gt;</code> is a content container for text, images and actions in the context of a single subject.</p>
+
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;core'</code>
+</p>
+
+<day-card>
+    <day-card-header>
+        <div>Title</div>
+        <div>Subtitle</div>
+    </day-card-header>
+    <day-card-body>
+        <p>Content</p>
+    </day-card-body>
+    <day-card-footer>
+        <day-button>Button</day-button>
+    </day-card-footer>
+</day-card>
+
+<h2>Description</h2>
+<p>The component is a content container for text, images and actions in the context of a single subject.</p>
+
+<h2>Basic card sections</h2>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="340" name="name" title="Element" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<p>
+    <code>import &#123; DAYCardComponent &#125; from '&#64;dayerlin-bustamante/card';</code><br>
+    <code>import &#123; DAYCardHeaderComponent &#125; from '&#64;dayerlin-bustamante/card';</code><br>
+    <code>import &#123; DAYCardBodyComponent &#125; from '&#64;dayerlin-bustamante/card';</code><br>
+    <code>import &#123; DAYCardFooterComponent &#125; from '&#64;dayerlin-bustamante/card';</code><br>
+</p>
+
+<h2>Inputs</h2>
+<day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="230" name="name" title="Name" />
+    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column [width]="180" name="default" title="Default" />
+</day-table>
+
+<h2>Output</h2>
+<div>Not included</div>
+
+<h2>Directives</h2>
+<div>Not included</div>
+
+<h2>Public methods</h2>
+<div>Not included</div>

@@ -1,0 +1,69 @@
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="paginator">Paginator</day-tab>
+        </day-tabs>        
+        <ng-template #paginator>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlPaginator">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoPaginator">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlPaginator>
+            <pre><code class="code-html">
+    &lt;div class="paginator-container"&gt; 
+        &lt;day-paginator 
+            [maxPages]="5" 
+            [page]="page()" 
+            [total]="129" 
+            [itemsPerPage]="itemsPerPage()" 
+            [itemsPerPageOptions]="itemsPerPageOptions" 
+            (paginationChanged)="changePagination($event, 1)" /&gt;       
+
+        &lt;day-paginator 
+            [maxPages]="5" 
+            [page]="page2()" 
+            [total]="129" 
+            [itemsPerPage]="itemsPerPage()" 
+            (paginationChanged)="changePagination($event, 2)" /&gt;
+
+        &lt;day-paginator 
+            [maxPages]="5"
+            [page]="page3()"
+            [total]="129"
+            [itemsPerPage]="itemsPerPage()"
+            (paginationChanged)="changePagination($event, 3)" /&gt;
+    &lt;/div&gt;
+            </code></pre>
+        </ng-template>             
+        <ng-template #demoPaginator>
+            <div class="paginator-container">
+                <day-paginator [maxPages]="5" [page]="page()" [total]="129" [itemsPerPage]="itemsPerPage()" [itemsPerPageOptions]="itemsPerPageOptions" (paginationChanged)="changePagination($event, 1)" />
+
+                <day-paginator [maxPages]="5" [page]="page2()" [total]="129" [itemsPerPage]="itemsPerPage()" (paginationChanged)="changePagination($event, 2)" />
+
+                <day-paginator [maxPages]="5" [page]="page3()" [total]="129" [itemsPerPage]="itemsPerPage()" (paginationChanged)="changePagination($event, 3)" />
+            </div>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-paginator can be customized overriding some of its CSS properties.
+</p>
+<day-table [data]="cssData" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="260" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

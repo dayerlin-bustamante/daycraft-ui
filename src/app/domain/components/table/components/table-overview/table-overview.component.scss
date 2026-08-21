@@ -1,0 +1,33 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    form {
+        display: flex;
+        gap: var(--spacing-m);
+        margin-top: var(--spacing-m);
+    }
+
+    day-card {
+        width: 700px;
+
+        ::ng-deep .day-tab-content-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        day-compound-input {
+            margin-top: var(--spacing-sm);
+        } 
+
+        pre {
+            margin-top: var(--spacing-sm);
+        }
+    }    
+}
+
+.dropdown-icon {
+    font-size: 20px;
+    margin-right: var(--spacing-s);
+}

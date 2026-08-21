@@ -1,0 +1,16 @@
+<h2>SKELETON</h2>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+       <skeleton-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <skeleton-examples />
+    </ng-template>
+</day-tabs>

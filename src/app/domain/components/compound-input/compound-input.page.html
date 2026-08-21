@@ -1,0 +1,16 @@
+<h2>COMPOUND INPUT</h2>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+        <compound-input-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <compound-input-examples />
+    </ng-template>
+</day-tabs>

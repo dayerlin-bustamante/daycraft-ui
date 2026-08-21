@@ -1,18 +1,37 @@
-<day-button size="big" type="primary">¡Click here!</day-button>
-<day-button size="big" type="secondary">¡Click here!</day-button>
-<day-button size="big" type="tertiary">¡Click here!</day-button>
-<day-button size="big" type="action">¡Click here!</day-button>
-<day-button size="big" type="clear">¡Click here!</day-button>
-<day-button size="big" type="neutral">¡Click here!</day-button>
-<day-button disabled size="big" type="primary">¡Click here!</day-button>
+<h2>Button examples</h2>
+<div class="flex flex-wrap gap-4 mt-6">
+    <day-button size="big" type="primary">¡Click here!</day-button>
+    <day-button size="big" type="secondary">¡Click here!</day-button>
+    <day-button size="big" type="tertiary">¡Click here!</day-button>
+    <day-button size="big" type="action">¡Click here!</day-button>
+    <day-button size="big" type="clear">¡Click here!</day-button>
+    <day-button size="big" type="neutral">¡Click here!</day-button>
+    <day-button disabled size="big" type="primary">¡Click here!</day-button>
+    
+    
+    <day-button size="big" type="primary">
+        <day-icon [icon]="'trash'"></day-icon>
+        ¡Click here!
+    </day-button>
+    
+    <day-button size="big" type="primary">
+        ¡Click here!
+        <day-icon [icon]="'trash'"></day-icon>
+    </day-button>
+</div>
 
+<h2>Custom CSS properties</h2>
 
-<day-button size="big" type="primary">
-    <day-icon [icon]="'trash'"></day-icon>
-    ¡Click here!
-</day-button>
-
-<day-button size="big" type="primary">
-    ¡Click here!
-    <day-icon [icon]="'trash'"></day-icon>
-</day-button>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template dayTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template dayTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

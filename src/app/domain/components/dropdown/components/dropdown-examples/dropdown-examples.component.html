@@ -1,0 +1,1191 @@
+<h2>Type</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="select">Select</day-tab>
+            <day-tab [tabTmpl]="dropdown">Dropdown</day-tab>
+        </day-tabs>        
+        <ng-template #select>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSelect">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSelect">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #dropdown>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDropdown">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDropdown">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlSelect>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'select'" 
+        [multiple]="true"
+        [showInputs]="false"
+        [autoclose]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSelect>
+            <day-dropdown 
+            [keyValue]="'id'" 
+            [data]="data" 
+            [placeholder]="'Choose an animal'" 
+            [keyText]="'name'" 
+            [type]="'select'" 
+            [multiple]="true"
+            [showInputs]="false"
+            [autoclose]="false"
+            [hasSearch]="false" />
+        </ng-template>
+
+        <ng-template #htmlDropdown>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [multiple]="true"
+        [showInputs]="false"
+        [autoclose]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoDropdown>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [multiple]="true"
+                [showInputs]="false"
+                [autoclose]="false"
+                [hasSearch]="false" />
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Size</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="medium">Medium</day-tab>
+            <day-tab [tabTmpl]="small">Small</day-tab>
+        </day-tabs>        
+        <ng-template #medium>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMedium">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMedium">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #small>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSmall">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSmall">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlMedium>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'select'" 
+        [multiple]="true"
+        [showInputs]="false"
+        [autoclose]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoMedium>
+            <day-dropdown 
+            [keyValue]="'id'" 
+            [data]="data" 
+            [placeholder]="'Choose an animal'" 
+            [keyText]="'name'" 
+            [type]="'select'" 
+            [multiple]="true"
+            [showInputs]="false"
+            [autoclose]="false"
+            [hasSearch]="false" />
+        </ng-template>
+        <ng-template #htmlSmall>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [multiple]="true"
+        [showInputs]="false"
+        [autoclose]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSmall>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [multiple]="true"
+                [showInputs]="false"
+                [autoclose]="false"
+                [hasSearch]="false" />
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Single selection dropdown</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="singleAutoclose">Autoclose</day-tab>
+            <day-tab [tabTmpl]="singleRadioAutoclose">Inputs with autoclose</day-tab>
+            <day-tab [tabTmpl]="singleRadioNoAutoclose">Inputs with footer</day-tab>
+            <day-tab [tabTmpl]="singleSearch">With search input</day-tab>
+        </day-tabs>  
+        <ng-template #singleAutoclose>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleAutoclose">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleAutoclose">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #singleRadioAutoclose>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleRadioAutoclose">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleRadioAutoclose">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #singleRadioNoAutoclose>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleRadioNoAutoclose">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleRadioNoAutoclose">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #singleSearch>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleSearch">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleSearch">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlSingleAutoclose>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [showInputs]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleAutoclose>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [showInputs]="false"
+                [hasSearch]="false" />
+        </ng-template>
+        <ng-template #htmlSingleRadioAutoclose>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleRadioAutoclose>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [hasSearch]="false" />
+        </ng-template>
+        <ng-template #htmlSingleRadioNoAutoclose>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [autoclose]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleRadioNoAutoclose>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [autoclose]="false"
+                [hasSearch]="false" />
+        </ng-template>
+        <ng-template #htmlSingleSearch>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [autoclose]="false"
+        (searchEvent)="search($event)" /&#62;
+
+    // .ts
+    export class DropdownExamplesComponent implements OnInit &#123;
+        keyText: string = 'name';
+    
+        data: any&#91;&#93; = &#91;
+            &#123; name: 'Elephant', id: 1 &#125;,
+            &#123; name: 'Lion', id: 2 &#125;,
+            &#123; name: 'Tiger', id: 3 &#125;,
+            &#123; name: 'Bear', id: 4 &#125;,
+            &#123; name: 'Wolf', id: 5 &#125;,
+            &#123; name: 'Fox', id: 6 &#125;
+            &#123; name: 'Dog', id: 7 &#125;,
+            &#123; name: 'Cat', id: 8 &#125;,
+            &#123; name: 'Turtle', id: 9 &#125;,
+            &#123; name: 'Dolphin', id: 10 &#125;
+        &#93;;
+    
+        dataToShow = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShow.set(this.data);
+        &#125;
+    
+        search(value: string) &#123;
+            this.dataToShow.set(&#91;...this.data&#93;.filter((item) => 
+                item&#91;this.keyText&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleSearch>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [autoclose]="false"
+                (searchEvent)="search($event)" />
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Multiple selection dropdown</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="multiple">Multiple</day-tab>
+            <day-tab [tabTmpl]="multipleSearch">With search input</day-tab>
+            <day-tab [tabTmpl]="multipleSelectionTmpl">With selection tmpl</day-tab>
+            <day-tab [tabTmpl]="multipleItemTmpl">With item tmpl</day-tab>
+        </day-tabs>  
+        <ng-template #multiple>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultiple">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultiple">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #multipleSearch>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleSearch">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleSearch">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #multipleSelectionTmpl>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleSelectionTmpl">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleSelectionTmpl">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #multipleItemTmpl>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleItemTmpl">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleItemTmpl">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlMultiple>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [showInputs]="false"
+        [hasSearch]="false"
+        [autoclose]="false"
+        [multiple]="true" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoMultiple>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [showInputs]="false"
+                [hasSearch]="false"
+                [autoclose]="false"
+                [multiple]="true" />
+        </ng-template>
+        <ng-template #htmlMultipleSearch>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [autoclose]="false"
+        [multiple]="true"
+        [hasSearch]="true"
+        (searchEvent)="search($event)" /&#62;
+            
+    // .ts
+    export class DropdownExamplesComponent implements OnInit &#123;
+        keyText: string = 'name';
+    
+        data: any&#91;&#93; = &#91;
+            &#123; name: 'Elephant', id: 1 &#125;,
+            &#123; name: 'Lion', id: 2 &#125;,
+            &#123; name: 'Tiger', id: 3 &#125;,
+            &#123; name: 'Bear', id: 4 &#125;,
+            &#123; name: 'Wolf', id: 5 &#125;,
+            &#123; name: 'Fox', id: 6 &#125;
+            &#123; name: 'Dog', id: 7 &#125;,
+            &#123; name: 'Cat', id: 8 &#125;,
+            &#123; name: 'Turtle', id: 9 &#125;,
+            &#123; name: 'Dolphin', id: 10 &#125;
+        &#93;;
+    
+        dataToShow = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShow.set(this.data);
+        &#125;
+    
+        search(value: string) &#123;
+            this.dataToShow.set(&#91;...this.data&#93;.filter((item) => 
+                item&#91;this.keyText&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+    </pre>
+        </ng-template>             
+        <ng-template #demoMultipleSearch>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [hasSearch]="true"
+                [autoclose]="false"
+                [multiple]="true"
+                (searchEvent)="search($event)" />
+        </ng-template>
+        <ng-template #htmlMultipleSelectionTmpl>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [hasSearch]="true"
+        [autoclose]="false"
+        [multiple]="true"&#62;
+        &#60;ng-template DAYDropdownSelectionTmpl let-item="item"&#62;
+            &#60;span&#62;You have chosen &#123; &#123; item.length &#125; &#125; animals&#60;/span&#62; 
+        &#60;/ng-template&#62;
+    &#60;/day-dropdown&#62;
+    </pre>
+        </ng-template>
+        <ng-template #demoMultipleSelectionTmpl>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [autoclose]="false"
+                [multiple]="true">
+                <ng-template DAYDropdownSelectionTmpl let-item="item">
+                    <span>You have chosen {{ item.length }} animals</span> 
+                </ng-template>
+            </day-dropdown>
+        </ng-template>
+        <ng-template #htmlMultipleItemTmpl>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'dropdown'" 
+        [hasSearch]="true"
+        [autoclose]="false"
+        [multiple]="true"&#62;
+        &#60;ng-template DAYDropdownItemTmpl let-item="item" let-index="index"&#62;
+            &#60;span&#62;Animal #&#123; &#123; index + 1 &#125; &#125;: &#123; &#123; item.name &#125; &#125;&#60;/span&#62; 
+        &#60;/ng-template&#62;
+    &#60;/day-dropdown&#62;
+    </pre>
+        </ng-template>
+        <ng-template #demoMultipleItemTmpl>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [type]="'dropdown'" 
+                [autoclose]="false"
+                [multiple]="true">
+                <ng-template DAYDropdownItemTmpl let-item="item" let-index="index">
+                    <span>Animal #{{ index + 1 }}: {{item.name}}</span> 
+                </ng-template>
+            </day-dropdown>
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Single selection select</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="singleSelect">Single</day-tab>
+            <day-tab [tabTmpl]="singleSelectHeader">With header</day-tab>
+            <day-tab [tabTmpl]="singleSelectSearch">With search input</day-tab>
+            <day-tab [tabTmpl]="singleSelectHeaderSearch">With header and search input</day-tab>
+        </day-tabs>  
+        <ng-template #singleSelect>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleSelect">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleSelect">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #singleSelectHeader>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleSelectHeader">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleSelectHeader">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #singleSelectSearch>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleSelectSearch">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleSelectSearch">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #singleSelectHeaderSearch>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSingleSelectHeaderSearch">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSingleSelectHeaderSearch">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlSingleSelect>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [showInputs]="false"
+        [hasSearch]="false" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleSelect>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [showInputs]="false"
+                [hasSearch]="false" />
+        </ng-template>
+        <ng-template #htmlSingleSelectHeader>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [showInputs]="false"
+        [hasSearch]="false"&#62;
+        &#60;ng-template DAYDropdownHeaderTmpl&#62;ANIMALS&#60;/ng-template&#62;
+    &#60;/day-dropdown&#62;
+            
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleSelectHeader>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [showInputs]="false"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'"
+                [hasSearch]="false">
+                <ng-template DAYDropdownHeaderTmpl>ANIMALS</ng-template>
+            </day-dropdown>
+        </ng-template>
+        <ng-template #htmlSingleSelectSearch>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'"
+        [showInputs]="false" 
+        [hasSearch]="true"
+        (searchEvent)="search($event)" /&#62;
+            
+    // .ts
+    export class DropdownExamplesComponent implements OnInit &#123;
+        keyText: string = 'name';
+    
+        data: any&#91;&#93; = &#91;
+            &#123; name: 'Elephant', id: 1 &#125;,
+            &#123; name: 'Lion', id: 2 &#125;,
+            &#123; name: 'Tiger', id: 3 &#125;,
+            &#123; name: 'Bear', id: 4 &#125;,
+            &#123; name: 'Wolf', id: 5 &#125;,
+            &#123; name: 'Fox', id: 6 &#125;
+            &#123; name: 'Dog', id: 7 &#125;,
+            &#123; name: 'Cat', id: 8 &#125;,
+            &#123; name: 'Turtle', id: 9 &#125;,
+            &#123; name: 'Dolphin', id: 10 &#125;
+        &#93;;
+    
+        dataToShow = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShow.set(this.data);
+        &#125;
+    
+        search(value: string) &#123;
+            this.dataToShow.set(&#91;...this.data&#93;.filter((item) => 
+                item&#91;this.keyText&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleSelectSearch>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'"
+                [showInputs]="false"
+                [hasSearch]="true"
+                (searchEvent)="search($event)" />
+        </ng-template>
+        <ng-template #htmlSingleSelectHeaderSearch>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [hasSearch]="true"
+        [showInputs]="false"
+        (searchEvent)="search($event)"&#62;
+        &#60;ng-template DAYDropdownHeaderTmpl&#62;ANIMALS&#60;/ng-template&#62;        
+    &#60;/day-dropdown&#62;
+            
+    // .ts
+    export class DropdownExamplesComponent implements OnInit &#123;
+        keyText: string = 'name';
+    
+        data: any&#91;&#93; = &#91;
+            &#123; name: 'Elephant', id: 1 &#125;,
+            &#123; name: 'Lion', id: 2 &#125;,
+            &#123; name: 'Tiger', id: 3 &#125;,
+            &#123; name: 'Bear', id: 4 &#125;,
+            &#123; name: 'Wolf', id: 5 &#125;,
+            &#123; name: 'Fox', id: 6 &#125;
+            &#123; name: 'Dog', id: 7 &#125;,
+            &#123; name: 'Cat', id: 8 &#125;,
+            &#123; name: 'Turtle', id: 9 &#125;,
+            &#123; name: 'Dolphin', id: 10 &#125;
+        &#93;;
+    
+        dataToShow = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShow.set(this.data);
+        &#125;
+    
+        search(value: string) &#123;
+            this.dataToShow.set(&#91;...this.data&#93;.filter((item) => 
+                item&#91;this.keyText&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+    </pre>
+        </ng-template>             
+        <ng-template #demoSingleSelectHeaderSearch>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'"
+                [showInputs]="false"
+                [hasSearch]="true"
+                (searchEvent)="search($event)">
+                <ng-template DAYDropdownHeaderTmpl>ANIMALS</ng-template>
+            </day-dropdown>
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Multiple selection select</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="multipleSelect">Multiple</day-tab>
+            <day-tab [tabTmpl]="multipleSelectHeader">With header</day-tab>
+            <day-tab [tabTmpl]="multipleSelectSearch">With search input</day-tab>
+            <day-tab [tabTmpl]="multipleSelectHeaderSearch">With header and search input</day-tab>
+        </day-tabs>  
+        <ng-template #multipleSelect>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleSelect">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleSelect">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #multipleSelectHeader>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleSelectHeader">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleSelectHeader">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #multipleSelectSearch>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleSelectSearch">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleSelectSearch">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #multipleSelectHeaderSearch>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlMultipleSelectHeaderSearch">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoMultipleSelectHeaderSearch">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlMultipleSelect>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="data" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'select'" 
+        [showInputs]="false"
+        [hasSearch]="false"
+        [autoclose]="false"
+        [multiple]="true" /&#62;
+    </pre>
+        </ng-template>             
+        <ng-template #demoMultipleSelect>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="data" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'" 
+                [showInputs]="false"
+                [hasSearch]="false"
+                [autoclose]="false"
+                [multiple]="true" />
+        </ng-template>
+        <ng-template #htmlMultipleSelectHeader>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'select'" 
+        [autoclose]="false"
+        [multiple]="true"
+        [hasSearch]="false"&#62;
+        &#60;ng-template DAYDropdownHeaderTmpl&#62;ANIMALS&#60;/ng-template&#62;
+    &#60;/day-dropdown&#62;
+            
+    </pre>
+        </ng-template>             
+        <ng-template #demoMultipleSelectHeader>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'"
+                [hasSearch]="false"
+                [autoclose]="false"
+                [multiple]="true">
+                <ng-template DAYDropdownHeaderTmpl>ANIMALS</ng-template>
+            </day-dropdown>
+        </ng-template>
+        <ng-template #htmlMultipleSelectSearch>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'select'" 
+        [autoclose]="false"
+        [multiple]="true"
+        [hasSearch]="true"
+        (searchEvent)="search($event)" /&#62;
+            
+    // .ts
+    export class DropdownExamplesComponent implements OnInit &#123;
+        keyText: string = 'name';
+    
+        data: any&#91;&#93; = &#91;
+            &#123; name: 'Elephant', id: 1 &#125;,
+            &#123; name: 'Lion', id: 2 &#125;,
+            &#123; name: 'Tiger', id: 3 &#125;,
+            &#123; name: 'Bear', id: 4 &#125;,
+            &#123; name: 'Wolf', id: 5 &#125;,
+            &#123; name: 'Fox', id: 6 &#125;
+            &#123; name: 'Dog', id: 7 &#125;,
+            &#123; name: 'Cat', id: 8 &#125;,
+            &#123; name: 'Turtle', id: 9 &#125;,
+            &#123; name: 'Dolphin', id: 10 &#125;
+        &#93;;
+    
+        dataToShow = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShow.set(this.data);
+        &#125;
+    
+        search(value: string) &#123;
+            this.dataToShow.set(&#91;...this.data&#93;.filter((item) => 
+                item&#91;this.keyText&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+    </pre>
+        </ng-template>             
+        <ng-template #demoMultipleSelectSearch>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'"
+                [hasSearch]="true"
+                [autoclose]="false"
+                [multiple]="true"
+                (searchEvent)="search($event)" />
+        </ng-template>
+        <ng-template #htmlMultipleSelectHeaderSearch>
+            <pre>
+
+    &#60;day-dropdown 
+        [keyValue]="'id'" 
+        [data]="dataToShow()" 
+        [size]="'small'"
+        [placeholder]="'Choose an animal'" 
+        [keyText]="'name'" 
+        [type]="'select'" 
+        [autoclose]="false"
+        [multiple]="true"
+        [hasSearch]="true"
+        (searchEvent)="search($event)"&#62;
+        &#60;ng-template DAYDropdownHeaderTmpl&#62;ANIMALS&#60;/ng-template&#62;        
+    &#60;/day-dropdown&#62;
+            
+    // .ts
+    export class DropdownExamplesComponent implements OnInit &#123;
+        keyText: string = 'name';
+    
+        data: any&#91;&#93; = &#91;
+            &#123; name: 'Elephant', id: 1 &#125;,
+            &#123; name: 'Lion', id: 2 &#125;,
+            &#123; name: 'Tiger', id: 3 &#125;,
+            &#123; name: 'Bear', id: 4 &#125;,
+            &#123; name: 'Wolf', id: 5 &#125;,
+            &#123; name: 'Fox', id: 6 &#125;
+            &#123; name: 'Dog', id: 7 &#125;,
+            &#123; name: 'Cat', id: 8 &#125;,
+            &#123; name: 'Turtle', id: 9 &#125;,
+            &#123; name: 'Dolphin', id: 10 &#125;
+        &#93;;
+    
+        dataToShow = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShow.set(this.data);
+        &#125;
+    
+        search(value: string) &#123;
+            this.dataToShow.set(&#91;...this.data&#93;.filter((item) => 
+                item&#91;this.keyText&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+    </pre>
+        </ng-template>             
+        <ng-template #demoMultipleSelectHeaderSearch>
+            <day-dropdown 
+                [keyValue]="'id'" 
+                [data]="dataToShow()" 
+                [size]="'small'"
+                [placeholder]="'Choose an animal'" 
+                [keyText]="'name'"
+                [hasSearch]="true"
+                [autoclose]="false"
+                [multiple]="true"
+                (searchEvent)="search($event)">
+                <ng-template DAYDropdownHeaderTmpl>ANIMALS</ng-template>
+            </day-dropdown>
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Group</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="flat">Flat</day-tab>
+            <day-tab [tabTmpl]="withFn">Fn</day-tab>
+            <day-tab [tabTmpl]="withTemplate">Template</day-tab>
+        </day-tabs>        
+        <ng-template #flat>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlFlat">Html</day-tab>
+                <day-tab [tabTmpl]="tsFlat">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoFlat">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #withFn>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlWithFn">Html</day-tab>
+                <day-tab [tabTmpl]="tsWithFn">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoWithFn">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #withTemplate>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlWithTemplate">Html</day-tab>
+                <day-tab [tabTmpl]="tsWithTemplate">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoWithTemplate">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlFlat>
+            <pre>
+
+    &#60;day-dropdown 
+        placeholder="Selecciona un país o ciudad" 
+        keyValue="id"
+        keyText="value"
+        groupKeyText="value"
+        groupKeyValue="children"
+        [multiple]="true"
+        [autoclose]="false"
+        [data]="dataToShow()"
+        (searchEvent)="search($event)" /&#62;
+
+    </pre>
+        </ng-template>             
+        <ng-template #demoFlat>
+            <day-dropdown 
+                [data]="dataToShowBig()"
+                placeholder="Selecciona un país o ciudad" 
+                keyValue="id"
+                keyText="value"
+                groupKeyText="value"
+                groupKeyValue="children"
+                [multiple]="true"
+                [autoclose]="false"
+                (searchEvent)="search($event)" />
+        </ng-template>
+        <ng-template #tsFlat>
+            <pre>
+        
+        export class DropdownExamplesComponent implements OnInit &#123;
+        keyTextBig: string = 'value';
+    
+        groupedData: any&#91;&#93; = &#91;
+            &#123;
+                id: 2,
+                value: "Afganistán",
+                children: &#91;
+                    &#123; id: 3, value: "Provincia de Kabul" &#125;,
+                    &#123; id: 4, value: "Provincia de Herat" &#125;,
+                    &#123; id: 5, value: "Provincia de Kandahar" &#125;
+                &#93;
+            &#125;,
+            &#123;
+                id: 6,
+                value: "Albania",
+                children: &#91;
+                    &#123; id: 7, value: "Condado de Tirana" &#125;,
+                    &#123; id: 8, value: "Condado de Durrës" &#125;,
+                    &#123; id: 9, value: "Condado de Vlorë" &#125;
+                &#93;
+            &#125;,
+            &#123;
+                id: 10,
+                value: "Alemania",
+                children: &#91;
+                    &#123; id: 11, value: "Baviera" &#125;,
+                    &#123; id: 12, value: "Berlín" &#125;,
+                    &#123; id: 13, value: "Renania del Norte-Westfalia" &#125;
+                &#93;
+            &#125;
+        &#93;;
+    
+        dataToShowBig = signal&#60;any&#91;&#93;&#62;(&#91;&#93;);
+    
+        ngOnInit() &#123;
+            this.dataToShowBig.set(this.groupedData);
+        &#125;
+    
+        searchBig(value: string) &#123;
+            this.dataToShowBig.set(&#91;...this.groupedData&#93;.filter((item) => 
+                item&#91;this.keyTextBig&#93;.toLowerCase().includes(value.toLowerCase())));
+        &#125;
+    &#125;
+
+    </pre>
+        </ng-template>  
+
+        <ng-template #htmlWithFn>
+            <pre>
+
+    &#60;day-dropdown 
+        [data]="groupedDataWithFn"
+        placeholder="Selecciona un continente o país" 
+        keyValue="code"
+        keyText="title"
+        groupKeyText="groupName"
+        [groupFn]="findDropdownChildren"
+        [multiple]="true"
+        [autoclose]="false" /&#62;
+    </pre>
+        </ng-template>
+        <ng-template #tsWithFn>
+            <pre>
+        
+        export class DropdownExamplesComponent &#123;
+        groupedDataWithFn: any&#91;&#93; = &#91;
+            &#123;
+                groupName: 'Europa',
+                nations: &#91;
+                    &#123; code: 'ESP', title: 'España' &#125;,
+                    &#123; code: 'FRA', title: 'Francia' &#125;
+                &#93;
+            &#125;,
+            &#123;
+                groupName: 'Asia',
+                countries: &#91;
+                    &#123; code: 'JPN', title: 'Japón' &#125;,
+                    &#123; code: 'CHN', title: 'China' &#125;
+                &#93;
+            &#125;
+        &#93;;
+
+        findDropdownChildren = (item: any): any&#91;&#93; => &#123;
+            if (item.nations) return item.nations;
+            if (item.countries) return item.countries;
+            return &#91;&#93;;
+        &#125;
+    &#125;
+
+    </pre>
+        </ng-template>               
+        <ng-template #demoWithFn>
+            <day-dropdown 
+                [data]="groupedDataWithFn"
+                placeholder="Selecciona un continente o país" 
+                keyValue="code"
+                keyText="title"
+                groupKeyText="groupName"
+                [groupFn]="findDropdownChildren"
+                [multiple]="true"
+                [autoclose]="false" />
+        </ng-template>
+
+        <ng-template #htmlWithTemplate>
+            <pre ngNonBindable>
+
+    &#60;day-dropdown 
+        [data]="groupedData"
+        placeholder="Selecciona un país o ciudad" 
+        keyValue="id"
+        keyText="value"
+        groupKeyText="value"
+        groupKeyValue="children"
+        [multiple]="true"
+        [autoclose]="false"&#62;
+        
+        &#60;ng-template DAYDropdownGroupTmpl let-group let-isExpanded="isExpanded"&#62;
+            &#60;div&#62;
+                &#60;span&#62; &#123;&#123; group.value &#125;&#125; &#60;/span&#62;
+            &#60;/div&#62;
+        &#60;/ng-template&#62;
+    &#60;/day-dropdown&#62;
+    </pre>
+        </ng-template>
+        <ng-template #tsWithTemplate>
+            <pre>
+        
+        export class DropdownExamplesComponent &#123;
+    
+            groupedData: any&#91;&#93; = &#91;
+                &#123;
+                    id: 2,
+                    value: "Afganistán",
+                    children: &#91;
+                        &#123; id: 3, value: "Provincia de Kabul" &#125;,
+                        &#123; id: 4, value: "Provincia de Herat" &#125;,
+                        &#123; id: 5, value: "Provincia de Kandahar" &#125;
+                    &#93;
+                &#125;,
+                &#123;
+                    id: 6,
+                    value: "Albania",
+                    children: &#91;
+                        &#123; id: 7, value: "Condado de Tirana" &#125;,
+                        &#123; id: 8, value: "Condado de Durrës" &#125;,
+                        &#123; id: 9, value: "Condado de Vlorë" &#125;
+                    &#93;
+                &#125;,
+                &#123;
+                    id: 10,
+                    value: "Alemania",
+                    children: &#91;
+                        &#123; id: 11, value: "Baviera" &#125;,
+                        &#123; id: 12, value: "Berlín" &#125;,
+                        &#123; id: 13, value: "Renania del Norte-Westfalia" &#125;
+                    &#93;
+                &#125;
+            &#93;;
+        &#125;
+
+    </pre>
+        </ng-template>               
+        <ng-template #demoWithTemplate>
+            <day-dropdown 
+                [data]="groupedData"
+                placeholder="Selecciona un país o ciudad" 
+                keyValue="id"
+                keyText="value"
+                groupKeyText="value"
+                groupKeyValue="children"
+                [multiple]="true"
+                [autoclose]="false">
+                <ng-template DAYDropdownGroupTmpl let-group let-isExpanded="isExpanded">
+                    <div>
+                        <span> {{ group.value }} </span>
+                    </div>
+                </ng-template>
+            </day-dropdown>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-dropdown can be customized overriding some of its CSS properties.
+</p>
+<day-table [data]="cssData" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

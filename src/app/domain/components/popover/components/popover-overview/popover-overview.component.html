@@ -1,0 +1,112 @@
+<p>
+    <code>import &#123; DAYPopoverComponent &#125; from '&#64;day/popover';</code><br>   
+    <code>import &#123; DAYPopoverContentComponent &#125; from '&#64;day/popover';</code><br>   
+    <code>import &#123; DAYPopoverHeaderComponent &#125; from '&#64;day/popover';</code><br>
+    <code>import &#123; DAYPopoverBodyComponent &#125; from '&#64;day/popover';</code><br>
+    <code>import &#123; DAYPopoverFooterComponent &#125; from '&#64;day/popover';</code><br>
+</p>
+
+<h2>Selector</h2>
+<p>Popover: <code>day-popover</code></p>
+<p>Popover content: <code>day-popover-content</code></p>
+<p>Popover header: <code>day-popover-header</code></p>
+<p>Popover body: <code>day-popover-body</code></p>
+<p>Popover footer: <code>day-popover-footer</code></p>
+
+<h2>Injector</h2>
+<p>Injection token for providing the popover configuration. This token is used to inject an instance of `<code>IDAYPopoverConfiguration</code>` into Angular components or services. It has a default configuration, injecting a new configuration is optional.</p>
+<p>Injection token to access the popover helper, enabling dynamic text handling. Through this mechanism, the displayed content can adapt to different cultures, ensuring that labels and messages are properly translated according to the user's language settings.</p>
+
+<h2>Inputs trigger directive</h2>
+<day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="300" name="name" title="Name" />
+    <day-table-column [width]="570" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<h2>Output</h2>
+<p>Not included.</p>
+
+<h2>Directives</h2>
+<p>The DAYPopoverTriggerDirective enables any element to trigger a popover, rendering the defined template or component with its configured behavior and style.</p>
+
+<h2>Public methods</h2>
+<day-table [data]="dataComputedsEvent" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="300" name="name" title="Name" />
+    <day-table-column [width]="570" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<p>The <code>DAYPopoverContainer</code> component manages the display, positioning, and animations of a popover in Angular. It adapts dynamically to the available screen space, applies configurable styles, and coordinates smooth open/close animations. It is complemented by the <code>DAYPopoverTrigger directive</code>, which allows any element to easily trigger a popover.</p>
+
+<div class="line-divider"></div>
+<h2>Dependencies</h2>
+<p><code>'&#64;day/core'</code></p>
+<p><code>'&#64;day/overlay'</code></p>
+
+<div class="line-divider"></div>
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+        
+        <ng-template #html>
+            <pre><code>
+    &lt;day-button (click)="showPopover($event)" size="big"&gt;
+        Show Popover
+    &lt;/day-button&gt;
+    &lt;day-popover #dayPopover&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover 1 Title&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover 1
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Footer&lt;/day-button&gt;   
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+            </code></pre>
+        </ng-template>                
+        
+        <ng-template #demo>
+            <day-button (click)="showPopover($event)" size="big">Show Popover</day-button>
+            <day-popover #dayPopover>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover 1 Title</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover 1
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Footer</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+        </ng-template>
+        
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Description</h2>
+<div>
+    <ul>
+        <li>Implements the IDAYDialogElement interface to integrate with the internal dialog system.</li>
+        <li>Dynamically calculates positioning (top, left) based on behavior (inject, dropdown, fill), spacing configuration, and anchor dimensions.</li>
+        <li>Uses ResizeObserver and reactive signals to track content size changes.</li>
+        <li>Manages enter/leave animations via AnimationBuilder, supporting fade, open, and close transitions.</li>
+        <li>Exposes custom CSS properties to control dimensions and the arrow polygon styling.</li>
+        <li>Listens to global resize events with fromEvent and debounceTime to recalculate positioning.</li>
+        <li>Applies dynamic CSS classes based on configuration (cssClasses) and computed position.</li>
+        <li>The DAYPopoverTrigger directive uses DAYPopoverService to create popovers with dynamic templates and configuration.</li>
+        <li>Supports multiple popover behaviors including inject, dropdown, and fill for versatile UI integration.</li>
+        <li>CustomPosition support for precise control over popover placement.</li>
+    </ul>
+</div>

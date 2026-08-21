@@ -1,0 +1,222 @@
+<h2>Overlay</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="withOverlay">With Overlay</day-tab>
+            <day-tab [tabTmpl]="withoutOverlay">Without Overlay</day-tab>
+        </day-tabs>        
+        <ng-template #withOverlay>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlWithOverlay">Html</day-tab>
+                <day-tab [tabTmpl]="tsWithOverlay">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoWithOverlay">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #withoutOverlay>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlWithoutOverlay">Html</day-tab>
+                <day-tab [tabTmpl]="tsWithoutOverlay">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoWithoutOverlay">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlWithOverlay>
+            <pre><code>
+    &#60;day-slide #daySlide&#62;
+        &#60;day-slide-header&#62;
+            &#60;h3&#62; Title&#60;/h3&#62;
+        &#60;/day-slide-header&#62;
+        &#60;day-slide-body&#62;
+            &#60;p&#62;Body&#60;/p&#62;
+        &#60;/day-slide-body&#62;
+        &#60;day-slide-footer&#62;
+            &#60;day-button (click)="closeSlide()" [size]="'small'"&#62;Close&#60;/day-button&#62;  
+        &#60;/day-slide-footer&#62;
+    &#60;/day-slide&#62;
+            </code></pre>
+        </ng-template>     
+        <ng-template #tsWithOverlay>
+            <pre ngNonBindable><code>
+const slideConfig: DAYSlideConfiguration = &#123;
+    overlay: true,
+&#125;;    
+            </code></pre>
+        </ng-template>         
+        <ng-template #demoWithOverlay>
+            <ng-container>
+                <day-button (click)="showSlideWithOverlayTmpl()" size="big">Show slide</day-button>
+            </ng-container>
+            <day-slide #daySlideWithOverlay>
+                <day-slide-header>
+                    <h3>Title</h3>
+                </day-slide-header>
+                <day-slide-body>
+                    <p>Body</p>
+                </day-slide-body>
+                <day-slide-footer>
+                    <day-button (click)="closeSlide()" [size]="'small'">Close</day-button>
+                </day-slide-footer>
+            </day-slide>
+        </ng-template>
+
+        <ng-template #htmlWithoutOverlay>
+            <pre><code>
+    &#60;day-slide #daySlide&#62;
+        &#60;day-slide-header&#62;
+            &#60;h3&#62; Title&#60;/h3&#62;
+        &#60;/day-slide-header&#62;
+        &#60;day-slide-body&#62;
+            &#60;p&#62;Body&#60;/p&#62;
+        &#60;/day-slide-body&#62;
+        &#60;day-slide-footer&#62;
+            &#60;day-button (click)="closeSlide()" [size]="'small'"&#62;Close&#60;/day-button&#62;  
+        &#60;/day-slide-footer&#62;
+    &#60;/day-slide&#62;
+
+            </code></pre>
+        </ng-template>        
+        <ng-template #tsWithoutOverlay>
+            <pre ngNonBindable><code>
+const slideConfig: DAYSlideConfiguration = &#123;
+    overlay: false,
+&#125;;    
+            </code></pre>
+        </ng-template>     
+        <ng-template #demoWithoutOverlay>
+            <ng-container>
+                <day-button (click)="showSlideWithoutOverlayTmpl()" size="big">Show slide</day-button>
+            </ng-container>
+            <day-slide #daySlideWithoutOverlay>
+                <day-slide-header>
+                    <h3>Title</h3>
+                </day-slide-header>
+                <day-slide-body>
+                    <p>Body</p>
+                </day-slide-body>
+                <day-slide-footer>
+                    <day-button (click)="closeSlide()" [size]="'small'">Close</day-button>
+                </day-slide-footer>
+            </day-slide>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Resize</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="withResize">With Resize</day-tab>
+            <day-tab [tabTmpl]="withoutResize">Without Resize</day-tab>
+        </day-tabs>        
+        <ng-template #withResize>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlWithResize">Html</day-tab>
+                <day-tab [tabTmpl]="tsWithResize">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoWithResize">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #withoutResize>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlWithoutResize">Html</day-tab>
+                <day-tab [tabTmpl]="tsWithoutResize">TS</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoWithoutResize">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlWithResize>
+            <pre><code>
+    &#60;day-slide #daySlide&#62;
+        &#60;day-slide-header&#62;
+            &#60;h3&#62; Title&#60;/h3&#62;
+        &#60;/day-slide-header&#62;
+        &#60;day-slide-body&#62;
+            &#60;p&#62;Body&#60;/p&#62;
+        &#60;/day-slide-body&#62;
+        &#60;day-slide-footer&#62;
+            &#60;day-button (click)="closeSlide()" [size]="'small'"&#62;Close&#60;/day-button&#62;  
+        &#60;/day-slide-footer&#62;
+    &#60;/day-slide&#62;
+            </code></pre>
+        </ng-template>     
+        <ng-template #tsWithResize>
+            <pre ngNonBindable><code>
+const slideConfig: DAYSlideConfiguration = &#123;
+    resize: true,
+&#125;;    
+            </code></pre>
+        </ng-template>         
+        <ng-template #demoWithResize>
+            <ng-container>
+                <day-button (click)="showSlideWithResizeTmpl()" size="big">Show slide</day-button>
+            </ng-container>
+            <day-slide #daySlideWithResize>
+                <day-slide-header>
+                    <h3>Title</h3>
+                </day-slide-header>
+                <day-slide-body>
+                    <p>Body</p>
+                </day-slide-body>
+                <day-slide-footer>
+                    <day-button (click)="closeSlide()" [size]="'small'">Close</day-button>
+                </day-slide-footer>
+            </day-slide>
+        </ng-template>
+
+        <ng-template #htmlWithoutResize>
+            <pre><code>
+    &#60;day-slide #daySlide&#62;
+        &#60;day-slide-header&#62;
+            &#60;h3&#62; Title&#60;/h3&#62;
+        &#60;/day-slide-header&#62;
+        &#60;day-slide-body&#62;
+            &#60;p&#62;Body&#60;/p&#62;
+        &#60;/day-slide-body&#62;
+        &#60;day-slide-footer&#62;
+            &#60;day-button (click)="closeSlide()" [size]="'small'"&#62;Close&#60;/day-button&#62;  
+        &#60;/day-slide-footer&#62;
+    &#60;/day-slide&#62;
+            </code></pre>
+        </ng-template>        
+        <ng-template #tsWithoutResize>
+            <pre ngNonBindable><code>
+const slideConfig: DAYSlideConfiguration = &#123;
+    resize: false,
+&#125;;
+            </code></pre>
+        </ng-template>     
+        <ng-template #demoWithoutResize>
+            <ng-container>
+                <day-button (click)="showSlideWithoutResizeTmpl()" size="big">Show slide</day-button>
+            </ng-container>
+            <day-slide #daySlideWithoutResize>
+                <day-slide-header>
+                    <h3>Title</h3>
+                </day-slide-header>
+                <day-slide-body>
+                    <p>Body</p>
+                </day-slide-body>
+                <day-slide-footer>
+                    <day-button (click)="closeSlide()" [size]="'small'">Close</day-button>
+                </day-slide-footer>
+            </day-slide>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Custom CSS properties</h2>
+<p>Styles of day-slide, day-slide-body, day-slide-header and day-slide-footer can be customized overriding some of their CSS properties.</p>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+
+    day-card {
+        width: 460px;
+
+        ::ng-deep .day-tab-content-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    day-toggle {
+        margin-top: var(--spacing-sm);
+
+        day-icon {
+            font-size: 16px;
+        }
+    } 
+}

@@ -1,0 +1,89 @@
+<p>
+    The component <code>&lt;day-checkbox&gt;</code> is a form control that provides the same
+    functionality as a native <code> &lt;input type="checkbox"&gt;</code>, enhanced with DAY Design styling.
+    <code>import &#123; DAYCheckboxComponent &#125; from '&#64;dayerlin-bustamante/checkbox';</code>
+</p>
+
+<h2>Dependencies</h2>
+<p><code>'&#64;core'</code></p>
+<p><code>'&#64;icon'</code></p>
+
+<h2>Selector</h2>
+<p>Checkbox:<code> day-checkbox</code></p>
+
+<form [formGroup]="formGroup" class="input-wrapper">
+    <day-checkbox formControlName="formControl" [id]="'1'">
+        <day-label>
+            <span class="label">Checkbox example</span>
+        </day-label>
+    </day-checkbox>
+    <day-checkbox [indeterminate]="indeterminate" formControlName="formControlIndeterminate" [id]="'2'">
+        <day-label>
+            <span class="label">Checkbox indeterminate</span>
+        </day-label>
+    </day-checkbox>
+    <day-checkbox formControlName="formControlDisabled" [id]="'3'">
+        <day-label>
+            <span class="label">Checkbox disabled</span>
+        </day-label>
+    </day-checkbox>
+</form>
+<form>
+    <day-checkbox type="toggle">
+        <day-label>
+            <span class="label">Toggle example</span>
+        </day-label>
+    </day-checkbox>
+    <day-checkbox type="toggle" [(ngModel)]="toggleValue" name="toggleValue" [disabled]="true">
+        <day-label>
+            <span class="label">Toggle disabled</span>
+        </day-label>
+    </day-checkbox>
+</form>
+<br>
+
+<h2>Checkbox label</h2>
+<p>
+    This label must be used with <code>&lt;day-label&gt;</code> component and can be positioned before or after the <code> &lt;input type="checkbox"&gt;</code> by setting the labelPosition property to 'before' or 'after' in <code> &lt;day-checkbox&gt;</code>.
+</p>
+
+<h2>Checkbox types</h2>
+<p>
+    The checkbox can be used as a toggle switch by setting the <code>type</code> property to <code>toggle</code>. This will change the appearance of the checkbox to look like a toggle switch.
+</p>
+
+<h2>Use with &#64;angular/forms</h2>
+<p>
+    Supports both FormsModule and ReactiveFormsModule.
+</p>
+
+<h2>Indeterminate state</h2>
+<p>
+    Supports an indeterminate state and can be checked or unchecked. This checkbox is often used for a list of multiple checkboxes where it is indeterminate whether any of them are checked. It can be checked to select all items in the list as checked.
+</p>
+<p>
+    This state is only applicable to the checkbox and not to the toggle switch.
+</p>
+
+<h2>Inputs</h2>
+<day-table [data]="dataInputsButton" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="250" name="name" title="Name" />
+    <day-table-column [width]="400" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<h2>Output</h2>
+<p>Not included.</p>
+
+<h2>Computes and internal events</h2>
+<day-table [data]="dataComputedsEvent" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="250" name="name" title="Name" />
+    <day-table-column [width]="400" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<h2>Directives</h2>
+<p>Not included.</p>
+
+<h2>Public methods</h2>
+<p>Not included.</p>

@@ -1,0 +1,62 @@
+<p>
+    A configurable text area component that allows the input of multiple lines of text. It exposes properties to control its state (e.g. disabled), initial content and validation.
+</p>
+
+<h2>Import</h2>
+<p>
+    <code>import &#123; DAYTextareaComponent &#125; from '&#64;dayerlin-bustamante/textarea';</code>
+</p>
+
+<h2>Dependencies</h2>
+<code>'&#64;angular/forms': Required for integration with reactive forms (e.g. formGroup, formControlName)</code>
+<code>'&#64;day/core': Required for core functionalities and shared components</code>
+
+<h2>Selectors</h2>
+<p>Textarea: <code>day-textarea</code></p>
+
+<h2>Inputs</h2>
+<day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="400" name="name" title="Name" />
+    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<h2>Outputs</h2>
+<p>Not included</p>
+
+<h2>Directives</h2>
+<p>Not included</p>
+
+<h2>Public methods</h2>
+<p>Not included</p>
+
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+
+        <ng-template #html>
+            <pre>
+
+    &#60;div [formGroup]=&#34;formGroup&#34; class=&#34;input-wrapper&#34; #bonded3&#62;
+        &#60;day-input formControlName=&#34;formControlDisabled&#34; placeholder=&#34;Enter text&#34;&#62; 
+            &#60;day-label&#62;Label example&#60;/day-label&#62;
+        &#60;/day-input&#62;
+    &#60;/div&#62;
+            </pre>
+        </ng-template>                
+                    
+        <ng-template #demo>
+            <day-textarea placeholder="Enter text">
+                    <day-label>Label example</day-label>
+                </day-textarea>
+        </ng-template>
+    </day-card-body>
+</day-card>
+<div class="line-divider"></div>
+
+<h2>Description</h2>
+<p>The <code>day-textarea</code> component provides a multi-line text input field, designed to easily integrate with Angular's reactive forms.</p>

@@ -1,0 +1,109 @@
+<p>The <code>&lt;day-slide&gt;</code> component provides a highly configurable sliding panel (sidebar) that emerges from the side of the screen. It is designed to display contextual content or related actions without leaving the current view. It exposes settings to control its appearance, behavior, and how it integrates with the main page content.</p>
+
+<h2>Import</h2>
+<p>
+    <code>import &#123; DAYSlideComponent &#125; from '&#64;dayerlin-bustamante/slide';</code><br>
+    <code>import &#123; DAYSlideHeaderComponent &#125; from '&#64;dayerlin-bustamante/slide';</code><br>
+    <code>import &#123; DAYSlideBodyComponent &#125; from '&#64;dayerlin-bustamante/slide';</code><br>
+    <code>import &#123; DAYSlideFooterComponent &#125; from '&#64;dayerlin-bustamante/slide';</code>
+</p>
+
+<h2>Selectors</h2>
+<day-table [data]="dataSelector" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="340" name="name" title="Element" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<h2>Inputs</h2>
+<day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="340" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<h2>Output</h2>
+<day-table [data]="dataOutputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="340" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<h2>Directives</h2>
+<day-table [data]="dataDirectives" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="340" name="name" title="Name" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<h2>Public methods</h2>
+<p>Method create in <code>DAYSlideService</code>:</p>
+<p>Creates and displays a slide dialog component.</p>
+<p>
+    This method instantiates the specified component inside a slide dialog, applies the provided configuration,
+    and attaches the dialog (and optional overlay) to the DOM. It returns a reference to the dialog for further interaction.
+</p>
+<p><code>component</code> - The component to render inside the slide dialog. Can be an <code>IDAYDialogTmpl</code> or any Angular component.</p>
+<p><code>config</code> - Optional configuration object to customize the dialog's behavior and appearance.</p>
+<p><code>returns</code> - A <code>DAYDialogRef</code> instance representing the created dialog, allowing for programmatic control.</p>
+
+<div class="line-divider"></div>
+<h2>Dependencies</h2>
+<p>
+    <code>'&#64;dayerlin-bustamante/core'</code>
+</p>
+
+<div class="line-divider"></div>
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+        
+        <ng-template #html>
+            <pre><code>                
+    &#60;day-slide #daySlide&#62;
+        &#60;day-slide-header&#62;
+            &#60;h3&#62;Title&#60;/h3&#62;
+        &#60;/day-slide-header&#62;
+        &#60;day-slide-body&#62;
+            &#60;p&#62;Body&#60;/p&#62;
+        &#60;/day-slide-body&#62;
+        &#60;day-slide-footer&#62;
+            &#60;day-button (click)="closeSlide()" [size]="'small'">Close&#60;/day-button&#62;  
+        &#60;/day-slide-footer&#62;
+    &#60;/day-slide&#62;
+            </code></pre>
+        </ng-template>                
+        
+        <ng-template #demo>
+            <ng-container>
+                <day-button (click)="showSlideTmpl()" size="big">Show slide</day-button>
+            </ng-container>
+            <day-slide #daySlide>
+                <day-slide-header>
+                    <h3>Title</h3>
+                </day-slide-header>
+                <day-slide-body>
+                    <p>Body</p>
+                </day-slide-body>
+                <day-slide-footer>
+                    <day-button (click)="closeSlide()" [size]="'small'">Close</day-button>
+                </day-slide-footer>
+            </day-slide>
+        </ng-template>
+        
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Description</h2>
+<div>
+    <ul>
+        <li>Utilizes a main container component (<code>day-slide-container</code>) to manage the structure and positioning of the sliding panel.</li>
+        <li>Allows content projection for header (<code>day-slide-header</code>), body (<code>day-slide-body</code>), and footer (<code>day-slide-footer</code>) sections, offering flexibility in internal layout.</li>
+        <li>Integrates with <code>DAYSlideService</code> for programmatic creation and management of slide instances.</li>
+        <li>Supports configuration for initial, minimum, and maximum width, as well as user-resizable functionality if enabled (via <code>DAYResizeComponent</code>).</li>
+        <li>Can display an optional overlay layer behind the slide to focus user attention, managed by <code>DAYOverlayComponent</code>.</li>
+        <li>Entry and exit animations are controlled using Angular Animations for a smooth user experience.</li>
+        <li>Configuration is provided via the <code>DAY_SLIDE_CONFIGURATION</code> injection token, allowing for global and per-instance adjustments.</li>
+    </ul>
+</div>

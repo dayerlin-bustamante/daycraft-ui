@@ -1,0 +1,16 @@
+<h2>TOGGLE</h2>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+        <toggle-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <toggle-examples />
+    </ng-template>
+</day-tabs>

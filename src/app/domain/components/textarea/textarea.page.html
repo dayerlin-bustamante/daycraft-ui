@@ -1,0 +1,16 @@
+<h2>TEXTAREA</h2>
+<day-tabs>
+    <day-tab [active]="true" [tabTmpl]="overview">
+        Overview
+    </day-tab>
+    <ng-template #overview>
+        <textarea-overview />
+    </ng-template>
+
+    <day-tab [tabTmpl]="examples">
+        Examples
+    </day-tab>
+    <ng-template #examples>
+        <textarea-examples />
+    </ng-template>
+</day-tabs>

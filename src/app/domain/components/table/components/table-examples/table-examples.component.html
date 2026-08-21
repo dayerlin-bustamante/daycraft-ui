@@ -1,0 +1,291 @@
+<h2>Table</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="simple">Simple</day-tab>
+            <day-tab [tabTmpl]="grouped">Grouped</day-tab>
+            <day-tab [tabTmpl]="tracker">Tracker</day-tab>
+        </day-tabs>        
+        <ng-template #simple>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlSimple">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoSimple">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #grouped>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlGrouped">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoGrouped">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #tracker>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlTracker">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoTracker">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlSimple>
+             <pre><code class="code-html">
+    &lt;day-table [data]="data" [displayedColumns]="displayedColumns" [lockedColumns]="lockedColumns"   
+    [selectableRows]="true" [orderableColumns]="false" [checkeableRows]="false"&gt;
+        &lt;day-table-column name="name" title="Name"&gt;
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Name
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                &#123; &#123; item.name &#125; &#125;
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableFooterTmpl&gt;
+                All names
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+        &lt;day-table-column name="code" title="Code"&gt;
+            &lt;ng-template DAYTableCellTmpl="code" let-item="item"&gt;
+                &#123; &#123; item.code &#125; &#125;
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+        &lt;day-table-column name="color" title="Color" /&gt;   
+        &lt;day-table-column name="brand"&gt;
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Brand
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                &#123; &#123; item.brand &#125; &#125;
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableFooterTmpl&gt;
+                All brand
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+        &lt;day-table-column name="year" title="Year" /&gt;
+    &lt;/day-table&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoSimple>
+            <day-table [data]="data" [displayedColumns]="displayedColumnsTable" [lockedColumns]="lockedColumns" [selectableRows]="true" [orderableColumns]="false" [checkeableRows]="false">
+                <day-table-column name="name" title="Name">
+                    <ng-template DAYTableHeaderTmpl>
+                        Name
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.name }}
+                    </ng-template>
+                    <ng-template DAYTableFooterTmpl>
+                        All names
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="code" title="Code">
+                    <ng-template DAYTableCellTmpl="code" let-item="item">
+                    {{ item.code }}
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="color" title="Color" />
+                <day-table-column name="brand">
+                    <ng-template DAYTableHeaderTmpl>
+                        Brand
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.brand }}
+                    </ng-template>
+                    <ng-template DAYTableFooterTmpl>
+                        All brand
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="year" title="Year" />
+            </day-table>
+        </ng-template>
+
+        <ng-template #htmlGrouped>
+             <pre><code class="code-html">
+    &lt;day-table [data]="dataGrouped" [displayedColumns]="displayedColumns" 
+    [groupedColumns]="groupedColumns" [selectableRows]="true"&gt;
+        &lt;ng-template DAYTableActionsTmpl let-item="item" let-index="index"&gt;
+            &lt;day-icon [icon]="'day-edit'" (click)="$event.stopPropagation(); edit(item)" /&gt;
+            &lt;day-icon class="table-actions-active" [icon]="'day-chat'" (click)="$event.stopPropagation(); comment(item)" /&gt;   
+        &lt;/ng-template&gt;
+
+        &lt;ng-template DAYTableGroupActionsTmpl let-key="key" let-value="value" let-items="items" let-parentValues="parentValues"&gt;
+            &lt;div class="actions-grouped"&gt;
+                &lt;day-icon [icon]="'day-edit'" (click)="$event.stopPropagation(); editGroup(key, value, items, parentValues)" /&gt;
+            &lt;/div&gt;
+        &lt;/ng-template&gt;
+
+        &lt;day-table-column name="name" title="Name" [hasActions]="true" /&gt;
+
+        &lt;day-table-column name="code" title="Code" [hasActions]="true" [width]="120"&gt;
+
+        &lt;day-table-column name="year" title="Year" [hasActions]="true" [width]="150"&gt;
+            &lt;ng-template DAYTableGroupTmpl let-value="value" let-groupData="groupData"&gt;
+                 &#123; &#123; value &#125; &#125; # &#123; &#123; groupData.length &#125; &#125;
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+
+        &lt;day-table-column name="color" title="Color" /&gt;
+
+        &lt;day-table-column name="brand"&gt;
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Brand
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                &#123; &#123; item.brand &#125; &#125;
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+
+        &lt;day-table-column name="plate" title="Plate" [hasActions]="true" /&gt;
+    &lt;/day-table&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoGrouped>
+            <day-table [data]="dataGrouped" [displayedColumns]="displayedColumnsTable" [groupedColumns]="groupedColumns" [selectableRows]="true">
+                <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+                    <day-icon [icon]="'day-edit'" (click)="$event.stopPropagation(); edit(item)" />
+                    <day-icon class="table-actions-active" [icon]="'day-chat'" (click)="$event.stopPropagation(); comment(item)" />
+                </ng-template>
+                <ng-template DAYTableGroupActionsTmpl let-key="key" let-value="value" let-items="items" let-parentValues="parentValues">
+                    <div class="actions-grouped">
+                        <day-icon [icon]="'day-edit'" (click)="$event.stopPropagation(); editGroup(key, value, items, parentValues)" />
+                    </div>
+                </ng-template>
+                <day-table-column name="name" title="Name" [hasActions]="true" />
+                <day-table-column name="code" title="Code" [hasActions]="true" [width]="120" />
+                <day-table-column name="year" title="Year" [hasActions]="true" [width]="150">
+                    <ng-template DAYTableGroupTmpl let-value="value" let-groupData="groupData">
+                        {{ value }} #{{ groupData.length }} 
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="color" title="Color" />
+                <day-table-column name="brand">
+                    <ng-template DAYTableHeaderTmpl>
+                        Brand
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.brand }}
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="plate" title="Plate" [hasActions]="true" />
+            </day-table>
+        </ng-template>
+
+        <ng-template #htmlTracker>
+             <pre><code class="code-html">
+    &lt;day-table [data]="data" [displayedColumns]="displayedColumns" 
+    [lockedColumns]="lockedColumns" [selectableRows]="true" [orderableColumns]="true" 
+    [checkeableRows]="true" [resizableColumns]="true" #dayTable&gt;
+        &lt;ng-template DAYTableActionsTmpl let-item="item" let-index="index"&gt;
+            &lt;day-icon class="details-icon" [class.show]="detailsIndexes().includes(index)" 
+            [icon]="'day-circle-chevron-right'" (click)="$event.stopPropagation(); 
+            showDetails(index)" /&gt;
+            &#64;if (item.year &gt; 2015) &#123;
+                &lt;day-icon class="table-actions-active" [icon]="'day-edit'" (click)="$event.stopPropagation(); edit(item)" /&gt;
+            &#125;
+            &lt;day-icon [icon]="'day-chat'" (click)="$event.stopPropagation(); comment(item)" /&gt;
+        &lt;/ng-template&gt;
+
+        &lt;ng-template DAYTableRowDetailsTmpl let-item="item"&gt;
+            &lt;div&gt; &#123; &#123; item.name &#125; &#125;&lt;/div&gt;
+            &lt;div&gt; &#123; &#123; item.code &#125; &#125;&lt;/div&gt;
+        &lt;/ng-template&gt;
+
+        &lt;day-table-column name="name" title="Name" [hasActions]="true" [width]="280"&gt;  
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Name
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                 &#123; &#123; item.name &#125; &#125;
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableFooterTmpl&gt;
+                All names
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+
+        &lt;day-table-column name="code" title="Code"&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                 &#123; &#123; item.code &#125; &#125;
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+
+        &lt;day-table-column name="color" title="Color" /&gt;
+
+        &lt;day-table-column name="brand"&gt;
+            &lt;ng-template DAYTableHeaderTmpl&gt;
+                Brand
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableCellTmpl let-item="item"&gt;
+                &#123; &#123; item.brand &#125; &#125;
+            &lt;/ng-template&gt;
+            &lt;ng-template DAYTableFooterTmpl&gt;
+                All brand
+            &lt;/ng-template&gt;
+        &lt;/day-table-column&gt;
+
+        &lt;day-table-column name="year" title="Year" /&gt;
+    &lt;/day-table&gt;
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoTracker>
+            <day-table [data]="data" [displayedColumns]="displayedColumnsTable" [lockedColumns]="lockedColumns" [selectableRows]="true" [orderableColumns]="true" [checkeableRows]="true" [resizableColumns]="true" #dayTable>
+                <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+                    <day-icon class="details-icon" [class.show]="detailsIndexes().includes(index)" [icon]="'day-circle-chevron-right'" (click)="$event.stopPropagation(); showDetails(index)" />
+                    @if (item.year > 2015) {
+                        <day-icon class="table-actions-active" [icon]="'day-edit'" (click)="$event.stopPropagation(); edit(item)" />
+                    }
+                    <day-icon [icon]="'day-chat'" (click)="$event.stopPropagation(); comment(item)" />
+                </ng-template>
+                <ng-template DAYTableRowDetailsTmpl let-item="item">
+                    <div>{{ item.name }}</div>
+                    <div>{{ item.code }}</div>
+                </ng-template>
+                <day-table-column name="name" title="Name" [hasActions]="true" [width]="280">
+                    <ng-template DAYTableHeaderTmpl>
+                        Name
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.name }}
+                    </ng-template>
+                    <ng-template DAYTableFooterTmpl>
+                        All names
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="code" title="Code">
+                    <ng-template DAYTableCellTmpl let-item="item">
+                    {{ item.code }}
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="color" title="Color" />
+                <day-table-column name="brand">
+                    <ng-template DAYTableHeaderTmpl>
+                        Brand
+                    </ng-template>
+                    <ng-template DAYTableCellTmpl let-item="item">
+                        {{ item.brand }}
+                    </ng-template>
+                    <ng-template DAYTableFooterTmpl>
+                        All brand
+                    </ng-template>
+                </day-table-column>
+                <day-table-column name="year" title="Year" />
+            </day-table>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-table can be customized overriding some of its CSS properties.
+</p>
+<day-table [data]="cssProperties" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+    <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+    </ng-template>
+    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+    <day-table-column [width]="300" name="description" title="Description" />
+    <day-table-column name="default" title="Default">
+        <ng-template DAYTableCellTmpl let-item="item">
+            <span [innerHTML]="item.default"></span>
+        </ng-template>
+    </day-table-column>
+</day-table>
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

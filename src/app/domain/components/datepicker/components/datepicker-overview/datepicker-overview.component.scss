@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+    
+    day-card {
+        width: 660px;
+
+        ::ng-deep .day-tabs-type-toggle {
+            margin-top: var(--spacing-xs);
+
+            .day-tab-content-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .selected-date-text{
+            text-align: center;
+            font-size: 12px;        
+        }
+    }
+    
+    day-datepicker {
+        margin-top: 24px;
+    }
+    
+    .wrapper-datepickers {
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+}

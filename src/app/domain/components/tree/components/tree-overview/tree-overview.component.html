@@ -1,0 +1,88 @@
+<p>
+    <code>import &#123; DAYTreeComponent &#125; from '&#64;day/tree';</code>
+</p>
+
+<div class="line-divider"></div>
+<h2>Selector</h2>
+<p>Tree: <code>day-tree</code></p>
+
+<div class="line-divider"></div>
+<h2>Injector</h2>
+<p>Not included</p>
+
+<div class="line-divider"></div>
+<h2>Inputs</h2>
+<day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="200" name="name" title="Name" />
+    <day-table-column [width]="450" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Output</h2>
+<day-table [data]="dataOutputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="200" name="name" title="Name" />
+    <day-table-column [width]="450" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Directives</h2>
+<day-table [data]="dataDirectives" [displayedColumns]="displayedColumns" [resizableColumns]="true">
+    <day-table-column [width]="200" name="name" title="Name" />
+    <day-table-column [width]="450" name="description" title="Description" />
+    <day-table-column name="default" title="Default" />
+</day-table>
+
+<div class="line-divider"></div>
+<h2>Public methods</h2>
+<p>Not included</p>
+
+<div class="line-divider"></div>
+<h2>Description</h2>
+<div>
+    <p>The <code>day-tree</code> component is a solution for visualizing and managing hierarchical data. <br>
+    It allows flexible content projection per node and offers intuitive navigation with expand/collapse functionalities. <br>
+    It supports data structure customization, <code>day-icon</code> integration, smooth animations, and emits node selection events.</p>
+</div>
+
+<div class="line-divider"></div>
+<h2>Example</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light">
+            <day-tab [tabTmpl]="html">Html</day-tab>
+            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
+        </day-tabs>
+        
+        <ng-template #html>
+            <pre ngNonBindable><code>
+    &#60;day-tree [data]="data" [childProperty]="'children'" (nodeSelected)="onNodeSelected($event)"&#62;
+        &#60;ng-template DAYTreeItemTmpl let-node="item" let-level="level"&#62;
+            &#60;div&#62;
+                &#60;day-icon&#62; [icon]="node.icon" /&#62;
+                &#60;span&#62;{{ node.name }}&#60;/span&#62;
+            &#60;/div&#62;
+        &#60;/ng-template&#62;
+    &#60;/day-tree&#62;
+            </code></pre>
+        </ng-template>                
+        
+        <ng-template #demo>
+            <day-tree [data]="data" [childProperty]="'children'" (nodeSelected)="onNodeSelected($event)">
+                <ng-template DAYTreeItemTmpl let-node="item" let-level="level">
+                    <div>
+                        <day-icon [icon]="node.icon" />
+                        <span>{{ node.name }}</span>
+                    </div>
+                </ng-template>
+            </day-tree>
+        </ng-template>
+        
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Dependencies</h2>
+<p><code>'&#64;day/core'</code></p>
+<p><code>'&#64;day/icon'</code></p>

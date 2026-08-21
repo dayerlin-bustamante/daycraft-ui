@@ -1,0 +1,108 @@
+<h2>Examples</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs class="light" [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="kit">DAY kit</day-tab>
+            <day-tab [tabTmpl]="classic">Classic</day-tab>
+            <day-tab [tabTmpl]="duotone">Duotone</day-tab>
+            <day-tab [tabTmpl]="hover">Hover</day-tab>
+        </day-tabs>
+
+        <ng-template #kit>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlKit">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoKit">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #classic>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlClassic">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoClassic">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #duotone>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDuotone">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDuotone">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #hover>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlHover">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoHover">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlKit>
+            <pre><code>
+
+    &lt;day-icon [icon]=&quot;'day-chat'&quot; /&gt;
+
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoKit>
+            <day-icon [icon]="'day-chat'" />
+        </ng-template>
+
+        <ng-template #htmlClassic>
+            <pre><code>
+
+
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoClassic>
+            <day-icon [icon]="'comment'" />
+        </ng-template>
+        
+        <ng-template #htmlDuotone>
+            <pre><code>
+
+    
+            </code></pre>
+        </ng-template>
+
+        <ng-template #demoDuotone>
+            <day-icon [icon]="'comment'" />
+        </ng-template>
+
+        <ng-template #htmlHover>
+            <pre><code>
+            </code></pre>  
+        </ng-template>
+
+        <ng-template #demoHover>
+            <day-icon [icon]="'day-error'" [iconHover]="'day-error-solid'"  />
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<div class="line-divider"></div>
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-icon can be customized overriding some of their CSS properties.
+</p>
+
+@for (table of tables;  let i = $index; track i) {
+    <h3>{{ table.title }}</h3>
+    <day-table [data]="table.data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+        <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)" />
+        </ng-template>
+        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+        <day-table-column [width]="250" name="description" title="Description" />
+        <day-table-column name="default" title="Default">
+            <ng-template DAYTableCellTmpl let-item="item">
+                <span [innerHTML]="item.default"></span>
+            </ng-template>
+        </day-table-column>
+    </day-table>
+    @if (i < tables.length - 1) {
+        <div class="line-divider"></div>
+    }
+}
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>

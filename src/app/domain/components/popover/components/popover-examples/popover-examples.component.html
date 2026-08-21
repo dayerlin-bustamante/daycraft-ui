@@ -1,0 +1,333 @@
+<h2>Behavior examples</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="fill">Fill</day-tab>
+            <day-tab [tabTmpl]="inject">Inject</day-tab>
+            <day-tab [tabTmpl]="dropdown">Dropdown</day-tab>
+        </day-tabs>
+        <ng-template #fill>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlFill">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoFill">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #inject>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlInject">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoInject">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #dropdown>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDropdown">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDropdown">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlFill>
+            <pre><code>
+    &lt;day-button [DAYPopover]="dayPopoverDirectiveFill" 
+    [DAYPopoverConfig]="popoverConfigFill"&gt;Directive&lt;/day-button&gt;
+    &lt;day-popover #dayPopoverDirectiveFill&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover Fill&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Footer popover&lt;/day-button&gt;   
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+            </code></pre>
+        </ng-template>         
+        <ng-template #demoFill>
+            <day-button [DAYPopover]="dayPopoverDirectiveFill" [DAYPopoverConfig]="popoverConfigFill">Directive</day-button>
+            <day-popover #dayPopoverDirectiveFill>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover Fill</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Footer popover</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+        </ng-template>
+
+        <ng-template #htmlInject>
+            <pre><code>
+    &lt;day-button [DAYPopover]="dayPopoverDirectiveInject" 
+    [DAYPopoverConfig]="popoverConfig"&gt;Directive&lt;/day-button&gt;
+    &lt;day-popover #dayPopoverDirectiveInject&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover Inject&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Footer popover&lt;/day-button&gt;   
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+            </code></pre>
+        </ng-template>     
+        <ng-template #demoInject>
+            <day-button [DAYPopover]="dayPopoverDirectiveInject" [DAYPopoverConfig]="popoverConfig">Directive</day-button>
+            <day-popover #dayPopoverDirectiveInject>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover Inject</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Footer popover</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+        </ng-template>
+
+        <ng-template #htmlDropdown>
+            <pre><code>
+    &lt;day-button [DAYPopover]="dayPopoverDirectiveDropdown" 
+    [DAYPopoverConfig]="popoverConfigDropdown"&gt;Directive&lt;/day-button&gt;
+    &lt;day-popover #dayPopoverDirectiveDropdown&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover Inject&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Footer popover&lt;/day-button&gt;   
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+            </code></pre>
+        </ng-template>     
+        <ng-template #demoDropdown>
+            <day-button [DAYPopover]="dayPopoverDirectiveDropdown" [DAYPopoverConfig]="popoverConfigDropdown">Directive</day-button>
+            <day-popover #dayPopoverDirectiveDropdown>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover Dropdown</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Footer popover</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+        </ng-template>
+    </day-card-body>
+</day-card>
+
+<h2>Custom CSS properties</h2>
+<p>
+    Styles of day-popover can be customized overriding some of its CSS properties.<br>
+    The invalid and disabled styles come from the form control.
+</p>
+@for (table of tables; let i = $index; track i) {
+    <h3>{{ table.title }}</h3>
+    <day-table [data]="table.data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
+        <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
+            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)" />
+        </ng-template>
+        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
+        <day-table-column [width]="250" name="description" title="Description" />
+        <day-table-column name="default" title="Default">
+            <ng-template DAYTableCellTmpl let-item="item">
+                <span [innerHTML]="item.default"></span>
+            </ng-template>
+        </day-table-column>
+    </day-table>
+    @if (i < tables.length - 1) { 
+        <div> - - - </div>
+    }
+}
+    
+<day-toast #dayToastDirective>Text copied to clipboard</day-toast>
+
+<h2>Diferent examples</h2>
+<day-card shadow="small">
+    <day-card-body>
+        <day-tabs [type]="'tabular'">
+            <day-tab [active]="true" [tabTmpl]="custom">Custom component</day-tab>
+            <day-tab [tabTmpl]="TwoPopover">Two popovers</day-tab>
+            <day-tab [tabTmpl]="directive">Directive</day-tab>
+        </day-tabs>
+        <ng-template #custom>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlCustom">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoCustom">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #TwoPopover>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlTwoPopover">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoTwoPopover">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+        <ng-template #directive>
+            <day-tabs class="light">
+                <day-tab [tabTmpl]="htmlDirective">Html</day-tab>
+                <day-tab [active]="true" [tabTmpl]="demoDirective">Demo</day-tab>
+            </day-tabs>
+        </ng-template>
+
+        <ng-template #htmlCustom>
+            <pre><code>
+    &lt;day-button (click)="showPopoverComponent($event)" size="big"&gt;
+        Custom Popover with CustomPosition
+    &lt;/day-button&gt;
+            </code></pre>
+        </ng-template>         
+        <ng-template #demoCustom>
+          <day-button (click)="showPopoverComponent($event)" size="big">Custom Popover with CustomPosition</day-button>
+        </ng-template>
+
+        <ng-template #htmlTwoPopover>
+            <pre><code>
+    &lt;day-button (click)="showPopover($event)" size="big"&gt;
+        Show Popover
+    &lt;/day-button&gt;
+    &lt;day-popover #dayPopover&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover 1 Title&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover 1
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Text&lt;/day-button&gt;
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover 1 Title 2&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Second body popover 1
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'" (click)="closePopover()"&gt;
+                    Close
+                &lt;/day-button&gt;
+                &lt;day-button [size]="'small'" (click)="showPopover2($event)"&gt;   
+                    Open other
+                &lt;/day-button&gt;
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+
+    &lt;day-popover #dayPopover2&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover 2 Title&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover 2
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Button popover 2&lt;/day-button&gt;
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+            </code></pre>
+        </ng-template>     
+        <ng-template #demoTwoPopover>
+            <day-button (click)="showPopover($event)" size="big">Show Popover</day-button>
+            <day-popover #dayPopover>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover 1 Title</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover 1
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Text</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover 1 Title 2</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Second body popover 1
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'" (click)="closePopover()">Close</day-button>
+                        <day-button [size]="'small'" (click)="showPopover2($event)">Open other</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+            <day-popover #dayPopover2>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover 2 Title</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover 2
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Button popover 2</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+        </ng-template>
+
+        <ng-template #htmlDirective>
+            <pre><code>
+    &lt;day-button [DAYPopover]="dayPopoverDirective" [DAYPopoverConfig]="popoverConfig"&gt;   
+        Directive
+    &lt;/day-button&gt;
+    &lt;day-popover #dayPopoverDirective&gt;
+        &lt;day-popover-content&gt;
+            &lt;day-popover-header&gt;
+                &lt;h3&gt;Popover directive title&lt;/h3&gt;
+            &lt;/day-popover-header&gt;
+            &lt;day-popover-body&gt;
+                Body popover directive
+            &lt;/day-popover-body&gt;
+            &lt;day-popover-footer&gt;
+                &lt;day-button [size]="'small'"&gt;Button popover directive&lt;/day-button&gt;
+            &lt;/day-popover-footer&gt;
+        &lt;/day-popover-content&gt;
+    &lt;/day-popover&gt;
+            </code></pre>
+        </ng-template>     
+        <ng-template #demoDirective>
+            <day-button [DAYPopover]="dayPopoverDirective" [DAYPopoverConfig]="popoverConfig">Directive</day-button>
+            <day-popover #dayPopoverDirective>
+                <day-popover-content>
+                    <day-popover-header>
+                        <h3>Popover directive title</h3>
+                    </day-popover-header>
+                    <day-popover-body>
+                        Body popover directive
+                    </day-popover-body>
+                    <day-popover-footer>
+                        <day-button [size]="'small'">Button popover directive</day-button>
+                    </day-popover-footer>
+                </day-popover-content>
+            </day-popover>
+        </ng-template>
+    </day-card-body>
+</day-card>
