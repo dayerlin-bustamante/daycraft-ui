@@ -7,7 +7,6 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
 @Component({
     selector: 'icon-overview',
     templateUrl: './icon-overview.component.html',
-    styleUrls: ['./icon-overview.component.scss'],
     imports: [DAYIconComponent, DAYCardComponent, DAYCardBodyComponent, DAYTableComponent, DAYTableColumnComponent]
 })
 export class IconOverviewComponent {

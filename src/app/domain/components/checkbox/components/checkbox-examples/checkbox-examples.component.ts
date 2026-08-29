@@ -10,7 +10,6 @@ import { IApiProperties } from "../../../../../core/interfaces/api-properties.in
 @Component({
     selector: 'checkbox-examples',
     templateUrl: './checkbox-examples.component.html',
-    styleUrls: ['./checkbox-examples.component.scss'],
     imports: [DAYCheckboxComponent, ReactiveFormsModule, FormsModule, DAYLabelComponent, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class checkboxExamplesComponent implements OnInit {

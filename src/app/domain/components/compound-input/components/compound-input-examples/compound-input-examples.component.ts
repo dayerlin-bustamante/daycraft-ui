@@ -6,15 +6,14 @@ import { DAYDropdownComponent, DAYDropdownItemTmplDirective, DAYDropdownSelectio
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYInputComponent } from '@dayerlin-bustamante/input';
 import { DAYLabelComponent } from '@dayerlin-bustamante/label';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'compound-input-examples',
     templateUrl: './compound-input-examples.component.html',
-    styleUrls: ['./compound-input-examples.component.scss'],
     imports: [ReactiveFormsModule, DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYCardComponent, DAYCardBodyComponent, DAYCompoundInputComponent, DAYLabelComponent, DAYDropdownComponent, DAYInputComponent, DAYTabsComponent, DAYTabComponent, DAYIconComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class CompoundInputExamplesComponent implements OnInit {

@@ -27,6 +27,11 @@ import { InfoPage } from "../information/info.page";
 
 export const MAIN_ROUTES: Routes = [
     {
+        path: '',
+        redirectTo: 'information',
+        pathMatch: 'full'
+    },
+    {
         component: InfoPage,
         path: 'information'
     },
