@@ -1,16 +1,15 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDropdownComponent, DAYDropdownGroupTmplDirective, DAYDropdownHeaderTmplDirective, DAYDropdownItemTmplDirective, DAYDropdownSelectionTmplDirective } from '@dayerlin-bustamante/dropdown';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'dropdown-examples',
     templateUrl: './dropdown-examples.component.html',
-    styleUrls: ['./dropdown-examples.component.scss'],
     imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYDropdownComponent, DAYDropdownHeaderTmplDirective, DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYDropdownGroupTmplDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class DropdownExamplesComponent implements OnInit {

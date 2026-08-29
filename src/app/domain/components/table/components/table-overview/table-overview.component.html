@@ -1,11 +1,21 @@
+<h1>Table component</h1>
 <p>
     <code>import &#123; DAYCompoundInputComponent, DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableGroupTmplDirective, DAYTableHeaderTmplDirective, DAYTableRowDetailsTmplDirective&#125; from '&#64;day/table';</code>
 </p>
-<div class="line-divider"></div>
+<h2>Selectors</h2>
+<p>Table: <code>day-table</code></p>
+<p>Table column: <code>day-table-column</code></p>
 
-<h2>Selector</h2>
-<p>Table:<code> day-table</code></p>
-<p>Table column:<code> day-table-column</code></p>
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/table</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYTableComponent, DAYTableColumnComponent {{ '}' }} from '@dayerlin-bustamante/table';</code></pre>
+    <br>
+    <pre><code>&lt;day-table [data]="data" [displayedColumns]="columns"&gt;
+    &lt;day-table-column name="name" title="Name" /&gt;
+&lt;/day-table&gt;</code></pre>
+</div>
 
 <div class="line-divider"></div>
 <h2>Inputs</h2>

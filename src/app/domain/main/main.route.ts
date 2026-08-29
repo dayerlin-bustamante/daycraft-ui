@@ -29,6 +29,11 @@ import { CustomIconsPage } from "../iconpage/custom-icons/custom-icons.page";
 
 export const MAIN_ROUTES: Routes = [
     {
+        path: '',
+        redirectTo: 'information',
+        pathMatch: 'full'
+    },
+    {
         component: InfoPage,
         path: 'information'
     },

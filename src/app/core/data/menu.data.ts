@@ -48,86 +48,81 @@ export const MENU_COMPONENTS: IMenuItem[] = [
     },
     {
         id: 10,
-        name: 'gantt',
-        url: '/components/gantt'
-    },
-    {
-        id: 11,
         name: 'icon',
         url: '/components/icon'
     },
     {
-        id: 12,
+        id: 11,
         name: 'input',
         url: '/components/input'
     },
     {
-        id: 13,
+        id: 12,
         name: 'label',
         url: '/components/label'
     },
     {
-        id: 14,
+        id: 13,
         name: 'modal',
         url: '/components/modal'
     },
     {
-        id: 15,
+        id: 14,
         name: 'paginator',
         url: '/components/paginator'
     },
     {
-        id: 16,
+        id: 15,
         name: 'popover',
         url: '/components/popover'
     },
     {
-        id: 17,
+        id: 16,
         name: 'radio',
         url: '/components/radio'
     },
     {
-        id: 18,
+        id: 17,
         name: 'skeleton-loader',
         url: '/components/skeleton-loader'
     },
     {
-        id: 19,
+        id: 18,
         name: 'slide',
         url: '/components/slide'
     },
     {
-        id: 20,
+        id: 19,
         name: 'table',
         url: '/components/table'
     },
     {
-        id: 21,
+        id: 20,
         name: 'tabs',
         url: '/components/tabs'
     },
     {
-        id: 22,
+        id: 21,
         name: 'textarea',
         url: '/components/textarea'
     },
     {
-        id: 23,
+        id: 22,
         name: 'toast',
         url: '/components/toast'
     },
     {
-        id: 24,
+        id: 23,
         name: 'toogle',
         url: '/components/toogle'
     },
     {
-        id: 25,
+        id: 24,
         name: 'tooltip',
         url: '/components/tooltip'
     },
     {
-        id: 26,
+        id: 25,
         name: 'tree',
         url: '/components/tree'
     }

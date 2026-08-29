@@ -11,7 +11,6 @@ import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 @Component({
     selector: 'compound-input-overview',
     templateUrl: './compound-input-overview.component.html',
-    styleUrls: ['./compound-input-overview.component.scss'],
     imports: [DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYCardComponent, DAYCardBodyComponent, DAYCompoundInputComponent, DAYLabelComponent, DAYDropdownComponent, DAYInputComponent, DAYTabsComponent, DAYTabComponent, DAYIconComponent, FormsModule]
 })
 export class CompoundInputOverviewComponent {

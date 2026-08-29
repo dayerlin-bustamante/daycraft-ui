@@ -1,3 +1,190 @@
-<section>
-    
-</section>
+<h1>Getting Started</h1>
+
+<p>
+    <code>@dayerlin-bustamante</code> is a collection of standalone Angular components built with Angular 22+,
+    signals, and Tailwind CSS. All components follow modern Angular best practices and are fully typed with TypeScript.
+</p>
+
+<h2>Prerequisites</h2>
+<ul class="list-disc list-inside mt-2 space-y-1">
+    <li>Angular <strong>22+</strong></li>
+    <li>Node.js <strong>18+</strong></li>
+    <li>A GitHub Personal Access Token (PAT) with <code>read:packages</code> scope</li>
+</ul>
+
+<h2>Installation</h2>
+
+<h3>1. Configure the npm registry</h3>
+<p>Create or update your <code>.npmrc</code> file at the root of your project:</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>&#64;dayerlin-bustamante:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_PAT
+always-auth=true</code></pre>
+</div>
+
+<h3>2. Install the packages</h3>
+<p>Install all packages at once:</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>npm install \
+  &#64;dayerlin-bustamante/core \
+  &#64;dayerlin-bustamante/button \
+  &#64;dayerlin-bustamante/card \
+  &#64;dayerlin-bustamante/icon \
+  &#64;dayerlin-bustamante/overlay \
+  &#64;dayerlin-bustamante/modal \
+  &#64;dayerlin-bustamante/popover \
+  &#64;dayerlin-bustamante/slide \
+  &#64;dayerlin-bustamante/toast \
+  &#64;dayerlin-bustamante/tooltip \
+  &#64;dayerlin-bustamante/tabs \
+  &#64;dayerlin-bustamante/table \
+  &#64;dayerlin-bustamante/input \
+  &#64;dayerlin-bustamante/textarea \
+  &#64;dayerlin-bustamante/checkbox \
+  &#64;dayerlin-bustamante/radio \
+  &#64;dayerlin-bustamante/toggle \
+  &#64;dayerlin-bustamante/label \
+  &#64;dayerlin-bustamante/dropdown \
+  &#64;dayerlin-bustamante/autocomplete \
+  &#64;dayerlin-bustamante/datepicker \
+  &#64;dayerlin-bustamante/calendar \
+  &#64;dayerlin-bustamante/avatar \
+  &#64;dayerlin-bustamante/compound-input \
+  &#64;dayerlin-bustamante/paginator \
+  &#64;dayerlin-bustamante/skeleton \
+  &#64;dayerlin-bustamante/tree</code></pre>
+</div>
+
+<p class="mt-4">Or install individual packages:</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>npm install &#64;dayerlin-bustamante/button</code></pre>
+</div>
+<p class="mt-2">
+    <strong>Note:</strong> <code>&#64;dayerlin-bustamante/core</code> is a required dependency for all packages.
+    Install it first if you are adding packages individually.
+</p>
+
+<h2>Configuration</h2>
+<p>
+    Some components require global configuration via <code>InjectionToken</code> providers in your
+    <code>app.config.ts</code>. Add the following providers:
+</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>import &#123; ApplicationConfig, provideBrowserGlobalErrorListeners &#125; from '&#64;angular/core';
+import &#123; provideRouter &#125; from '&#64;angular/router';
+import &#123; provideClientHydration &#125; from '&#64;angular/platform-browser';
+import &#123; DAY_MODAL_CONFIGURATION, IModalConfiguration &#125; from '&#64;dayerlin-bustamante/modal';
+import &#123; DAY_POPOVER_CONFIGURATION, IPopoverConfiguration &#125; from '&#64;dayerlin-bustamante/popover';
+import &#123; DAY_SLIDE_CONFIGURATION, ISlideConfiguration &#125; from '&#64;dayerlin-bustamante/slide';
+import &#123; DAY_TOAST_CONFIGURATION, IToastConfiguration &#125; from '&#64;dayerlin-bustamante/toast';
+import &#123; DAY_TOOLTIP_CONFIGURATION, ITooltipConfiguration &#125; from '&#64;dayerlin-bustamante/tooltip';
+
+export const appConfig: ApplicationConfig = &#123;
+    providers: [
+        provideBrowserGlobalErrorListeners(),
+        provideRouter(routes),
+        provideClientHydration(),
+        &#123;
+            provide: DAY_POPOVER_CONFIGURATION,
+            useValue: &#60;IPopoverConfiguration&#62;&#123;
+                behavior: 'fill',
+                horizontalPosition: 'center',
+                verticalPosition: 'top',
+                gap: 0,
+                disableCloseOnBackdrop: false
+            &#125;
+        &#125;,
+        &#123;
+            provide: DAY_SLIDE_CONFIGURATION,
+            useValue: &#60;ISlideConfiguration&#62;&#123;
+                defaultMinWidth: 400,
+                defaultMaxWidth: 600,
+                sidebarWidth: 300,
+                resize: false,
+                overlay: true,
+                disableCloseOnBackdrop: false,
+                cssClasses: [],
+                overlayCssClasses: [],
+                data: &#123;&#125;
+            &#125;
+        &#125;,
+        &#123;
+            provide: DAY_MODAL_CONFIGURATION,
+            useValue: &#60;IModalConfiguration&#62;&#123;
+                size: 'medium',
+                cssClasses: [],
+                data: &#123;&#125;,
+                disableCloseOnBackdrop: false
+            &#125;
+        &#125;,
+        &#123;
+            provide: DAY_TOAST_CONFIGURATION,
+            useValue: &#60;IToastConfiguration&#62;&#123;
+                verticalPosition: 'bottom',
+                gap: 20,
+                autoClose: true,
+                timeOut: 4000,
+                cssClasses: [],
+                data: &#123;&#125;
+            &#125;
+        &#125;,
+        &#123;
+            provide: DAY_TOOLTIP_CONFIGURATION,
+            useValue: &#60;ITooltipConfiguration&#62;&#123;
+                behavior: 'tooltip',
+                horizontalPosition: 'center',
+                verticalPosition: 'top',
+                gap: 2,
+                spacing: &#123; top: 0, bottom: 0, right: 0, left: 0 &#125;,
+                cssClasses: [],
+                delayIn: 330,
+                delayOut: 220
+            &#125;
+        &#125;
+    ]
+&#125;;</code></pre>
+</div>
+
+<h3>Configuration Options</h3>
+<day-table [data]="configData" [displayedColumns]="configColumns">
+    <day-table-column name="provider" title="Provider" />
+    <day-table-column name="description" title="Description" />
+</day-table>
+
+<h2>Global Styles</h2>
+<p>Import the library theme styles in your global <code>styles.css</code>:</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>&#64;use '&#64;dayerlin-bustamante/core/assets/theme/styles';</code></pre>
+</div>
+
+<h2>Basic Usage</h2>
+<p>All components are standalone. Import them directly in your component:</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>import &#123; DAYButtonComponent &#125; from '&#64;dayerlin-bustamante/button';
+import &#123; DAYCardComponent, DAYCardBodyComponent &#125; from '&#64;dayerlin-bustamante/card';
+
+&#64;Component(&#123;
+    selector: 'my-component',
+    templateUrl: './my.component.html',
+    imports: [DAYButtonComponent, DAYCardComponent, DAYCardBodyComponent]
+&#125;)
+export class MyComponent &#123;&#125;</code></pre>
+</div>
+
+<p class="mt-4">Then use them in your template:</p>
+<div class="p-4 bg-gray-100 rounded-sm mt-2">
+    <pre><code>&lt;day-card&gt;
+    &lt;day-card-body&gt;
+        &lt;day-button type="primary" size="medium"&gt;
+            Click me
+        &lt;/day-button&gt;
+    &lt;/day-card-body&gt;
+&lt;/day-card&gt;</code></pre>
+</div>
+
+<h2>Available Components</h2>
+<day-table [data]="componentsData" [displayedColumns]="componentsColumns">
+    <day-table-column name="package" title="Package" />
+    <day-table-column name="selector" title="Selector" />
+    <day-table-column name="description" title="Description" />
+</day-table>

@@ -1,3 +1,4 @@
+<h1>Popover component</h1>
 <p>
     <code>import &#123; DAYPopoverComponent &#125; from '&#64;day/popover';</code><br>   
     <code>import &#123; DAYPopoverContentComponent &#125; from '&#64;day/popover';</code><br>   
@@ -6,12 +7,23 @@
     <code>import &#123; DAYPopoverFooterComponent &#125; from '&#64;day/popover';</code><br>
 </p>
 
-<h2>Selector</h2>
+<h2>Selectors</h2>
 <p>Popover: <code>day-popover</code></p>
 <p>Popover content: <code>day-popover-content</code></p>
 <p>Popover header: <code>day-popover-header</code></p>
 <p>Popover body: <code>day-popover-body</code></p>
 <p>Popover footer: <code>day-popover-footer</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/popover</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYPopoverComponent {{ '}' }} from '@dayerlin-bustamante/popover';</code></pre>
+    <br>
+    <pre><code>&lt;day-popover&gt;
+    &lt;day-popover-content&gt;Content&lt;/day-popover-content&gt;
+&lt;/day-popover&gt;</code></pre>
+</div>
 
 <h2>Injector</h2>
 <p>Injection token for providing the popover configuration. This token is used to inject an instance of `<code>IDAYPopoverConfiguration</code>` into Angular components or services. It has a default configuration, injecting a new configuration is optional.</p>

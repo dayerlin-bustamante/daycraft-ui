@@ -8,7 +8,6 @@ import { IApiProperties } from "../../../../../core/interfaces/api-properties.in
 @Component({
     selector: 'checkbox-overview',
     templateUrl: './checkbox-overview.component.html',
-    styleUrls: ['./checkbox-overview.component.scss'],
     imports: [ReactiveFormsModule, FormsModule, DAYCheckboxComponent, DAYLabelComponent, DAYTableComponent, DAYTableColumnComponent]
 })
 export class CheckboxOverviewComponent implements OnInit {
