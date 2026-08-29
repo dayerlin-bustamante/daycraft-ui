@@ -1,3 +1,4 @@
+<h1>Tooltip component</h1>
 <p>The <code>&lt;day-tooltip&gt;</code> with the <code>DAYTooltipTriggerDirective</code> form an advanced, customizable
     tooltip system in Angular, handling positioning, sizing, animations, and dynamic behavior based on configuration.
 </p>
@@ -17,6 +18,17 @@
 <h2>Selectors</h2>
 <p>Tooltip: <code>day-tooltip</code></p>
 <p>Tooltip directive: <code>[DAYTooltip]</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/tooltip</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYTooltipComponent, DAYTooltipTriggerDirective {{ '}' }} from '@dayerlin-bustamante/tooltip';</code></pre>
+    <br>
+    <pre><code>&lt;day-tooltip [text]="'Hello'"&gt;
+    &lt;span [DAYTooltip]="'Hello'"&gt;Hover me&lt;/span&gt;
+&lt;/day-tooltip&gt;</code></pre>
+</div>
 
 <div class="line-divider"></div>
 <h2>Inputs directive</h2>

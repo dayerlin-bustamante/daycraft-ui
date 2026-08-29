@@ -9,6 +9,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
 @Component({
     selector: 'card-examples',
     templateUrl: './card-examples.component.html',
+    styleUrls: ['./card-examples.component.scss'],
     imports: [DAYCardComponent, DAYCardBodyComponent, DAYCardFooterComponent, DAYCardHeaderComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent, DAYButtonComponent]
 })
 export class CardExamplesComponent {

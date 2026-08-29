@@ -7,6 +7,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
 @Component({
     selector: 'card-overview',
     templateUrl: './card-overview.component.html',
+    styleUrls: ['./card-overview.component.scss'],
     imports: [DAYButtonComponent, DAYCardComponent, DAYCardBodyComponent, DAYCardHeaderComponent, DAYCardFooterComponent, DAYTableComponent, DAYTableColumnComponent]
 })
 export class CardOverviewComponent {

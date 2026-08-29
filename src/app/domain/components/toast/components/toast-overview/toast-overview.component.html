@@ -1,3 +1,4 @@
+<h1>Toast component</h1>
 <p>
     The component <code>&lt;day-toast&gt;</code> is a dynamic container for toast notifications, managing screen position, auto-close behavior, and entry/exit animations.
 </p>
@@ -9,10 +10,19 @@
     <code>import &#123; DAYToastTriggerDirective &#125; from '&#64;dayerlin-bustamante/toast';</code>
 </p>
 
-<div class="line-divider"></div>
-<h2>Selector</h2>
-<p>Toast:<code> day-toast</code></p>
-<p>Toast trigger directive:<code> [DAYToast]</code></p>
+<h2>Selectors</h2>
+<p>Toast: <code>day-toast</code></p>
+<p>Toast trigger directive: <code>[DAYToast]</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/toast</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYToastComponent, DAYToastTriggerDirective {{ '}' }} from '@dayerlin-bustamante/toast';</code></pre>
+    <br>
+    <pre><code>&lt;day-toast #toast&gt;Message&lt;/day-toast&gt;
+&lt;day-icon [DAYToast]="toast" [icon]="'copy'" /&gt;</code></pre>
+</div>
 
 <div class="line-divider"></div>
 <h2>Inputs</h2>

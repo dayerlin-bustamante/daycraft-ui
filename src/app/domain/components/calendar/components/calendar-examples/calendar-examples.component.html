@@ -1,4 +1,4 @@
-<h3>Calendar CSS properties</h3>
+<h2>Calendar CSS properties</h2>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
         <day-icon [DAYToast]="dayToastDirective" [icon]="'copy'" (click)="copyToClipboard(item.name)" />
@@ -14,39 +14,39 @@
 <day-toast #dayToastDirective>Text copied to clipboard</day-toast>
 
 <h2>Calendar Examples</h2>
-<h3>Default</h3>
+<h2>Default</h2>
 <day-calendar [config]="calendarConfigOne" (selectedEvent)="onDateSelectedCalendarOne($event)" />    
 
-<h3>Range dates</h3> 
+<h2>Range dates</h2> 
 <day-calendar [config]="calendarConfigTwo" [date]="{start: startDate, end: endDate}" (selectedEvent)="onDateSelectedCalendarTwo($event)" />    
 
-<h3>Disabled dates</h3>
+<h2>Disabled dates</h2>
 <day-calendar [config]="calendarConfigThree" [disabledDates]="disabledDate" (selectedEvent)="onDateSelectedCalendarThree($event)" /> 
 
-<h3>Highlight dates</h3>
+<h2>Highlight dates</h2>
 <day-calendar [config]="calendarConfigFour" [highlightDates]="highlightDates" (selectedEvent)="onDateSelectedCalendarFour($event)" /> 
 
 <h2>View calendar examples</h2>
-<h3>Days</h3>
+<h2>Days</h2>
 <day-calendar [config]="calendarConfigViewOne" (selectedEvent)="onDateSelectedCalendarViewOne($event)" />  
 
-<h3>Months</h3>
+<h2>Months</h2>
 <day-calendar [config]="calendarConfigViewTwo" (selectedEvent)="onDateSelectedCalendarViewTwo($event)" />   
 
-<h3>Years</h3>
+<h2>Years</h2>
 <day-calendar [config]="calendarConfigViewThree" (selectedEvent)="onDateSelectedCalendarViewThree($event)" />
 
-<h3>Time</h3>
+<h2>Time</h2>
 <day-calendar [config]="calendarConfigViewFour" (selectedEvent)="onDateSelectedCalendarViewFour($event)" />
 
 <h2>Size calendar examples</h2>
-<h3>Small</h3>
+<h2>Small</h2>
 <day-calendar [config]="calendarConfigSmall" (selectedEvent)="onDateSelectedCalendarSmall($event)" />       
 
-<h3>Medium</h3>
+<h2>Medium</h2>
 <day-calendar [config]="calendarConfigMedium" (selectedEvent)="onDateSelectedCalendarMedium($event)" />       
 
-<h3>Large</h3>
+<h2>Large</h2>
 <day-calendar [config]="calendarConfigLarge" (selectedEvent)="onDateSelectedCalendarLarge($event)" />       
 
 

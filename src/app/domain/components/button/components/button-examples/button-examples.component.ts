@@ -1,14 +1,14 @@
 import { Component } from "@angular/core";
 import { DAYButtonComponent } from "@dayerlin-bustamante/button";
 import { DAYIconComponent } from "@dayerlin-bustamante/icon";
-import { DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
+import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
 import { DAYToastComponent, DAYToastTriggerDirective } from "@dayerlin-bustamante/toast";
 import { IApiProperties } from "../../../../../core/interfaces/api-properties.interface";
 
 @Component({
     selector: 'button-examples',
     templateUrl: './button-examples.component.html',
-    imports: [DAYButtonComponent, DAYIconComponent, DAYTableComponent, DAYTableColumnComponent, DAYToastComponent, DAYToastTriggerDirective]
+    imports: [DAYButtonComponent, DAYIconComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastComponent, DAYToastTriggerDirective]
 })
 export class ButtonExamplesComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];

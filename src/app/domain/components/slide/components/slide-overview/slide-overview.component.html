@@ -1,3 +1,4 @@
+<h1>Slide component</h1>
 <p>The <code>&lt;day-slide&gt;</code> component provides a highly configurable sliding panel (sidebar) that emerges from the side of the screen. It is designed to display contextual content or related actions without leaving the current view. It exposes settings to control its appearance, behavior, and how it integrates with the main page content.</p>
 
 <h2>Import</h2>
@@ -13,6 +14,17 @@
     <day-table-column [width]="340" name="name" title="Element" />
     <day-table-column name="description" title="Description" />
 </day-table>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/slide</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYSlideComponent {{ '}' }} from '@dayerlin-bustamante/slide';</code></pre>
+    <br>
+    <pre><code>&lt;day-slide [opened]="true"&gt;
+    &lt;day-slide-body&gt;Content&lt;/day-slide-body&gt;
+&lt;/day-slide&gt;</code></pre>
+</div>
 
 <h2>Inputs</h2>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">

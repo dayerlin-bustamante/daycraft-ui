@@ -8,6 +8,18 @@
     <code>'&#64;dayerlin-bustamante/core'</code>  <code>'&#64;dayerlin-bustamante/popover'</code>  <code>'&#64;dayerlin-bustamante/input'</code>
 </p>
 
+<h2>Selectors</h2>
+<p>Autocomplete: <code>day-autocomplete</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/autocomplete</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYAutocompleteComponent {{ '}' }} from '@dayerlin-bustamante/autocomplete';</code></pre>
+    <br>
+    <pre><code>&lt;day-autocomplete [data]="items" [placeholder]="'Search...'" /&gt;</code></pre>
+</div>
+
 <day-autocomplete [data]="availableColours" [filterFn]="filterColoursSimple" [minCharacters]="3" [keyText]="'name'" [keyValue]="'code'" [placeholder]="'Busca un color...'" [(ngModel)]="selectedColourCodeSimple">
     <ng-template DAYAutocompleteLoaderTmpl>
         <div>

@@ -1,3 +1,4 @@
+<h1>Modal component</h1>
 <p>The <code>&lt;day-modal&gt;</code> component provides a highly configurable modal dialog that overlays the main page content. It is designed to display important information, request user actions, or present focused content without leaving the current view. It exposes settings to control it's size and the content it displays.</p>
 
 <h2>Dependencies</h2>
@@ -19,6 +20,17 @@
 <p>Modal header: <code>day-modal-header</code></p>
 <p>Modal body: <code>day-modal-body</code></p>
 <p>Modal footer: <code>day-modal-footer</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/modal</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYModalComponent, DAYModalBodyComponent {{ '}' }} from '@dayerlin-bustamante/modal';</code></pre>
+    <br>
+    <pre><code>&lt;day-modal #modal&gt;
+    &lt;day-modal-body&gt;Content&lt;/day-modal-body&gt;
+&lt;/day-modal&gt;</code></pre>
+</div>
 
 <h2>Injector</h2>
 <p>Injection token for providing the modal configuration.<br>

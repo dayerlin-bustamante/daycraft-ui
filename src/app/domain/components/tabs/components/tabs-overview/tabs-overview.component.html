@@ -1,3 +1,4 @@
+<h1>Tabs component</h1>
 <p>
     The component <code>&lt;day-tabs&gt;</code> and <code>&lt;day-tab&gt;</code> is a container for tabbed navigation, allowing users to switch between different views or content sections.
 </p>
@@ -11,6 +12,17 @@
 <h2>Selectors</h2>
 <p>Tabs: <code>day-tabs</code></p>
 <p>Tab: <code>day-tab</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/tabs</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYTabsComponent, DAYTabComponent {{ '}' }} from '@dayerlin-bustamante/tabs';</code></pre>
+    <br>
+    <pre><code>&lt;day-tabs&gt;
+    &lt;day-tab [active]="true" [tabTmpl]="content"&gt;Tab 1&lt;/day-tab&gt;
+&lt;/day-tabs&gt;</code></pre>
+</div>
 <div class="line-divider"></div>
 
 <h2>Inputs</h2>

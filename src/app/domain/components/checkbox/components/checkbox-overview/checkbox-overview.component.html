@@ -1,3 +1,4 @@
+<h1>Checkbox component</h1>
 <p>
     The component <code>&lt;day-checkbox&gt;</code> is a form control that provides the same
     functionality as a native <code> &lt;input type="checkbox"&gt;</code>, enhanced with DAY Design styling.
@@ -8,8 +9,17 @@
 <p><code>'&#64;core'</code></p>
 <p><code>'&#64;icon'</code></p>
 
-<h2>Selector</h2>
-<p>Checkbox:<code> day-checkbox</code></p>
+<h2>Selectors</h2>
+<p>Checkbox: <code>day-checkbox</code></p>
+
+<h2>Installation and Usage</h2>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>npm install @dayerlin-bustamante/checkbox</code></pre>
+    <br>
+    <pre><code>import {{ '{' }} DAYCheckboxComponent {{ '}' }} from '@dayerlin-bustamante/checkbox';</code></pre>
+    <br>
+    <pre><code>&lt;day-checkbox&gt;Label&lt;/day-checkbox&gt;</code></pre>
+</div>
 
 <form [formGroup]="formGroup" class="input-wrapper">
     <day-checkbox formControlName="formControl" [id]="'1'">
