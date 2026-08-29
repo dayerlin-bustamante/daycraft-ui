@@ -24,6 +24,8 @@ import { TogglePage } from "../components/toggle/toggle.page";
 import { TooltipPage } from "../components/tooltip/tooltip.page";
 import { TreePage } from "../components/tree/tree.component";
 import { InfoPage } from "../information/info.page";
+import { DaycraftIconsPage } from "../iconpage/daycraft-icons/daycraft-icons.page";
+import { CustomIconsPage } from "../iconpage/custom-icons/custom-icons.page";
 
 export const MAIN_ROUTES: Routes = [
     {
@@ -129,5 +131,13 @@ export const MAIN_ROUTES: Routes = [
     {
         component: TreePage,
         path: 'components/tree'
+    },
+    {
+        component: DaycraftIconsPage,
+        path: 'icons'
+    },
+    {
+        component: CustomIconsPage,
+        path: 'customicons'
     }
 ]
