@@ -1,4 +1,5 @@
-import { Component, inject, viewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, PLATFORM_ID, viewChild } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
 import { DAYCalendarComponent, DAYCalendarConfiguration, DAYCalendarSelectedDates } from '@dayerlin-bustamante/calendar';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
@@ -17,10 +18,11 @@ export class CalendarExamplesComponent {
     modalService = inject(DAYModalService);
     dayModal = viewChild.required<DAYModalComponent>('dayModal');
 
-    today: Temporal.PlainDate = Temporal.Now.plainDateISO();
-    startDate: string = this.today.toString();
-    nextDay: string = this.today.add({ days: 1 }).toString();
-    endDate: string = this.today.add({ days: 4 }).toString();
+    today: Temporal.PlainDate | null = null;
+    startDate = '';
+    nextDay = '';
+    endDate = '';
+
     disabledDate: string[] = [this.startDate, this.nextDay];
     highlightDates = [
         { date: this.startDate, className: 'holiday' },
@@ -118,12 +120,24 @@ export class CalendarExamplesComponent {
         { name: '--calendar-border-radius', description: 'Border radius of the calendar container.', default: 'var(--radius-l)' }
     ];
 
+    private dialogRef?: DAYDialogRef;
+    private readonly platformId = inject(PLATFORM_ID);
+
+    constructor() {
+        if (isPlatformBrowser(this.platformId)) {
+            this.today = Temporal.Now.plainDateISO();
+            this.startDate = this.today.toString();
+            this.nextDay = this.today.add({ days: 1 }).toString();
+            this.endDate = this.today.add({ days: 4 }).toString();
+            this.disabledDate = [this.startDate, this.nextDay];
+            this.highlightDates = [{ date: this.startDate, className: 'holiday' }, { date: this.nextDay, className: 'important' }];
+        }
+    }
+
     copyToClipboard(text: string) {
         navigator.clipboard.writeText(text)
             .catch(err => err);
     }
-
-    private dialogRef?: DAYDialogRef;
 
     showModal() {
         const modalConfig: IModalConfiguration = {
