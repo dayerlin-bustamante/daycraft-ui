@@ -1,135 +1,86 @@
 <h2>Skeleton loader component types</h2>
-<day-card shadow="small" class="big">
-    <day-card-body>
-        <day-tabs class="light" [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="block">Block</day-tab>
-            <day-tab [tabTmpl]="checkbox">Checkbox</day-tab>
-            <day-tab [tabTmpl]="radio">Radio</day-tab>
-            <day-tab [tabTmpl]="input">Input</day-tab>
-            <day-tab [tabTmpl]="table">Table</day-tab>
-            <day-tab [tabTmpl]="tabs">Tabs</day-tab>
-        </day-tabs>
+<p>
+    Different skeleton loader types for various UI components: block, checkbox, radio, input, table, and tabs.
+</p>
 
-        <ng-template #block>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlBlock">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoBlock">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h3>Block</h3>
+<day-skeleton-loader/>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-skeleton-loader/&gt;
+</code></pre></div>
 
-        <ng-template #checkbox>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlCheckbox">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoCheckbox">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h3>Checkbox</h3>
+<div class="flex flex-wrap gap-4">
+    <day-skeleton-loader [type]="'checkbox'"/>
+    <day-skeleton-loader [type]="'checkbox'"/>
+</div>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-skeleton-loader [type]="'checkbox'"/&gt;
+&lt;day-skeleton-loader [type]="'checkbox'"/&gt;
+</code></pre></div>
 
-        <ng-template #radio>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlRadio">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoRadio">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h3>Radio</h3>
+<div class="flex flex-wrap gap-4">
+    <day-skeleton-loader [type]="'radio'"/>
+    <day-skeleton-loader [type]="'radio'"/>
+</div>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-skeleton-loader [type]="'radio'"/&gt;
+&lt;day-skeleton-loader [type]="'radio'"/&gt;
+</code></pre></div>
 
-        <ng-template #input>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlInput">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoInput">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h3>Input</h3>
+<div class="flex flex-wrap gap-4">
+    <day-skeleton-loader [type]="'input'" [label]="true"/>
+    <day-skeleton-loader [type]="'input'"/>
+</div>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-skeleton-loader [type]="'input'" [label]="true"/&gt;
+&lt;day-skeleton-loader [type]="'input'"/&gt;
+</code></pre></div>
 
-        <ng-template #table>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlTable">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoTable">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h3>Table</h3>
+<day-skeleton-loader [type]="'table'" [rows]="8" [cols]="4"/>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-skeleton-loader [type]="'table'" [rows]="8" [cols]="4"/&gt;
+</code></pre></div>
 
-        <ng-template #tabs>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlTabs">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoTabs">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h3>Tabs</h3>
+<day-skeleton-loader [type]="'tabs'" [tabs]="4"/>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-skeleton-loader [type]="'tabs'" [tabs]="4"/&gt;
+</code></pre></div>
 
-        <ng-template #htmlBlock>
-            <pre><code class="code-html">
-    &lt;day-skeleton-loader /&gt;   
-            </code></pre>
-        </ng-template>
+ 
+<h2>Skeleton loader directive</h2>
+        <p>This content is wrapped with the skeleton loader directive.</p>
+          <day-card [daySkeletonLoader]="isLoadingDirective">
+                <day-card-body>
+                    <h3>Skeleton Loader Directive Example</h3>
+                    <p>This content is wrapped with the skeleton loader directive.</p>
+                </day-card-body>
+            </day-card>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
+&lt;day-card [daySkeletonLoader]="isLoadingDirective"&gt;
+    &lt;day-card-body&gt;
+        &lt;h3&gt;Skeleton Loader Directive Example&lt;/h3&gt;
+        &lt;p&gt;This content is wrapped with the skeleton loader directive.&lt;/p&gt;
+    &lt;/day-card-body&gt;
+&lt;/day-card&gt;
+</code></pre></div>
 
-        <ng-template #demoBlock>
-            <day-skeleton-loader />
-        </ng-template>
 
-        <ng-template #htmlCheckbox>
-            <pre><code class="code-html">
-    &lt;day-skeleton-loader [type]="'checkbox'" /&gt;
-    &lt;day-skeleton-loader [type]="'checkbox'" /&gt;   
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demoCheckbox>
-            <day-skeleton-loader [type]="'checkbox'" />
-            <day-skeleton-loader [type]="'checkbox'" />
-        </ng-template>
-
-        <ng-template #htmlRadio>
-            <pre><code class="code-html">
-    &lt;day-skeleton-loader [type]="'radio'" /&gt;
-    &lt;day-skeleton-loader [type]="'radio'" /&gt;   
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demoRadio>
-            <day-skeleton-loader [type]="'radio'" />
-            <day-skeleton-loader [type]="'radio'" />
-        </ng-template>
-
-        <ng-template #htmlInput>
-            <pre><code class="code-html">
-  &lt;day-skeleton-loader [type]="'input'" [label]="true"  /&gt;  
-    &lt;day-skeleton-loader [type]="'input'" /&gt;
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demoInput>
-            <day-skeleton-loader [type]="'input'" [label]="true" />
-            <day-skeleton-loader [type]="'input'" />
-        </ng-template>
-
-        <ng-template #htmlTable>
-            <pre><code class="code-html">
-  &lt;day-skeleton-loader [type]="'table'" [rows]="8" [cols]="4" /&gt;   
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demoTable>
-            <day-skeleton-loader [type]="'table'" [rows]="8" [cols]="4" />
-        </ng-template>
-
-        <ng-template #htmlTabs>
-            <pre><code class="code-html">
-  &lt;day-skeleton-loader [type]="'tabs'" [tabs]="4" /&gt;   
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demoTabs>
-            <day-skeleton-loader [type]="'tabs'" [tabs]="4" />
-        </ng-template>
-    </day-card-body>
-</day-card>
-<div class="line-divider"></div>
+ 
 <h2>Custom CSS properties</h2>
 <p>
     Styles of day-skeleton-loader can be customized overriding some of its CSS properties.
 </p>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
-    <day-table-column [width]="300" name="description" title="Description" />
+    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true"/>
+    <day-table-column [width]="300" name="description" title="Description"/>
     <day-table-column name="default" title="Default">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.default"></span>
@@ -137,39 +88,3 @@
     </day-table-column>
 </day-table>
 <day-toast #dayToastDirective>Text copied to clipboard</day-toast>
-<div class="line-divider"></div>
-<h2>Skeleton loader directive</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs class="light" [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="directive">Directive</day-tab>
-        </day-tabs>
-
-        <ng-template #directive>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDirective">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDirective">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-
-        <ng-template #htmlDirective>
-            <pre><code class="code-html">
-    &lt;day-card [daySkeletonLoader]="true"&gt;
-      &lt;day-card-body&gt;
-        &lt;h3&gt;Skeleton Loader Directive Example&lt;/h3&gt;
-        &lt;p&gt;This content is wrapped with the skeleton loader directive.&lt;/p&gt;  
-      &lt;/day-card-body&gt;
-    &lt;/day-card&gt;
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demoDirective>
-            <day-card [daySkeletonLoader]="isLoadingDirective">
-                <day-card-body>
-                    <h3>Skeleton Loader Directive Example</h3>
-                    <p>This content is wrapped with the skeleton loader directive.</p>
-                </day-card-body>
-            </day-card>
-        </ng-template>
-    </day-card-body>
-</day-card>

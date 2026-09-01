@@ -1,35 +1,9 @@
 <h2>Toggle tabs type</h2>
-<day-card shadow="small" class="big">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="default">Default</day-tab>
-            <day-tab [tabTmpl]="light">Light</day-tab>
-            <day-tab [tabTmpl]="disabled">Disabled</day-tab>
-        </day-tabs>
-        <ng-template #default>
-            <day-tabs class="has-tabs-light">
-                <day-tab class="has-tab-light" [tabTmpl]="htmlDefault">Html</day-tab>
-                <day-tab class="has-tab-light" [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #light>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlLight">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoLight">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #disabled>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDisabled">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDisabled">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlDefault>
-          <pre><code class="code-html">
+          <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;day-tabs&gt;
         &lt;day-tab [active]="true" [tabTmpl]="tab1"&gt;
-            &lt;day-icon [icon]="'day-chat'" /&gt;
+            &lt;day-icon [icon]="'day-chat'"/&gt;
             &lt;span&gt;First tab&lt;/span&gt;
         &lt;/day-tab&gt;
 
@@ -50,37 +24,23 @@
             Lorem Ipsum has been the industry's standard.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/ng-template&gt;
-          </code></pre>
-        </ng-template>    
+          </code></pre></div>
 
-        <ng-template #demoDefault>
-            <day-tabs>
-                <day-tab [active]="true" [tabTmpl]="tab1">
-                    <day-icon [icon]="'day-chat'" />
+                    <day-icon [icon]="'day-chat'"/>
                     <span>First tab</span>
-                </day-tab>
 
-                <day-tab [tabTmpl]="tab2">
                     Second tab
-                </day-tab>
-            </day-tabs> 
-            <ng-template #tab1>
                 <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to.</p>
-            </ng-template>
 
-            <ng-template #tab2>
                 <div>
                     <h3>Title text</h3>
                     <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                 </div>
-            </ng-template>
-        </ng-template>
 
-        <ng-template #htmlLight>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;day-tabs class="light"&gt;
         &lt;day-tab [active]="true" [tabTmpl]="tabLight1"&gt;
-            &lt;day-icon [icon]="'day-chat'" /&gt;
+            &lt;day-icon [icon]="'day-chat'"/&gt;
             &lt;span&gt;Link light 1&lt;/span&gt;
         &lt;/day-tab&gt;
 
@@ -89,7 +49,7 @@
         &lt;/day-tab&gt;
 
         &lt;day-tab [tabTmpl]="tabLight3"&gt;
-            &lt;day-icon [icon]="'day-message'" /&gt;
+            &lt;day-icon [icon]="'day-message'"/&gt;
             &lt;span&gt;Link light 3&lt;/span&gt;
         &lt;/day-tab&gt;
     &lt;/day-tabs&gt;
@@ -112,43 +72,25 @@
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to.&lt;/p&gt;
     &lt;/ng-template&gt;
-            </code></pre>
-        </ng-template>    
+            </code></pre></div>
 
-        <ng-template #demoLight>
-            <day-tabs class="light">
-                <day-tab [active]="true" [tabTmpl]="tabLight1">
-                    <day-icon [icon]="'day-chat'" />
+                    <day-icon [icon]="'day-chat'"/>
                     <span>Link light 1</span>
-                </day-tab>
 
-                <day-tab [tabTmpl]="tabLight2">
                     Link light 2
-                </day-tab>
 
-                <day-tab [tabTmpl]="tabLight3">
-                    <day-icon [icon]="'day-message'" />
+                    <day-icon [icon]="'day-message'"/>
                     <span>Link light 3</span>
-                </day-tab>
-            </day-tabs>
-            <ng-template #tabLight1>
                 <div>
                     <h3>Title text</h3>
                     <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
                 </div>
-            </ng-template>
 
-            <ng-template #tabLight2>
                 <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to.</p>
-            </ng-template>
 
-            <ng-template #tabLight3>
                 <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to.</p>
-            </ng-template>
-        </ng-template>
 
-        <ng-template #htmlDisabled>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;day-tabs class="light"&gt;
         &lt;day-tab [disabled]="true"&gt;
             Tab disabled 1
@@ -162,38 +104,18 @@
             Tab disabled 3
         &lt;/day-tab&gt;
     &lt;/day-tabs&gt;
-            </code></pre>
-        </ng-template>    
+            </code></pre></div>
 
-        <ng-template #demoDisabled>
-            <day-tabs class="light">
-                <day-tab [disabled]="true">
                     Tab disabled 1
-                </day-tab>
 
-                <day-tab [active]="true" [disabled]="true">
                     Tab disabled 2
-                </day-tab>
 
-                <day-tab [disabled]="true">
                     Tab disabled 3
-                </day-tab>
-            </day-tabs>
-        </ng-template>
-    </day-card-body>
-</day-card>
-<div class="line-divider"></div>
+ 
 
 <h2>Tabular tabs with links</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs class="light">
-            <day-tab [tabTmpl]="htmlLinks">Html</day-tab>
-            <day-tab [active]="true" [tabTmpl]="demoLinks">Demo</day-tab>
-        </day-tabs>
       
-        <ng-template #htmlLinks>
-          <pre><code class="code-html">
+          <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;day-tabs [type]="'tabular'"&gt;
         &lt;day-tab [link]="'/structure/tabs/test-page'"&gt;
             Link test
@@ -204,35 +126,21 @@
         &lt;/day-tab&gt;
     &lt;/day-tabs&gt;
     &lt;router-outlet&gt;&lt;/router-outlet&gt;
-          </code></pre>
-        </ng-template>    
+          </code></pre></div>
 
-        <ng-template #demoLinks>
-            <day-tabs [type]="'tabular'">
-                <day-tab [link]="'/structure/tabs/test-page'">
                     Link test
-                </day-tab>
 
-                <day-tab [link]="'/structure/tabs/test2-page'">
                     Link test 2
-                </day-tab>
-            </day-tabs>
-        </ng-template>
         <router-outlet></router-outlet>
-    </day-card-body>
-</day-card>
-<div class="line-divider"></div>
+ 
 
 <h2>Custom CSS properties</h2>
-<p>
-    Styles of day-tabs and day-tab can be customized overriding some of its CSS properties.
-</p>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true" />
-    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
     <day-table-column name="default" title="Default">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.default"></span>

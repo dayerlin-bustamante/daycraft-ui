@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
-import { DAYLabelComponent } from '@dayerlin-bustamante/label';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
-import { DAYTextareaComponent } from '@dayerlin-bustamante/textarea';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
+import { DAYLabelComponent } from '@dayerlin-bustamante/label';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
+import { DAYTextareaComponent } from '@dayerlin-bustamante/textarea';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
@@ -13,7 +11,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'textarea-examples',
     templateUrl: './textarea-examples.component.html',
     styleUrls: ['./textarea-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYLabelComponent, DAYTextareaComponent, ReactiveFormsModule, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYLabelComponent, DAYTextareaComponent, ReactiveFormsModule, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class TextareaExamplesComponent {
     formGroup: FormGroup = new FormGroup({

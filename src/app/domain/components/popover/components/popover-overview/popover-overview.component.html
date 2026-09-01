@@ -1,10 +1,10 @@
 <h1>Popover component</h1>
 <p>
-    <code>import &#123; DAYPopoverComponent &#125; from '&#64;day/popover';</code><br>   
-    <code>import &#123; DAYPopoverContentComponent &#125; from '&#64;day/popover';</code><br>   
-    <code>import &#123; DAYPopoverHeaderComponent &#125; from '&#64;day/popover';</code><br>
-    <code>import &#123; DAYPopoverBodyComponent &#125; from '&#64;day/popover';</code><br>
-    <code>import &#123; DAYPopoverFooterComponent &#125; from '&#64;day/popover';</code><br>
+    <code>import &#123; DAYPopoverComponent &#125; from '/popover';</code><br>   
+    <code>import &#123; DAYPopoverContentComponent &#125; from '/popover';</code><br>   
+    <code>import &#123; DAYPopoverHeaderComponent &#125; from '/popover';</code><br>
+    <code>import &#123; DAYPopoverBodyComponent &#125; from '/popover';</code><br>
+    <code>import &#123; DAYPopoverFooterComponent &#125; from '/popover';</code><br>
 </p>
 
 <h2>Selectors</h2>
@@ -31,9 +31,9 @@
 
 <h2>Inputs trigger directive</h2>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
-    <day-table-column [width]="570" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="300" name="name" title="Name"/>
+    <day-table-column [width]="570" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Output</h2>
@@ -44,19 +44,19 @@
 
 <h2>Public methods</h2>
 <day-table [data]="dataComputedsEvent" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
-    <day-table-column [width]="570" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="300" name="name" title="Name"/>
+    <day-table-column [width]="570" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <p>The <code>DAYPopoverContainer</code> component manages the display, positioning, and animations of a popover in Angular. It adapts dynamically to the available screen space, applies configurable styles, and coordinates smooth open/close animations. It is complemented by the <code>DAYPopoverTrigger directive</code>, which allows any element to easily trigger a popover.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code></p>
-<p><code>'&#64;day/overlay'</code></p>
+<p><code>'/core'</code></p>
+<p><code>'/overlay'</code></p>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -106,7 +106,7 @@
     </day-card-body>
 </day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 <div>
     <ul>

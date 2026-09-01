@@ -3,7 +3,7 @@
     The component <code>&lt;day-toast&gt;</code> is a dynamic container for toast notifications, managing screen position, auto-close behavior, and entry/exit animations.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Import</h2>
 <p>
     <code>import &#123; DAYToastComponent &#125; from '&#64;dayerlin-bustamante/toast';</code><br>
@@ -21,34 +21,34 @@
     <pre><code>import {{ '{' }} DAYToastComponent, DAYToastTriggerDirective {{ '}' }} from '@dayerlin-bustamante/toast';</code></pre>
     <br>
     <pre><code>&lt;day-toast #toast&gt;Message&lt;/day-toast&gt;
-&lt;day-icon [DAYToast]="toast" [icon]="'copy'" /&gt;</code></pre>
+&lt;day-icon [DAYToast]="toast" [icon]="'copy'"/&gt;</code></pre>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs</h2>
 <p>Not included.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Output</h2>
 <p>Not included.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Directives</h2>
 <day-table [data]="dataDirectives" [displayedColumns]="displayedColumnsTwo" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="240" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Public methods</h2>
 <p>getEnterAnimationClass: returns depending on the verticalPosition 'day-slide-top-in' : 'day-slide-bottom-in';</p>
 <p>getLeaveAnimationClass: returns depending on the verticalPosition 'day-slide-top-out' : 'day-slide-bottom-out';</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code></p>
+<p><code>'/core'</code></p>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -63,7 +63,7 @@
     &lt;day-toast #dayToast&gt;
         Prueba de toast
         &lt;day-close-button [DAYCloseDialog]="dialogRef"&gt;
-            &lt;day-icon [icon]="'day-circle-close-solid'" /&gt;
+            &lt;day-icon [icon]="'day-circle-close-solid'"/&gt;
         &lt;/day-close-button&gt;
     &lt;/day-toast&gt;
             </code></pre>
@@ -74,7 +74,7 @@
             <day-toast #dayToast>
                 Prueba de toast
                 <day-close-button DAYCloseDialog>
-                    <day-icon [icon]="'day-circle-close-solid'" />
+                    <day-icon [icon]="'day-circle-close-solid'"/>
                 </day-close-button>
             </day-toast>
         </ng-template>
@@ -82,7 +82,7 @@
 </day-card>
 <br>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 <ul>
     <li>Supports placing the toast at the top or bottom of the screen. Selects predefined animations depending on position.</li>

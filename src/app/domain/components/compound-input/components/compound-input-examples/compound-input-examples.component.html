@@ -1,31 +1,5 @@
-<h2>day-dropdown + day-input</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="regular">Regular</day-tab>
-            <day-tab [tabTmpl]="disabled">Disabled</day-tab>
-            <day-tab [tabTmpl]="error">Error</day-tab>
-        </day-tabs>        
-        <ng-template #regular>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlRegular">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoRegular">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #disabled>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDisabled">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDisabled">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #error>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlError">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoError">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
+<h2>Default, disabled and error</h2>
 
-        <ng-template #htmlRegular>
             <pre>
 
     &#60;day-compound-input&#62;
@@ -39,21 +13,19 @@
             [showInputs]="false"
             [placeholder]="'...'"&#62;
             &#60;ng-template DAYDropdownItemTmpl let-item="item"&#62;
-                &#60;day-icon [icon]="item.icon" /&#62;
+                &#60;day-icon [icon]="item.icon"/&#62;
                 &#60;span&#62; &#123; &#123; item.value &#125; &#125; &#60;/span&#62;
             &#60;/ng-template&#62;
             &#60;ng-template DAYDropdownSelectionTmpl let-item="item"&#62;
-                &#60;day-icon [icon]="item.icon" /&#62;
+                &#60;day-icon [icon]="item.icon"/&#62;
                 &#60;span&#62; &#123; &#123; item.value &#125; &#125; &#60;/span&#62;
             &#60;/ng-template&#62;
         &#60;/day-dropdown&#62;
-        &#60;day-input [placeholder]="'Phone'" [type]="'number'" /&#62;
+        &#60;day-input [placeholder]="'Phone'" [type]="'number'"/&#62;
     &#60;/day-compound-input&#62;
     </pre>
-        </ng-template>
 
-        <ng-template #demoRegular>
-            <day-compound-input>
+       <day-compound-input>
                 <day-label size="medium">Phone</day-label>
                 <day-dropdown
                     [data]="dataToShow()" 
@@ -65,19 +37,17 @@
                     [placeholder]="'...'"
                     (searchEvent)="search($event)">
                     <ng-template DAYDropdownItemTmpl let-item="item">
-                        <day-icon [icon]="item.icon" />
+                        <day-icon [icon]="item.icon"/>
                         <span> {{ item.value }}</span>
                     </ng-template>
                     <ng-template DAYDropdownSelectionTmpl let-item="item">
-                        <day-icon [icon]="item.icon" />
+                        <day-icon [icon]="item.icon"/>
                         <span>{{ item.value }}</span>
                     </ng-template>
                 </day-dropdown>
-                <day-input [placeholder]="'Phone'" [type]="'number'" />
+                <day-input [placeholder]="'Phone'" [type]="'number'"/>
             </day-compound-input>
-        </ng-template>
 
-        <ng-template #htmlDisabled>
             <pre>
 
     &#60;day-compound-input&#62;
@@ -91,12 +61,10 @@
             [showInputs]="false"
             [placeholder]="'...'"&#62;
         &#60;/day-dropdown&#62;
-        &#60;day-input [placeholder]="'Phone'" [type]="'number'" /&#62;
+        &#60;day-input [placeholder]="'Phone'" [type]="'number'"/&#62;
     &#60;/day-compound-input&#62;
     </pre>
-        </ng-template>
 
-        <ng-template #demoDisabled>
             <form [formGroup]="formGroup">
                 <day-compound-input>
                     <day-label size="medium">Phone</day-label>
@@ -109,12 +77,10 @@
                         [showInputs]="false"
                         [placeholder]="'...'">
                     </day-dropdown>
-                    <day-input [placeholder]="'Phone'" [type]="'number'" formControlName="formControlDisabled" />
+                    <day-input [placeholder]="'Phone'" [type]="'number'" formControlName="formControlDisabled"/>
                 </day-compound-input>
             </form>
-        </ng-template>
 
-        <ng-template #htmlError>
             <pre>
 
     &#60;day-compound-input&#62;
@@ -128,21 +94,19 @@
             [showInputs]="false"
             [placeholder]="'...'"&#62;
             &#60;ng-template DAYDropdownItemTmpl let-item="item"&#62;
-                &#60;day-icon [icon]="item.icon" /&#62;
+                &#60;day-icon [icon]="item.icon"/&#62;
                 &#60;span&#62; &#123; &#123; item.value &#125; &#125; &#60;/span&#62;
             &#60;/ng-template&#62;
             &#60;ng-template DAYDropdownSelectionTmpl let-item="item"&#62;
-                &#60;day-icon [icon]="item.icon" /&#62;
+                &#60;day-icon [icon]="item.icon"/&#62;
                 &#60;span&#62; &#123; &#123; item.value &#125; &#125; &#60;/span&#62;
             &#60;/ng-template&#62;
         &#60;/day-dropdown&#62;
-        &#60;day-input [placeholder]="'Phone'" [type]="'number'" /&#62;
+        &#60;day-input [placeholder]="'Phone'" [type]="'number'"/&#62;
     &#60;/day-compound-input&#62;
     </pre>
-        </ng-template>
 
-        <ng-template #demoError>
-            <form [formGroup]="formGroup">
+         <form [formGroup]="formGroup">
                 <day-compound-input>
                     <day-label size="medium">Phone</day-label>
                     <day-dropdown
@@ -155,32 +119,27 @@
                         [placeholder]="'...'"
                         (searchEvent)="search($event)">
                         <ng-template DAYDropdownItemTmpl let-item="item">
-                            <day-icon [icon]="item.icon" />
+                            <day-icon [icon]="item.icon"/>
                             <span> {{ item.value }}</span>
                         </ng-template>
                         <ng-template DAYDropdownSelectionTmpl let-item="item">
-                            <day-icon [icon]="item.icon" />
+                            <day-icon [icon]="item.icon"/>
                             <span>{{ item.value }}</span>
                         </ng-template>
                     </day-dropdown>
-                    <day-input [placeholder]="'Phone'" [type]="'number'" formControlName="formControlError" />
+                    <day-input [placeholder]="'Phone'" [type]="'number'" formControlName="formControlError"/>
                 </day-compound-input>
             </form>
-        </ng-template>
-    </day-card-body>
-</day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Custom CSS properties</h2>
-<p>
-    Styles of day-compound-input can be customized overriding some of its CSS properties.
-</p>
+
 <day-table [data]="cssData" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true" />
-    <day-table-column [width]="250" name="description" title="Description" />
+    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true"/>
+    <day-table-column [width]="250" name="description" title="Description"/>
     <day-table-column name="default" title="Default">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.default"></span>

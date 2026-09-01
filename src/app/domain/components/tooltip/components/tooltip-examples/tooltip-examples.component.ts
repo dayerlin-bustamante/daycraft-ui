@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { DAYTooltipComponent, DAYTooltipTriggerDirective, ITooltipConfiguration } from '@dayerlin-bustamante/tooltip';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
@@ -12,7 +10,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'tooltip-examples',
     templateUrl: './tooltip-examples.component.html',
     styleUrls: ['./tooltip-examples.component.scss'],
-    imports: [DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYTooltipComponent, DAYTooltipTriggerDirective, DAYCardBodyComponent, DAYCardComponent, DAYIconComponent, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYButtonComponent, DAYTooltipComponent, DAYTooltipTriggerDirective, DAYIconComponent, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class TooltipExamplesComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];

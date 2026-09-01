@@ -1,11 +1,9 @@
 import { Component, inject, viewChild } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYModalBodyComponent, DAYModalComponent, DAYModalFooterComponent, DAYModalHeaderComponent, DAYModalService, IModalConfiguration } from '@dayerlin-bustamante/modal';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 import { CustomModalComponent } from '../custom-modal/custom-modal.component';
@@ -13,8 +11,7 @@ import { CustomModalComponent } from '../custom-modal/custom-modal.component';
 @Component({
     selector: 'modal-examples',
     templateUrl: './modal-examples.component.html',
-    styleUrls: ['./modal-examples.component.scss'],
-    imports: [DAYButtonComponent, DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYModalComponent, DAYModalHeaderComponent, DAYModalBodyComponent, DAYModalFooterComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYButtonComponent, DAYModalComponent, DAYModalHeaderComponent, DAYModalBodyComponent, DAYModalFooterComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class ModalExamplesComponent {
     dayModalSmall = viewChild.required<DAYModalComponent>('dayModalSmall');

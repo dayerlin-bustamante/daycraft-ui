@@ -1,15 +1,13 @@
 import { Component, computed, viewChild } from '@angular/core';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableGroupActionsTmplDirective, DAYTableGroupTmplDirective, DAYTableHeaderTmplDirective, DAYTableRowDetailsTmplDirective } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 
 @Component({
     selector: 'table-examples',
     templateUrl: './table-examples.component.html',
     styleUrls: ['./table-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabsComponent, DAYTabComponent, DAYIconComponent, DAYTableGroupActionsTmplDirective, DAYTableComponent, DAYTableHeaderTmplDirective, DAYTableCellTmplDirective, DAYTableActionsTmplDirective, DAYTableFooterTmplDirective, DAYTableRowDetailsTmplDirective, DAYTableGroupTmplDirective, DAYTableColumnComponent, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYIconComponent, DAYTableGroupActionsTmplDirective, DAYTableComponent, DAYTableHeaderTmplDirective, DAYTableCellTmplDirective, DAYTableActionsTmplDirective, DAYTableFooterTmplDirective, DAYTableRowDetailsTmplDirective, DAYTableGroupTmplDirective, DAYTableColumnComponent, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class TableExamplesComponent {
     dayTable = viewChild.required<DAYTableComponent>('dayTable');

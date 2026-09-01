@@ -1,10 +1,8 @@
 import { Component, inject, viewChild } from "@angular/core";
 import { DAYButtonComponent } from "@dayerlin-bustamante/button";
-import { DAYCardBodyComponent, DAYCardComponent } from "@dayerlin-bustamante/card";
 import { DAYCloseButtonComponent, DAYDialogRef } from "@dayerlin-bustamante/core";
 import { DAYIconComponent } from "@dayerlin-bustamante/icon";
 import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
-import { DAYTabComponent, DAYTabsComponent } from "@dayerlin-bustamante/tabs";
 import { DAYToastComponent, DAYToastService, DAYToastTriggerDirective, IToastConfiguration } from "@dayerlin-bustamante/toast";
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 import { CustomToastComponent } from "../custom-toast/custom-toast.component";
@@ -13,7 +11,7 @@ import { CustomToastComponent } from "../custom-toast/custom-toast.component";
     selector: 'toast-examples',
     templateUrl: './toast-examples.component.html',
     styleUrls: ['./toast-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYToastComponent, DAYIconComponent, DAYToastTriggerDirective, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYCloseButtonComponent]
+    imports: [DAYButtonComponent, DAYToastComponent, DAYIconComponent, DAYToastTriggerDirective, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYCloseButtonComponent]
 })
 export class ToastExamplesComponent {
     toastComponent = viewChild.required<DAYToastComponent>('dayToast');

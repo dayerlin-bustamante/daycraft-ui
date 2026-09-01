@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
-import { DAYTreeComponent, DAYTreeItemTmplDirective } from '@dayerlin-bustamante/tree';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
+import { DAYTreeComponent, DAYTreeItemTmplDirective } from '@dayerlin-bustamante/tree';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'tree-examples',
     templateUrl: './tree-examples.component.html',
     styleUrls: ['./tree-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYTreeComponent, DAYTreeItemTmplDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYTreeComponent, DAYTreeItemTmplDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class TreeExamplesComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];
@@ -64,7 +62,7 @@ export class TreeExamplesComponent {
         {
             name: 'Nivel 1 - Carpeta C (vacía)',
             icon: 'day-assets-solid',
-            children: [] // carpeta vacia
+            children: []// carpeta vacia
         },
         {
             name: 'Nivel 1 - Documento suelto',

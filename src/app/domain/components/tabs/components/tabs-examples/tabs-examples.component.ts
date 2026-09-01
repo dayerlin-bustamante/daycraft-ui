@@ -1,8 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
@@ -11,7 +9,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'tabs-examples',
     templateUrl: './tabs-examples.component.html',
     styleUrls: ['./tabs-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYIconComponent, DAYTabComponent, DAYTabsComponent, RouterOutlet, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYIconComponent, RouterOutlet, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class TabsExamplesComponent {
     icon = signal<string>('day-chat');
@@ -32,11 +30,11 @@ export class TabsExamplesComponent {
         { name: '--tab-color', description: 'Text color of the tab.', default: 'var(--color-primary-300)' },
         { name: '--tab-border-bottom-color', description: 'Bottom border color for active tab (tabular style).', default: 'var(--color-secondary)' },
         { name: '--tab-padding', description: 'Padding of the tab element.', default: 'var(--spacing-xs) var(--spacing-s)' },
-        { name: '--tab-font-weight', description: 'Font weight of the tab text.', default: '400 / 500 if active' },
+        { name: '--tab-font-weight', description: 'Font weight of the tab text.', default: '400/ 500 if active' },
         { name: '--tab-font-size', description: 'Font size of the tab text.', default: 'var(--font-size-p)' },
         { name: '--tab-min-width', description: 'Minimum width of a tab.', default: '120px' },
         { name: '--tab-max-width', description: 'Maximum width of a tab.', default: '172px' },
-        { name: '--tab-height', description: 'Height of a tab.', default: '40px / 34px in tabular' },
+        { name: '--tab-height', description: 'Height of a tab.', default: '40px/ 34px in tabular' },
         { name: '--tab-underline-height', description: 'Height of the underline shown in tabular active tabs.', default: '8px' },
         { name: '--tab-border-radius', description: 'Border radius of the individual tab.', default: '999px (toggle), 8px (tabular)' }
     ];

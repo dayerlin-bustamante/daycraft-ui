@@ -1,53 +1,23 @@
 <h2>Input state</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs class="light" [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="default">Default</day-tab>
-            <day-tab [tabTmpl]="error">Error</day-tab>
-            <day-tab [tabTmpl]="disabled">Disabled</day-tab>
-        </day-tabs>
 
-        <ng-template #default>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDefault">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #error>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlError">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoError">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #disabled>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDisabled">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDisabled">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlDefault>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroupDefault" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlDefault" placeholder="Enter value"&gt;  
         &lt;day-label&gt;Label default&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoDefault>
             <div [formGroup]="formGroupDefault" class="input-wrapper">
                 <day-input formControlName="formControlDefault" placeholder="Enter value">
                     <day-label>Label default</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlError>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroupDefault" class="inputs-container"&gt;
     &lt;day-input formControlName="formControlError" placeholder="Enter value"&gt;
       &lt;day-label&gt;Label error&lt;/day-label&gt;
@@ -59,14 +29,12 @@
         &lt;day-icon 
           [icon]="'day-error'" 
           [DAYTooltip]="'Mensaje de error'" 
-          [DAYTooltipConfig]="tooltipConfig" /&gt;
+          [DAYTooltipConfig]="tooltipConfig"/&gt;
       &lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoError>
             <div [formGroup]="formGroupDefault" class="inputs-container">
                 <day-input formControlName="formControlError" placeholder="Enter value">
                     <day-label>Label error</day-label>
@@ -75,293 +43,174 @@
                 <day-input formControlName="formControlError2" placeholder="Enter value">
                     <day-label>
                         <span class="label">Label error tooltip</span>
-                        <day-icon [icon]="'day-error'" [DAYTooltip]="'Mensaje de error'" [DAYTooltipConfig]="tooltipConfig" />
+                        <day-icon [icon]="'day-error'" [DAYTooltip]="'Mensaje de error'" [DAYTooltipConfig]="tooltipConfig"/>
                     </day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlDisabled>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroupDefault" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlDisabled" placeholder="Enter value"&gt;  
       &lt;day-label&gt;Label disabled&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoDisabled>
             <div [formGroup]="formGroupDefault" class="input-wrapper">
                 <day-input formControlName="formControlDisabled" placeholder="Enter value">
                     <day-label>Label disabled</day-label>
                 </day-input>
             </div>
-        </ng-template>
-    </day-card-body>
-</day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Input type</h2>
-<day-card class="big" shadow="small">
-    <day-card-body>
-        <day-tabs class="light" [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="textType">Text</day-tab>
-            <day-tab [tabTmpl]="numberType">Number</day-tab>
-            <day-tab [tabTmpl]="emailType">Email</day-tab>
-            <day-tab [tabTmpl]="passwordType">Password</day-tab>
-            <day-tab [tabTmpl]="telType">Tel</day-tab>
-            <day-tab [tabTmpl]="urlType">Url</day-tab>
-        </day-tabs>
 
-        <ng-template #textType>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlTextType">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoTextType">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #numberType>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlNumberType">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoNumberType">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #emailType>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlEmailType">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoEmailType">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #passwordType>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlPasswordType">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoPasswordType">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #telType>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlTelType">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoTelType">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #urlType>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlUrlType">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoUrlType">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlTextType>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroup" class="input-wrapper"&gt;
     &lt;day-input [id]="'1'" formControlName="formControlText" 
     placeholder="Enter text value"&gt;
       &lt;day-label&gt;Label example&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoTextType>
             <div [formGroup]="formGroup" class="input-wrapper">
                 <day-input [id]="'1'" formControlName="formControlText" placeholder="Enter text value">
                     <day-label>Label example</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlNumberType>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroup" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlNumber" placeholder="Enter number value" 
     [type]="'number'"&gt;
       &lt;day-label&gt;Label example&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoNumberType>
             <div [formGroup]="formGroup" class="input-wrapper">
                 <day-input formControlName="formControlNumber" placeholder="Enter number value" [type]="'number'">
                     <day-label>Label example</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlEmailType>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroup" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlEmail" placeholder="Enter email value"  
     [type]="'email'"&gt;
       &lt;day-label&gt;Label example&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoEmailType>
             <div [formGroup]="formGroup" class="input-wrapper">
                 <day-input formControlName="formControlEmail" placeholder="Enter email value" [type]="'email'">
                     <day-label>Label example</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlPasswordType>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroup" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlPassword" placeholder="Enter password value"  [type]="'password'"&gt;
       &lt;day-label&gt;Label example&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoPasswordType>
             <div [formGroup]="formGroup" class="input-wrapper">
                 <day-input formControlName="formControlPassword" placeholder="Enter password value" [type]="'password'">
                     <day-label>Label example</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlTelType>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroup" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlTel" placeholder="Enter telephone value"   
     [type]="'tel'"&gt;
       &lt;day-label&gt;Label example&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoTelType>
             <div [formGroup]="formGroup" class="input-wrapper">
                 <day-input formControlName="formControlTel" placeholder="Enter telephone value" [type]="'tel'">
                     <day-label>Label example</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlUrlType>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
   &lt;div [formGroup]="formGroup" class="input-wrapper"&gt;
     &lt;day-input formControlName="formControlUrl" placeholder="Enter URL value" 
     [type]="'url'"&gt;
       &lt;day-label&gt;Label example&lt;/day-label&gt;
     &lt;/day-input&gt;
   &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoUrlType>
             <div [formGroup]="formGroup" class="input-wrapper">
                 <day-input formControlName="formControlUrl" placeholder="Enter URL value" [type]="'url'">
                     <day-label>Label example</day-label>
                 </day-input>
             </div>
-        </ng-template>
-    </day-card-body>
-</day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Input size</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs class="light" [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="medium">Medium</day-tab>
-            <day-tab [tabTmpl]="big">Big</day-tab>
-        </day-tabs>
 
-        <ng-template #medium>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlMedium">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoMedium">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #big>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlBig">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoBig">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlMedium>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;div [formGroup]="formGroupSize" class="input-wrapper"&gt;
         &lt;day-input formControlName="formControlMedium" placeholder="Enter value"&gt;
             &lt;day-label&gt;Label medium&lt;/day-label&gt;
         &lt;/day-input&gt;
     &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoMedium>
             <div [formGroup]="formGroupSize" class="input-wrapper">
                 <day-input formControlName="formControlMedium" placeholder="Enter value">
                     <day-label>Label medium</day-label>
                 </day-input>
             </div>
-        </ng-template>
 
-        <ng-template #htmlBig>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;div [formGroup]="formGroupSize" class="inputs-container"&gt;
         &lt;day-input formControlName="formControlBig" placeholder="Enter value" size="big"&gt;
             &lt;day-label&gt;Label big&lt;/day-label&gt;
         &lt;/day-input&gt;
     &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoBig>
             <div [formGroup]="formGroupSize" class="inputs-container">
                 <day-input formControlName="formControlBig" placeholder="Enter value" size="big">
                     <day-label>Label big</day-label>
                 </day-input>
             </div>
-        </ng-template>
-    </day-card-body>
-</day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Input with icons</h2>
-<day-card shadow="small" class="big">
-    <day-card-body>
-        <day-tabs class="light" [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="icons">With icons</day-tab>
-        </day-tabs>
 
-        <ng-template #icons>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlIcons">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoIcons">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlIcons>
-            <pre><code class="code-html">
+            <div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
     &lt;div [formGroup]="formGroupIcons"&gt;
         &lt;div class="inputs-container"&gt;
             &lt;day-input formControlName="formControl" placeholder="Enter text"&gt;
-                &lt;day-icon [icon]="'day-mail'" DAYSlot="left" /&gt;
+                &lt;day-icon [icon]="'day-mail'" DAYSlot="left"/&gt;
             &lt;/day-input&gt;
 
             &lt;day-input formControlName="formControl" placeholder="Enter text"&gt;
-                &lt;day-icon [icon]="'day-mail'" DAYSlot="left" /&gt;
-                &lt;day-icon [icon]="'day-chevron-down'" DAYSlot="right" /&gt;      
+                &lt;day-icon [icon]="'day-mail'" DAYSlot="left"/&gt;
+                &lt;day-icon [icon]="'day-chevron-down'" DAYSlot="right"/&gt;      
             &lt;/day-input&gt;
 
             &lt;day-input formControlName="formControl" placeholder="Enter text"&gt;
-                &lt;day-icon [icon]="'day-mail'" DAYSlot="left" /&gt;
+                &lt;day-icon [icon]="'day-mail'" DAYSlot="left"/&gt;
                 &lt;span DAYSlot="right"&gt;MW&lt;/span&gt;
             &lt;/day-input&gt;
         &lt;/div&gt;
@@ -372,27 +221,25 @@
             &lt;/day-input&gt;
 
             &lt;day-input formControlName="formControl" placeholder="Enter text"&gt;
-                &lt;day-icon [icon]="'day-chevron-down'" DAYSlot="right" /&gt;
+                &lt;day-icon [icon]="'day-chevron-down'" DAYSlot="right"/&gt;
             &lt;/day-input&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-            </code></pre>
-        </ng-template>
+            </code></pre></div>
 
-        <ng-template #demoIcons>
             <div [formGroup]="formGroupIcons">
                 <div class="inputs-container">
                     <day-input formControlName="formControl" placeholder="Enter text">
-                        <day-icon [icon]="'day-mail'" DAYSlot="left" />
+                        <day-icon [icon]="'day-mail'" DAYSlot="left"/>
                     </day-input>
     
                     <day-input formControlName="formControl" placeholder="Enter text">
-                        <day-icon [icon]="'day-mail'" DAYSlot="left" />
-                        <day-icon [icon]="'day-chevron-down'" DAYSlot="right" />
+                        <day-icon [icon]="'day-mail'" DAYSlot="left"/>
+                        <day-icon [icon]="'day-chevron-down'" DAYSlot="right"/>
                     </day-input>
     
                     <day-input formControlName="formControl" placeholder="Enter text">
-                        <day-icon [icon]="'day-mail'" DAYSlot="left" />
+                        <day-icon [icon]="'day-mail'" DAYSlot="left"/>
                         <span DAYSlot="right">MW</span>
                     </day-input>
                 </div>
@@ -403,26 +250,20 @@
                     </day-input>
     
                     <day-input formControlName="formControl" placeholder="Enter text">
-                        <day-icon [icon]="'day-chevron-down'" DAYSlot="right" />
+                        <day-icon [icon]="'day-chevron-down'" DAYSlot="right"/>
                     </day-input>
                 </div>
             </div>
-        </ng-template>
-    </day-card-body>
-</day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Custom CSS properties</h2>
-<p>
-    Styles of day-input can be customized overriding some of its CSS properties.<br>
-    The invalid and disabled styles come from the form control.
-</p>
+
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" class="details-icon show" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" class="details-icon show" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column name="name" title="Name" [hasActions]="true" [width]="200" />
-    <day-table-column [width]="320" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column name="name" title="Name" [hasActions]="true" [width]="200"/>
+    <day-table-column [width]="320" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
     <day-toast #dayToastDirective>Text copied to clipboard</day-toast>
 </day-table>

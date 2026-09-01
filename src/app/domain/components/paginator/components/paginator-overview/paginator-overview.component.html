@@ -2,15 +2,15 @@
 <p>
     The component <code>&lt;day-paginator&gt;</code> is a flexible UI element for navigating paginated data, offering customizable options and seamless integration with reactive Angular applications.
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code>, <code>'&#64;day/button'</code>, <code>'&#64;day/icon'</code>, <code>'&#64;day/dropdown'</code></p>
-<div class="line-divider"></div>
+<p><code>'/core'</code>, <code>'/button'</code>, <code>'/icon'</code>, <code>'/dropdown'</code></p>
+ 
 
 <h2>Import</h2>
-<p><code>import &#123; DAYPaginatorComponent &#125; from '&#64;day/paginator';</code></p>
-<div class="line-divider"></div>
+<p><code>import &#123; DAYPaginatorComponent &#125; from '/paginator';</code></p>
+ 
 
 <h2>Selectors</h2>
 <p>Paginator: <code>day-paginator</code></p>
@@ -21,49 +21,49 @@
     <br>
     <pre><code>import {{ '{' }} DAYPaginatorComponent {{ '}' }} from '@dayerlin-bustamante/paginator';</code></pre>
     <br>
-    <pre><code>&lt;day-paginator [totalItems]="100" [pageSize]="10" /&gt;</code></pre>
+    <pre><code>&lt;day-paginator [totalItems]="100" [pageSize]="10"/&gt;</code></pre>
 </div>
 
 <h2>Inputs</h2>
 <day-table [data]="inputsData" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
+    <day-table-column [width]="300" name="name" title="Name"/>
     <day-table-column name="description" title="Description">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.description"></span>
         </ng-template>
     </day-table-column>
-    <day-table-column [width]="100" name="default" title="Default" />
+    <day-table-column [width]="100" name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Outputs</h2>
 <day-table [data]="outputsData" [displayedColumns]="outputsDisplayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="300" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Directives</h2>
 <p>Not included</p>
-<div class="line-divider"></div>
+ 
 
 <h2>Computes and internal events</h2>
 <day-table [data]="dataComputeds" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="200" name="name" title="Name" />
-    <day-table-column [width]="350" name="description" title="Description" />
+    <day-table-column [width]="200" name="name" title="Name"/>
+    <day-table-column [width]="350" name="description" title="Description"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Public methods</h2>
 <h3>DAYDPaginatorAdapter</h3>
 <day-table [data]="adaptersData" [displayedColumns]="adaptersDisplayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="220" name="name" title="Name" />
-    <day-table-column [width]="300" name="description" title="Description" />
-    <day-table-column [width]="300" name="returns" title="Returns" />
-    <day-table-column [width]="300" name="param" title="Params" />
+    <day-table-column [width]="220" name="name" title="Name"/>
+    <day-table-column [width]="300" name="description" title="Description"/>
+    <day-table-column [width]="300" name="returns" title="Returns"/>
+    <day-table-column [width]="300" name="param" title="Params"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -81,19 +81,19 @@
         [total]="129"
         [itemsPerPage]="itemsPerPage()"
         [itemsPerPageOptions]="itemsPerPageOptions"
-        (paginationChanged)="changePagination($event)" /&gt;    
+        (paginationChanged)="changePagination($event)"/&gt;    
     &lt;/div&gt;
             </code></pre>
         </ng-template>                
                     
         <ng-template #demo>
             <div class="paginator-container">
-                <day-paginator [maxPages]="5" [page]="page()" [total]="129" [itemsPerPage]="itemsPerPage()" [itemsPerPageOptions]="itemsPerPageOptions" (paginationChanged)="changePagination($event)" />
+                <day-paginator [maxPages]="5" [page]="page()" [total]="129" [itemsPerPage]="itemsPerPage()" [itemsPerPageOptions]="itemsPerPageOptions" (paginationChanged)="changePagination($event)"/>
             </div>
         </ng-template>
     </day-card-body>
 </day-card>
-<div class="line-divider"></div>
+ 
 
 <h2>Description</h2>
 <p>

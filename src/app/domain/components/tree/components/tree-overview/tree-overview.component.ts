@@ -62,7 +62,7 @@ export class TreeOverviewComponent {
         {
             name: 'Nivel 1 - Carpeta C (vacía)',
             icon: 'day-assets-solid',
-            children: [] // carpeta vacia
+            children: []// carpeta vacia
         },
         {
             name: 'Nivel 1 - Documento suelto',

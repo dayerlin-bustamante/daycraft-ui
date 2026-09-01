@@ -3,7 +3,6 @@ import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/car
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYSkeletonLoaderComponent, DAYSkeletonLoaderDirective } from '@dayerlin-bustamante/skeleton';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
@@ -11,7 +10,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'skeleton-examples',
     templateUrl: './skeleton-examples.component.html',
     styleUrls: ['./skeleton-examples.component.scss'],
-    imports: [DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYSkeletonLoaderComponent, DAYSkeletonLoaderDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYSkeletonLoaderComponent, DAYSkeletonLoaderDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYCardComponent, DAYCardBodyComponent, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class SkeletonExamplesComponent implements OnDestroy {
     isLoadingDirective: boolean = true;

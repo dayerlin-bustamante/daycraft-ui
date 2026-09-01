@@ -1,79 +1,43 @@
 <h2>Toggle examples</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="default">Default</day-tab>
-            <day-tab [tabTmpl]="withTmpl">With tmpl</day-tab>
-            <day-tab [tabTmpl]="disabled">Disabled</day-tab>
-        </day-tabs>        
-        <ng-template #default>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDefault">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDefault">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #withTmpl>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlWithTmpl">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoWithTmpl">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #disabled>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDisabled">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDisabled">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlDefault>
-            <pre><code>
-    &#60;day-toggle [options]="['Edit', 'View']" /&#62;
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>
+    &#60;day-toggle [options]="['Edit', 'View']"/&#62;
             </code></pre>
-        </ng-template>             
-        <ng-template #demoDefault>
-            <day-toggle [options]="['Edit', 'View']" />
-        </ng-template>
+</div>
+<day-toggle [options]="['Edit', 'View']"/>
 
-        <ng-template #htmlWithTmpl>
-            <pre><code>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>
     &#60;day-toggle [options]="['Edit', 'View']"&#62;
         &#60;ng-template DAYToggleItemTmpl let-item="item"&#62;
-            &#60;day-icon [icon]="item" /&#62;
+            &#60;day-icon [icon]="item"/&#62;
         &#60;/ng-template&#62;
     &#60;/day-toggle&#62;
             </code></pre>
-        </ng-template>             
-        <ng-template #demoWithTmpl>
-            <day-toggle [options]="optionsIcons()">
-                <ng-template DAYToggleItemTmpl let-item="item">
-                    <day-icon [icon]="item" />
-                </ng-template>
-            </day-toggle>
-        </ng-template>
-        
-        <ng-template #htmlDisabled>
-            <pre><code>
+</div>
+<day-toggle [options]="optionsIcons()">
+    <ng-template DAYToggleItemTmpl let-item="item">
+        <day-icon [icon]="item"/>
+    </ng-template>
+</day-toggle>
+
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>
     &#60;day-toggle [options]="['Option 1', 'Option 2']" 
         [(ngModel)]="toggleDisabled" 
-        name="toggleDisabled" [disabled]="true" /&#62;
+        name="toggleDisabled" [disabled]="true"/&#62;
             </code></pre>
-        </ng-template>             
-        <ng-template #demoDisabled>
-            <day-toggle [options]="['Option 1', 'Option 2']" [(ngModel)]="toggleDisabled" name="toggleDisabled" [disabled]="true" />
-        </ng-template>
-    </day-card-body>
-</day-card>
+</div>
+<day-toggle [options]="['Option 1', 'Option 2']" [(ngModel)]="toggleDisabled" name="toggleDisabled" [disabled]="true"/>
 
 <h2>Custom CSS properties</h2>
-<p>
-    Styles of day-dropdown can be customized overriding some of its CSS properties.
-</p>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column [width]="240" name="name" title="Name" [hasActions]="true" />
-    <day-table-column [width]="280" name="description" title="Description" />
+    <day-table-column [width]="240" name="name" title="Name" [hasActions]="true"/>
+    <day-table-column [width]="280" name="description" title="Description"/>
     <day-table-column name="default" title="Default">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.default"></span>

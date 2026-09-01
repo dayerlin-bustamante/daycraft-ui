@@ -1,19 +1,17 @@
 import { Component } from "@angular/core";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { DAYCardBodyComponent, DAYCardComponent } from "@dayerlin-bustamante/card";
 import { DAYLabelComponent } from '@dayerlin-bustamante/label';
 import { DAYRadioButtonComponent, DAYRadioGroupComponent } from "@dayerlin-bustamante/radio";
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
-import { DAYTabComponent, DAYTabsComponent } from "@dayerlin-bustamante/tabs";
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'radio-examples',
     templateUrl: './radio-examples.component.html',
     styleUrls: ['./radio-examples.component.scss'],
-    imports: [DAYRadioButtonComponent, DAYLabelComponent, DAYRadioGroupComponent, ReactiveFormsModule, FormsModule, DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYRadioButtonComponent, DAYLabelComponent, DAYRadioGroupComponent, ReactiveFormsModule, FormsModule, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class RadioExamplesComponent {
     selected: string = 'option2';

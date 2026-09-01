@@ -1,6 +1,6 @@
 <h1>Tree component</h1>
 <p>
-    <code>import &#123; DAYTreeComponent &#125; from '&#64;day/tree';</code>
+    <code>import &#123; DAYTreeComponent &#125; from '/tree';</code>
 </p>
 
 <h2>Selectors</h2>
@@ -12,42 +12,42 @@
     <br>
     <pre><code>import {{ '{' }} DAYTreeComponent {{ '}' }} from '@dayerlin-bustamante/tree';</code></pre>
     <br>
-    <pre><code>&lt;day-tree [data]="treeData" /&gt;</code></pre>
+    <pre><code>&lt;day-tree [data]="treeData"/&gt;</code></pre>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Injector</h2>
 <p>Not included</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs</h2>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="200" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="200" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Output</h2>
 <day-table [data]="dataOutputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="200" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="200" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Directives</h2>
 <day-table [data]="dataDirectives" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="200" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="200" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Public methods</h2>
 <p>Not included</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 <div>
     <p>The <code>day-tree</code> component is a solution for visualizing and managing hierarchical data. <br>
@@ -55,7 +55,7 @@
     It supports data structure customization, <code>day-icon</code> integration, smooth animations, and emits node selection events.</p>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -69,7 +69,7 @@
     &#60;day-tree [data]="data" [childProperty]="'children'" (nodeSelected)="onNodeSelected($event)"&#62;
         &#60;ng-template DAYTreeItemTmpl let-node="item" let-level="level"&#62;
             &#60;div&#62;
-                &#60;day-icon&#62; [icon]="node.icon" /&#62;
+                &#60;day-icon&#62; [icon]="node.icon"/&#62;
                 &#60;span&#62;{{ node.name }}&#60;/span&#62;
             &#60;/div&#62;
         &#60;/ng-template&#62;
@@ -81,7 +81,7 @@
             <day-tree [data]="data" [childProperty]="'children'" (nodeSelected)="onNodeSelected($event)">
                 <ng-template DAYTreeItemTmpl let-node="item" let-level="level">
                     <div>
-                        <day-icon [icon]="node.icon" />
+                        <day-icon [icon]="node.icon"/>
                         <span>{{ node.name }}</span>
                     </div>
                 </ng-template>
@@ -91,7 +91,7 @@
     </day-card-body>
 </day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code></p>
-<p><code>'&#64;day/icon'</code></p>
+<p><code>'/core'</code></p>
+<p><code>'/icon'</code></p>

@@ -1,9 +1,9 @@
 <h1>Radio component</h1>
 <p>
-    <code>import &#123; DAYRadioGroupComponent, DAYRadioButtonComponent &#125; from '&#64;day/radio';</code>
+    <code>import &#123; DAYRadioGroupComponent, DAYRadioButtonComponent &#125; from '/radio';</code>
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Selectors</h2>
 <p>Radio group: <code>day-radio-group</code></p>
 <p>Radio button: <code>day-radio-button</code></p>
@@ -19,43 +19,43 @@
 &lt;/day-radio-group&gt;</code></pre>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs</h2>
 
 <h3>Radio Button</h3>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="400" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="400" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h3>Radio Group</h3>
 <p>No inputs included in radio group component.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Output</h2>
 <p>No outputs are included in the radio group component or the radio button component.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Directives</h2>
 <p>No directives are included in the radio group component or the radio button component.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Public methods</h2>
 <p>No public methods are included in the radio group component or the radio button component.</p>
 
-<div class="line-divider"></div>
+ 
 
 <p>
     The component <code>&lt;day-radio-group&gt;</code> is a form control that provides the same functionality as a native <code>&lt;input type="radio"&gt;</code>, enhanced with Design styling.
 </p>
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
 <p>
-    <code>'&#64;day/core'</code>
+    <code>'/core'</code>
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -91,19 +91,19 @@
 </day-card>
 <br>
 
-<div class="line-divider"></div>
+ 
 <h2>Radio button label</h2>
 <p>
     This label must be used with <code>&lt;day-label&gt;</code> component and can be positioned before or after the <code> &lt;input type="radio"&gt;</code> by setting the labelPosition property to 'before' or 'after' in <code> &lt;day-radio-button&gt;</code>.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Radio groups</h2>
 <p>
     The <code>&lt;day-radio-group&gt;</code> component is used to group radio buttons together. It allows you to bind the selected value to a model using two-way data binding with <code>[(ngModel)]</code> or by using reactive forms with <code>formControlName</code>. The group manages the state changes for disabled and invalid radio buttons.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Use with &#64;angular/forms</h2>
 <p>
     Supports both FormsModule and ReactiveFormsModule.

@@ -20,36 +20,37 @@
     <br>
     <pre><code>&lt;day-checkbox&gt;Label&lt;/day-checkbox&gt;</code></pre>
 </div>
-
-<form [formGroup]="formGroup" class="input-wrapper">
-    <day-checkbox formControlName="formControl" [id]="'1'">
-        <day-label>
-            <span class="label">Checkbox example</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox [indeterminate]="indeterminate" formControlName="formControlIndeterminate" [id]="'2'">
-        <day-label>
-            <span class="label">Checkbox indeterminate</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox formControlName="formControlDisabled" [id]="'3'">
-        <day-label>
-            <span class="label">Checkbox disabled</span>
-        </day-label>
-    </day-checkbox>
-</form>
-<form>
-    <day-checkbox type="toggle">
-        <day-label>
-            <span class="label">Toggle example</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox type="toggle" [(ngModel)]="toggleValue" name="toggleValue" [disabled]="true">
-        <day-label>
-            <span class="label">Toggle disabled</span>
-        </day-label>
-    </day-checkbox>
-</form>
+<div class="flex flex-wrap gap-4 mt-6">
+    <form [formGroup]="formGroup" class="input-wrapper flex flex-col gap-4">
+        <day-checkbox formControlName="formControl" [id]="'1'">
+            <day-label>
+                <span class="label">Checkbox example</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox [indeterminate]="indeterminate" formControlName="formControlIndeterminate" [id]="'2'">
+            <day-label>
+                <span class="label">Checkbox indeterminate</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox formControlName="formControlDisabled" [id]="'3'">
+            <day-label>
+                <span class="label">Checkbox disabled</span>
+            </day-label>
+        </day-checkbox>
+    </form>
+    <form class="flex flex-col gap-4"> 
+        <day-checkbox type="toggle">
+            <day-label>
+                <span class="label">Toggle example</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox type="toggle" [(ngModel)]="toggleValue" name="toggleValue" [disabled]="true">
+            <day-label>
+                <span class="label">Toggle disabled</span>
+            </day-label>
+        </day-checkbox>
+    </form>
+</div>
 <br>
 
 <h2>Checkbox label</h2>
@@ -77,9 +78,9 @@
 
 <h2>Inputs</h2>
 <day-table [data]="dataInputsButton" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="400" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="400" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Output</h2>
@@ -87,9 +88,9 @@
 
 <h2>Computes and internal events</h2>
 <day-table [data]="dataComputedsEvent" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="400" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="400" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Directives</h2>

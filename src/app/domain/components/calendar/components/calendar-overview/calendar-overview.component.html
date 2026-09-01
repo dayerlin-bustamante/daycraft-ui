@@ -8,7 +8,7 @@
 <p>
     <code>'&#64;core'</code>, <code>'&#64;icon'</code>, <code>'&#64;input'</code>, <code>'&#64;label'</code>
 </p>
-<day-calendar [config]="calendarConfig" (selectedEvent)="onDateSelectedCalendar($event)" />
+<day-calendar [config]="calendarConfig" (selectedEvent)="onDateSelectedCalendar($event)"/>
 <p class="selected-date-text">{{ selectedDateText }}</p>
 
 <h2>Description</h2>
@@ -26,7 +26,7 @@
 </ul>
 
 <p>
-    <code>import &#123; DAYCalendarComponent &#125; from '&#64;day/calendar';</code>
+    <code>import &#123; DAYCalendarComponent &#125; from '/calendar';</code>
 </p>
 
 <h2>Selectors</h2>
@@ -38,175 +38,175 @@
     <br>
     <pre><code>import {{ '{' }} DAYCalendarComponent {{ '}' }} from '@dayerlin-bustamante/calendar';</code></pre>
     <br>
-    <pre><code>&lt;day-calendar [config]="config" (selectedEvent)="onDateSelected($event)" /&gt;</code></pre>
+    <pre><code>&lt;day-calendar [config]="config" (selectedEvent)="onDateSelected($event)"/&gt;</code></pre>
 </div>
 
 <h2>Inputs</h2>
 <h2>Calendar component</h2>
 <day-table [data]="dataInputsCalendar" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar body component</h2>
 <day-table [data]="dataInputsCalendarBody" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar header component</h2>
 <day-table [data]="dataInputsCalendarHeader" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months days view component</h2>
 <day-table [data]="dataInputsCalendarMonthsDays" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months view component</h2>
 <day-table [data]="dataInputsCalendarMonths" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar years view component</h2>
 <day-table [data]="dataInputsCalendarYears" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar time view component</h2>
 <day-table [data]="dataInputsCalendarTime" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Outputs</h2>
 <h2>Calendar component</h2>
 <day-table [data]="dataOutputsCalendar" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar body component</h2>
 <day-table [data]="dataOutputsCalendarBody" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar header component</h2>
 <day-table [data]="dataOutputsCalendarHeader" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months days view component</h2>
 <day-table [data]="dataOutputsCalendarMonthsDays" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months view component</h2>
 <day-table [data]="dataOutputsCalendarMonths" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar years view component</h2>
 <day-table [data]="dataOutputsCalendarYears" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar time view component</h2>
 <day-table [data]="dataOutputsCalendarTime" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Computes and internal events</h2>
 <h2>Calendar component</h2>
 <day-table [data]="dataComputedsCalendar" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar body component</h2>
 <day-table [data]="dataComputedsCalendarBody" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar header component</h2>
 <day-table [data]="dataComputedsCalendarHeader" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months days view component</h2>
 <day-table [data]="dataComputedsMonthDays" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Public methods</h2>
 <h2>Calendar Adapter</h2>
 <day-table [data]="dataMethodsCalendarAdapter" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar Helpers</h2>
 <day-table [data]="dataMethodsCalendarHelper" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar component</h2>
 <day-table [data]="dataMethodsCalendar" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar body component</h2>
 <day-table [data]="dataMethodsCalendarBody" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar header component</h2>
 <day-table [data]="dataMethodsCalendarHeader" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months days view component</h2>
 <day-table [data]="dataMethodsMonthDays" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar months view component</h2>
 <day-table [data]="dataMethodsCalendarMonth" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar years view component</h2>
 <day-table [data]="dataMethodsCalendarYears" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h2>Calendar time view component</h2>
 <day-table [data]="dataMethodsTimeView" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>

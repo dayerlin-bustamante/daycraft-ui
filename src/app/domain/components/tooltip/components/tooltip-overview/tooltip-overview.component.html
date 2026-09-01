@@ -3,18 +3,18 @@
     tooltip system in Angular, handling positioning, sizing, animations, and dynamic behavior based on configuration.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code></p>
+<p><code>'/core'</code></p>
 
-<div class="line-divider"></div>
+ 
 <h2>Import</h2>
 <p>
-    <code>import &#123; DAYTooltipComponent &#125; from '&#64;day/tooltip';</code><br>
-    <code>import &#123; DAYTooltipTriggerDirective &#125; from '&#64;day/tooltip';</code>
+    <code>import &#123; DAYTooltipComponent &#125; from '/tooltip';</code><br>
+    <code>import &#123; DAYTooltipTriggerDirective &#125; from '/tooltip';</code>
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Selectors</h2>
 <p>Tooltip: <code>day-tooltip</code></p>
 <p>Tooltip directive: <code>[DAYTooltip]</code></p>
@@ -30,27 +30,27 @@
 &lt;/day-tooltip&gt;</code></pre>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs directive</h2>
 <day-table [data]="dataInputsDirective" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="400" name="name" title="Name" />
-    <day-table-column [width]="300" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="400" name="name" title="Name"/>
+    <day-table-column [width]="300" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Output</h2>
 <div>Not included</div>
 
-<div class="line-divider"></div>
+ 
 <h2>Directives</h2>
 <p>The DAYTooltipTriggerDirective <code>([DAYTooltip])</code> attaches to any element to handle tooltip display and lifecycle. It merges default settings with optional inputs (DAYTooltipConfig, DAYTooltipBondedElement) and reacts to mouse events to show either a classic hover tooltip or a cursor-following title. Tooltips are created via DAYTooltipService and tracked through DAYDialogRef, while reactive primitives (computed, BehaviorSubject, effect) and takeUntilDestroyed ensure dynamic configuration, customizable delays, and safe cleanup.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Public methods</h2>
 <div>Not included</div>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -74,7 +74,7 @@
     </day-card-body>
 </day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 
 <p>The DAYTooltip system combines a directive and a container component to deliver a reactive, customizable tooltip in Angular.</p>

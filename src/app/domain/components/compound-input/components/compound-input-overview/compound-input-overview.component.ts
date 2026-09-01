@@ -1,17 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYCompoundInputComponent } from '@dayerlin-bustamante/compound-input';
 import { DAYDropdownComponent, DAYDropdownItemTmplDirective, DAYDropdownSelectionTmplDirective } from '@dayerlin-bustamante/dropdown';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYInputComponent } from '@dayerlin-bustamante/input';
 import { DAYLabelComponent } from '@dayerlin-bustamante/label';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 
 @Component({
     selector: 'compound-input-overview',
     templateUrl: './compound-input-overview.component.html',
-    imports: [DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYCardComponent, DAYCardBodyComponent, DAYCompoundInputComponent, DAYLabelComponent, DAYDropdownComponent, DAYInputComponent, DAYTabsComponent, DAYTabComponent, DAYIconComponent, FormsModule]
+    imports: [DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYCompoundInputComponent, DAYLabelComponent, DAYDropdownComponent, DAYInputComponent, DAYIconComponent, FormsModule]
 })
 export class CompoundInputOverviewComponent {
     dropdownOptions: { id: number; value: string; icon: string }[] = [

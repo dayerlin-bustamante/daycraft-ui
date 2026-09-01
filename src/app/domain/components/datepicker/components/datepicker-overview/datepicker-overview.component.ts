@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDatePickerComponent } from '@dayerlin-bustamante/datepicker';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'datepicker-overview',
     templateUrl: './datepicker-overview.component.html',
-    imports: [DAYDatePickerComponent, DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, ReactiveFormsModule, DAYTableComponent, DAYTableColumnComponent]
+    imports: [DAYDatePickerComponent, ReactiveFormsModule, DAYTableComponent, DAYTableColumnComponent]
 })
 export class DatepickerOverviewComponent {
     selectedDateText!: string;

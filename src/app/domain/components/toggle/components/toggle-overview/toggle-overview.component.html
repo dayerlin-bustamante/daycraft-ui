@@ -1,8 +1,8 @@
 <h1>Toggle component</h1>
 <p>
-    <code>import &#123; DAYToggleComponent &#125; from '&#64;day/toggle';</code>
+    <code>import &#123; DAYToggleComponent &#125; from '/toggle';</code>
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Selectors</h2>
 <p>Toggle: <code>day-toggle</code></p>
@@ -13,45 +13,45 @@
     <br>
     <pre><code>import {{ '{' }} DAYToggleComponent {{ '}' }} from '@dayerlin-bustamante/toggle';</code></pre>
     <br>
-    <pre><code>&lt;day-toggle [options]="['Option 1', 'Option 2']" /&gt;</code></pre>
+    <pre><code>&lt;day-toggle [options]="['Option 1', 'Option 2']"/&gt;</code></pre>
 </div>
 
 <h2>Inputs</h2>
 <day-table [data]="inputsData" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
-    <day-table-column [width]="120" name="default" title="Default" />
+    <day-table-column [width]="240" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
+    <day-table-column [width]="120" name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Outputs</h2>
 <day-table [data]="outputsData" [displayedColumns]="displayedColumnsNoDefault" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="240" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Directives</h2>
 <day-table [data]="directivesData" [displayedColumns]="displayedColumnsNoDefault" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="240" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Public methods</h2>
 <div>Not included</div>
-<div class="line-divider"></div>
+ 
 
 <p>
     <code>&lt;day-toggle&gt;</code> is a component for toggling between two states, similar to a switch or checkbox. It can be used to represent binary choices or options.
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Dependencies</h2>
 <p>
-    <code>'&#64;day/core'</code>
+    <code>'/core'</code>
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Example</h2>
 <day-card shadow="small">
@@ -63,23 +63,23 @@
 
         <ng-template #html>
             <pre><code>
-    &#60;day-toggle [options]="['Edit', 'View']" /&#62;
+    &#60;day-toggle [options]="['Edit', 'View']"/&#62;
             </code></pre>
         </ng-template>
 
         <ng-template #demo>
-            <day-toggle [options]="['Edit', 'View']" />
+            <day-toggle [options]="['Edit', 'View']"/>
         </ng-template>
 
     </day-card-body>
 </day-card>
-<div class="line-divider"></div>
+ 
 
 <h2>Use with &#64;angular/forms</h2>
 <p>
     Supports both FormsModule and ReactiveFormsModule.
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Description</h2>
 <p>

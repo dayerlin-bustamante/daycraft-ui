@@ -1,6 +1,6 @@
 <h1>Table component</h1>
 <p>
-    <code>import &#123; DAYCompoundInputComponent, DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableGroupTmplDirective, DAYTableHeaderTmplDirective, DAYTableRowDetailsTmplDirective&#125; from '&#64;day/table';</code>
+    <code>import &#123; DAYCompoundInputComponent, DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent, DAYTableFooterTmplDirective, DAYTableGroupTmplDirective, DAYTableHeaderTmplDirective, DAYTableRowDetailsTmplDirective&#125; from '/table';</code>
 </p>
 <h2>Selectors</h2>
 <p>Table: <code>day-table</code></p>
@@ -13,59 +13,59 @@
     <pre><code>import {{ '{' }} DAYTableComponent, DAYTableColumnComponent {{ '}' }} from '@dayerlin-bustamante/table';</code></pre>
     <br>
     <pre><code>&lt;day-table [data]="data" [displayedColumns]="columns"&gt;
-    &lt;day-table-column name="name" title="Name" /&gt;
+    &lt;day-table-column name="name" title="Name"/&gt;
 &lt;/day-table&gt;</code></pre>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs</h2>
 <h3>Table component</h3>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="400" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="400" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h3>Table column component</h3>
 <day-table [data]="dataInputsColumn" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="430" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="430" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Outputs</h2>
 <day-table [data]="dataOutputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="500" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="500" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Directives</h2>
 <day-table [data]="dataDirectives" [displayedColumns]="displayedColumnsTwo" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="240" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Public methods</h2>
 <day-table [data]="dataPublicMethods" [displayedColumns]="displayedColumnsTwo" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="240" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <p>
     The <code>&lt;day-table&gt;</code> component is a powerful and customizable table that supports features like
     sortable columns, row selection, and expandable groups.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code>, <code>'&#64;day/icon'</code>, <code>'&#64;day/checkbox'</code>, <code>'&#64;day/resize'</code>, <code>'&#64;day/skeleton-loader'</code></p>
+<p><code>'/core'</code>, <code>'/icon'</code>, <code>'/checkbox'</code>, <code>'/resize'</code>, <code>'/skeleton-loader'</code></p>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -94,7 +94,7 @@
                 &#123; &#123; item.code &#125; &#125;
             &lt;/ng-template&gt;
         &lt;/day-table-column&gt;
-        &lt;day-table-column name="color" title="Color" /&gt;  
+        &lt;day-table-column name="color" title="Color"/&gt;  
         &lt;day-table-column name="brand"&gt;
             &lt;ng-template DAYTableHeaderTmpl&gt;
                 Brand
@@ -106,7 +106,7 @@
                 Footer brand
             &lt;/ng-template&gt;
         &lt;/day-table-column&gt;
-        &lt;day-table-column name="year" title="Year" /&gt;
+        &lt;day-table-column name="year" title="Year"/&gt;
     &lt;/day-table&gt;
             </code></pre>
         </ng-template>
@@ -130,7 +130,7 @@
                         {{ item.code }}
                     </ng-template>
                 </day-table-column>
-                <day-table-column name="color" title="Color" />
+                <day-table-column name="color" title="Color"/>
                 <day-table-column name="brand">
                     <ng-template DAYTableHeaderTmpl>
                         Brand
@@ -142,13 +142,13 @@
                         Footer brand
                     </ng-template>
                 </day-table-column>
-                <day-table-column name="year" title="Year" />
+                <day-table-column name="year" title="Year"/>
             </day-table>
         </ng-template>
     </day-card-body>
 </day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 <ul>
     <li>Custom Angular table component supporting locked and sortable columns.</li>

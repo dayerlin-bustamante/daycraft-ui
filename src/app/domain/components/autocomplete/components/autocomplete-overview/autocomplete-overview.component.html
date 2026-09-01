@@ -17,7 +17,7 @@
     <br>
     <pre><code>import {{ '{' }} DAYAutocompleteComponent {{ '}' }} from '@dayerlin-bustamante/autocomplete';</code></pre>
     <br>
-    <pre><code>&lt;day-autocomplete [data]="items" [placeholder]="'Search...'" /&gt;</code></pre>
+    <pre><code>&lt;day-autocomplete [data]="items" [placeholder]="'Search...'"/&gt;</code></pre>
 </div>
 
 <day-autocomplete [data]="availableColours" [filterFn]="filterColoursSimple" [minCharacters]="3" [keyText]="'name'" [keyValue]="'code'" [placeholder]="'Busca un color...'" [(ngModel)]="selectedColourCodeSimple">
@@ -48,18 +48,18 @@
 
 <h2>Inputs</h2>
 <day-table [data]="inputsData" [displayedColumns]="inputsDisplayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="240" name="name" title="Name" />
+    <day-table-column [width]="240" name="name" title="Name"/>
     <day-table-column [width]="700" name="description" title="Description">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.description"></span>
         </ng-template>
     </day-table-column>
-    <day-table-column [width]="120" name="default" title="Default" />
+    <day-table-column [width]="120" name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Directives</h2>
 <day-table [data]="directivesData" [displayedColumns]="directivesDisplayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column name="description" title="Description" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column name="description" title="Description"/>
 </day-table>

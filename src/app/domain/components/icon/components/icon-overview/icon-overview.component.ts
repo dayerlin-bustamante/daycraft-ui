@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
@@ -7,7 +6,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
 @Component({
     selector: 'icon-overview',
     templateUrl: './icon-overview.component.html',
-    imports: [DAYIconComponent, DAYCardComponent, DAYCardBodyComponent, DAYTableComponent, DAYTableColumnComponent]
+    imports: [DAYIconComponent, DAYTableComponent, DAYTableColumnComponent]
 })
 export class IconOverviewComponent {
     displayedColumns: string[] = ['name', 'description', 'default'];

@@ -1,8 +1,8 @@
 <h1>Skeleton component</h1>
 <p>
-    <code>import &#123; DAYSkeletonLoaderComponent &#125; or &#123; DAYSkeletonLoaderDirective &#125; from '&#64;day/skeleton-loader';</code>
+    <code>import &#123; DAYSkeletonLoaderComponent &#125; or &#123; DAYSkeletonLoaderDirective &#125; from '/skeleton-loader';</code>
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Selectors</h2>
 <p>Skeleton Loader: <code>day-skeleton-loader</code></p>
@@ -14,41 +14,41 @@
     <br>
     <pre><code>import {{ '{' }} DAYSkeletonLoaderComponent {{ '}' }} from '@dayerlin-bustamante/skeleton';</code></pre>
     <br>
-    <pre><code>&lt;day-skeleton-loader [width]="'100%'" [height]="'20px'" /&gt;</code></pre>
+    <pre><code>&lt;day-skeleton-loader [width]="'100%'" [height]="'20px'"/&gt;</code></pre>
 </div>
-<div class="line-divider"></div>
+ 
 
 <h2>Inputs</h2>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Outputs</h2>
 <p>Not included</p>
-<div class="line-divider"></div>
+ 
 
 <h2>Directives</h2>
 <p>The <code>daySkeletonLoader</code> directive applies a lightweight shimmer-style loading effect to any DOM element using a ::after pseudo-element. Designed for simplicity and flexibility, it wraps content with a visual skeleton block while data is loading.</p>
 
 <p>It automatically sets position: relative on the host element if its position is static, ensuring the ::after overlay is positioned correctly regardless of layout context.</p>
-<div class="line-divider"></div>
+ 
 
 <h2>Public methods</h2>
 <p>Not included</p>
 
-<div class="line-divider"></div>
+ 
 <p>
     The <code>day-skeleton-loader</code> and its directive provide animated loaders while data is being fetched, dynamically adapting to the structure and type of content through configurable types.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
 <p>This component does not have any dependencies.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -60,24 +60,24 @@
         <ng-template #html>
             <pre><code class="code-html">
   &lt;div class="skeleton-overview"&gt;
-    &lt;day-skeleton-loader /&gt;
-    &lt;day-skeleton-loader [type]="'radio'" /&gt;
-    &lt;day-skeleton-loader [type]="'checkbox'" /&gt;    
+    &lt;day-skeleton-loader/&gt;
+    &lt;day-skeleton-loader [type]="'radio'"/&gt;
+    &lt;day-skeleton-loader [type]="'checkbox'"/&gt;    
   &lt;/div&gt;
             </code></pre>
         </ng-template>
 
         <ng-template #demo>
          
-                <day-skeleton-loader />
-                <day-skeleton-loader [type]="'radio'" />
-                <day-skeleton-loader [type]="'checkbox'" />
+                <day-skeleton-loader/>
+                <day-skeleton-loader [type]="'radio'"/>
+                <day-skeleton-loader [type]="'checkbox'"/>
          
         </ng-template>
     </day-card-body>
 </day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 <ul>
     <li>Multiple supported types: block, input, checkbox, radio, table.</li>

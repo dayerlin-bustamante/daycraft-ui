@@ -1,7 +1,8 @@
 <h2>Checkbox type checkbox</h2>
-<h3>Default, Error and Disabled</h3>
- <form [formGroup]="formGroupDefault">
-    <div class="content-wrapper">
+
+<h3>Default</h3>
+<form [formGroup]="formGroupDefault">
+    <div class="flex flex-wrap gap-4">
         <day-checkbox formControlName="formControl1" [id]="'1'">
             <day-label>
                 <span class="label">Checkbox example 1</span>
@@ -13,66 +14,76 @@
             </day-label>
         </day-checkbox>
     </div>
-    <div class="content-wrapper">
-        <day-checkbox formControlName="formControl" />
-        <day-checkbox formControlName="formControlError" />
-        <day-checkbox formControlName="formControlDisabled" />
-    </div>
-</form>
- <form [formGroup]="formGroupError">
-    <day-checkbox formControlName="formControlError1">
-        <day-label>
-            <span class="label">Checkbox error 1</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox formControlName="formControlError2">
-        <day-label>
-            <span class="label">Checkbox error 2</span>
-        </day-label>
-    </day-checkbox>
 </form>
 
+<h3>Error</h3>
+<form [formGroup]="formGroupError">
+    <div class="flex flex-wrap gap-4">
+        <day-checkbox formControlName="formControlError1">
+            <day-label>
+                <span class="label">Checkbox error 1</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox formControlName="formControlError2">
+            <day-label>
+                <span class="label">Checkbox error 2</span>
+            </day-label>
+        </day-checkbox>
+    </div>
+</form>
+
+<h3>Disabled</h3>
 <form>
-    <day-checkbox [(ngModel)]="checkbox1" name="checkbox1" [disabled]="true">
-        <day-label>
-            <span class="label">Checkbox checked disabled</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox [(ngModel)]="checkbox2" name="checkbox2" [disabled]="true">
-        <day-label>
-            <span class="label">Checkbox unchecked disabled</span>
-        </day-label>
-    </day-checkbox>
+    <div class="flex flex-wrap gap-4">
+        <day-checkbox [(ngModel)]="checkbox1" name="checkbox1" [disabled]="true">
+            <day-label>
+                <span class="label">Checkbox checked disabled</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox [(ngModel)]="checkbox2" name="checkbox2" [disabled]="true">
+            <day-label>
+                <span class="label">Checkbox unchecked disabled</span>
+            </day-label>
+        </day-checkbox>
+    </div>
 </form>
 
 <h3>Indeterminate</h3>
 <form [formGroup]="formGroupIndeterminate">
-    <day-checkbox [indeterminate]="indeterminate" formControlName="formControlIndeterminate">
-        <day-label>
-            <span class="label">Checkbox Indeterminate</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox [indeterminate]="true" formControlName="formControlDisabled">
-        <day-label>
-            <span class="label">Indeterminate and disabled</span>
-        </day-label>
-    </day-checkbox>
-</form>
-<h3>LabelPosition</h3>
- <form>
-    <day-checkbox [(ngModel)]="checkbox1" [labelPosition]="'after'" name="checkbox1">
-        <day-label>
-            <span class="label">Checkbox label position 1</span>
-        </day-label>
-    </day-checkbox>
-    <day-checkbox [(ngModel)]="checkbox2" [labelPosition]="'after'" name="checkbox2">
-        <day-label>
-            <span class="label">Checkbox label position 2</span>
-        </day-label>
-    </day-checkbox>
+    <div class="flex flex-wrap gap-4">
+        <day-checkbox [indeterminate]="indeterminate" formControlName="formControlIndeterminate">
+            <day-label>
+                <span class="label">Checkbox Indeterminate</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox [indeterminate]="true" formControlName="formControlDisabled">
+            <day-label>
+                <span class="label">Indeterminate and disabled</span>
+            </day-label>
+        </day-checkbox>
+    </div>
 </form>
 
+<h3>LabelPosition</h3>
+<form>
+    <div class="flex flex-wrap gap-4">
+        <day-checkbox [(ngModel)]="checkbox1" [labelPosition]="'after'" name="checkbox1">
+            <day-label>
+                <span class="label">Checkbox label position 1</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox [(ngModel)]="checkbox2" [labelPosition]="'after'" name="checkbox2">
+            <day-label>
+                <span class="label">Checkbox label position 2</span>
+            </day-label>
+        </day-checkbox>
+    </div>
+</form>
+
+ 
 <h2>Checkbox type toggle</h2>
+
+<h3>Default</h3>
 <form>
     <day-checkbox type="toggle" labelPosition="after" [(ngModel)]="toggleDefault" name="toggleDefault">
         <day-label>
@@ -81,8 +92,9 @@
     </day-checkbox>
 </form>
 
+<h3>Disabled</h3>
 <form>
-    <div class="toggle-wrapper">                
+    <div class="flex flex-wrap gap-4">
         <day-checkbox type="toggle" labelPosition="after" [(ngModel)]="toggleTrue" name="toggleTrue" [disabled]="true">
             <day-label>
                 <span class="label">Toggle checked disabled</span>
@@ -96,8 +108,9 @@
     </div>
 </form>
 
- <form>
-    <div class="toggle-wrapper">                
+<h3>Label Position</h3>
+<form>
+    <div class="flex flex-wrap gap-4">
         <day-checkbox type="toggle" [(ngModel)]="toggleDefault" name="toggleLeft">
             <day-label>
                 <span class="label">Toggle label before</span>
@@ -111,11 +124,31 @@
     </div>
 </form>
 
+ 
 <h2>FormGroup checkbox</h2>
 <p>
     Use of ReactiveFormsMoldule to create a form with checkbox. An example without label is also shown.
 </p>
-    <pre><code class="code-html">
+<form [formGroup]="formGroup">
+    <div class="flex flex-wrap gap-4">
+        <day-checkbox formControlName="formControl">
+            <day-label>
+                <span class="label">Checkbox default</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox formControlName="formControlError">
+            <day-label>
+                <span class="label">Checkbox error</span>
+            </day-label>
+        </day-checkbox>
+        <day-checkbox formControlName="formControlDisabled">
+            <day-label>
+                <span class="label">Checkbox disabled</span>
+            </day-label>
+        </day-checkbox>
+    </div>
+</form>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
 &lt;form [formGroup]="formGroup" class="form-group-section"&gt;
     &lt;day-checkbox formControlName="formControl"&gt;
         &lt;day-label&gt;
@@ -133,14 +166,23 @@
         &lt;/day-label&gt;
     &lt;/day-checkbox&gt;
 &lt;/form&gt;
-        </code></pre>
+</code></pre></div>
 
-
+ 
 <h2>NgModel checkbox</h2>
 <p>
     Use of FormsModule [(ngModel)] to create a form with checkbox. The example with a long label.
 </p>
-    <pre><code class="code-html">
+<form>
+    <div class="flex flex-wrap gap-4">
+        <day-checkbox [ngModel]="false" [labelPosition]="'after'" name="defaultCheckbox">
+            <day-label>
+                <span class="label">Checkbox default a long text...</span>
+            </day-label>
+        </day-checkbox>
+    </div>
+</form>
+<div class="p-4 bg-gray-100 rounded-sm"><pre><code class="code-html">
 &lt;form&gt;
     &lt;day-checkbox [ngModel]="false" [labelPosition]="'after'" name="defaultCheckbox"&gt;
         &lt;day-label&gt;
@@ -148,15 +190,16 @@
         &lt;/day-label&gt;
     &lt;/day-checkbox&gt;
 &lt;/form&gt;
-        </code></pre>
+</code></pre></div>
 
+ 
 <h2>Custom CSS properties</h2>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" class="details-icon show" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" class="details-icon show" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column name="name" title="Name" [hasActions]="true" [width]="200" />
-    <day-table-column [width]="400" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column name="name" title="Name" [hasActions]="true" [width]="200"/>
+    <day-table-column [width]="400" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
     <day-toast #dayToastDirective>Text copied to clipboard</day-toast>
 </day-table>

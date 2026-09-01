@@ -1,90 +1,51 @@
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="normal">Normal</day-tab>
-            <day-tab [tabTmpl]="disabled">Disabled</day-tab>
-        </day-tabs>        
-        <ng-template #normal>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlNormal">Html</day-tab>
-                <day-tab [tabTmpl]="tsNormal">TS</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoNormal">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #disabled>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlDisabled">Html</day-tab>
-                <day-tab [tabTmpl]="tsDisabled">TS</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoDisabled">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-
-        <ng-template #htmlNormal>
-            <pre>
-
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre>
     &#60;div [formGroup]="formGroup" class="input-wrapper" #bonded3&#62;
         &#60;day-input formControlName="formControl" placeholder="Enter text"&#62; 
             &#60;day-label&#62;Label example&#60;/day-label&#62;
         &#60;/day-input&#62;
     &#60;/div&#62;
             </pre>
-        </ng-template> 
-
-        <ng-template #tsNormal>
-            <pre ngNonBindable><code>
+<pre ngNonBindable><code>
  formGroup: FormGroup &#61; new FormGroup&#40;&#123;
     formControl: new FormControl&#40;null, Validators.required&#41; 
  &#125;&#41;   
             </code></pre>
-        </ng-template> 
+</div>
 
-        <ng-template #demoNormal>
-            <div [formGroup]="formGroup" class="input-wrapper" #bonded3>
-                <day-textarea formControlName="formControl" placeholder="Enter text">
-                    <day-label>Label example</day-label>
-                </day-textarea>
-            </div>
-        </ng-template>
-
-        <ng-template #htmlDisabled>
-            <pre>
-
+<div [formGroup]="formGroup" class="input-wrapper" #bonded3>
+    <day-textarea formControlName="formControl" placeholder="Enter text">
+        <day-label>Label example</day-label>
+    </day-textarea>
+</div>
+<div class="p-4 bg-gray-100 rounded-sm">
+<pre>
     &#60;div [formGroup]=&#34;formGroup&#34; class=&#34;input-wrapper&#34; #bonded3&#62;
         &#60;day-input formControlName=&#34;formControlDisabled&#34; placeholder=&#34;Enter text&#34;&#62; 
             &#60;day-label&#62;Label example&#60;/day-label&#62;
         &#60;/day-input&#62;
     &#60;/div&#62;
             </pre>
-        </ng-template> 
 
-        <ng-template #tsDisabled>
-            <pre ngNonBindable><code>
+<pre ngNonBindable><code>
  formGroup: FormGroup &#61; new FormGroup&#40;&#123;
     formControlDisabled: new FormControl&#40;&#123; value: null, disabled: true &#125;, Validators.required&#41; 
  &#125;&#41;   
             </code></pre>
-        </ng-template> 
+</div>
 
-        <ng-template #demoDisabled>
-            <div [formGroup]="formGroup" class="input-wrapper" #bonded3>
-                <day-textarea formControlName="formControlDisabled" placeholder="Enter text">
-                    <day-label>Label example</day-label>
-                </day-textarea>
-            </div>
-        </ng-template>
-    </day-card-body>
-</day-card>
-
+<div [formGroup]="formGroup" class="input-wrapper" #bonded3>
+    <day-textarea formControlName="formControlDisabled" placeholder="Enter text">
+        <day-label>Label example</day-label>
+    </day-textarea>
+</div>
 <h2>Custom CSS properties</h2>
-<p>
-    Styles of day-textarea can be customized overriding some of its CSS properties.
-</p>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
-    <day-table-column [width]="230" name="description" title="Description" />
+    <day-table-column [width]="250" name="name" title="Name" [hasActions]="true"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
     <day-table-column name="default" title="Default">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.default"></span>

@@ -38,7 +38,7 @@ export class AutocompleteExamplesComponent {
                     item.name.toLowerCase().includes(lowerCaseSearchTerm)
                 );
                 resolve(filtered);
-            }, 300); // Un poco de retraso para simular carga asíncrona
+            }, 300);// Un poco de retraso para simular carga asíncrona
         });
     };
 }

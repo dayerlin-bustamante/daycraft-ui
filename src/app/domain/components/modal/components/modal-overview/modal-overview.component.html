@@ -2,17 +2,17 @@
 <p>The <code>&lt;day-modal&gt;</code> component provides a highly configurable modal dialog that overlays the main page content. It is designed to display important information, request user actions, or present focused content without leaving the current view. It exposes settings to control it's size and the content it displays.</p>
 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code>,  <code>'&#64;day/overlay'</code></p>
+<p><code>'/core'</code>,  <code>'/overlay'</code></p>
 
 <h2>Import</h2>
 <p>
-    <code>import &#123; DAYModalComponent &#125; from '&#64;day/modal';</code>    
-    <code>import &#123; DAYModalHeaderComponent &#125; from '&#64;day/modal';</code><br>
-    <code>import &#123; DAYModalBodyComponent &#125; from '&#64;day/modal';</code><br>
-    <code>import &#123; DAYModalFooterComponent &#125; from '&#64;day/modal';</code><br>
+    <code>import &#123; DAYModalComponent &#125; from '/modal';</code>    
+    <code>import &#123; DAYModalHeaderComponent &#125; from '/modal';</code><br>
+    <code>import &#123; DAYModalBodyComponent &#125; from '/modal';</code><br>
+    <code>import &#123; DAYModalFooterComponent &#125; from '/modal';</code><br>
     <br>or using<br>
     <br>
-    <code>import &#123; DAYModalModule &#125; from '&#64;day/modal';</code>
+    <code>import &#123; DAYModalModule &#125; from '/modal';</code>
 </p>
 
 <h2>Selectors</h2>
@@ -31,6 +31,46 @@
     &lt;day-modal-body&gt;Content&lt;/day-modal-body&gt;
 &lt;/day-modal&gt;</code></pre>
 </div>
+
+<day-button class="mt-6" (click)="showModalTmpl()" size="big">Show modal</day-button>
+<day-modal #dayModal>
+    <day-modal-header>
+        <day-close-button DAYCloseDialog>
+            <day-icon [icon]="'day-circle-close-solid'"/>
+        </day-close-button>
+        <h3> Title</h3>
+    </day-modal-header>
+    <day-modal-body>
+        ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+        Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
+        of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
+        during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+        original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+        Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
+        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
+        of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
+        during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+        section 1.10.32.
+
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+        original form, accompanied by English versions from the 1914 translation by H. Rackham.
+    </day-modal-body>
+    <day-modal-footer>
+        <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
+    </day-modal-footer>
+</day-modal>
+
 
 <h2>Injector</h2>
 <p>Injection token for providing the modal configuration.<br>
@@ -54,78 +94,6 @@ This token is used to inject an instance of <code>IDAYModalConfiguration</code> 
 <p><code>anchor</code> - The HTML element to which the modal is anchored.</p>
 <p><code>config</code> - Optional configuration for the modal dialog.</p>
 <p><code>returns</code> - A reference to the created dialog, allowing further interaction and control.</p>
-
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs class="light">
-            <day-tab [tabTmpl]="html">Html</day-tab>
-            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
-        </day-tabs>
-        
-        <ng-template #html>
-            <pre><code>
-    &#60;day-modal #dayModal&#62;
-        &#60;day-modal-header&#62;
-            &#60;day-close-button [DAYCloseDialog]="dialogRef"&#62;
-                &#60;day-icon [icon]="'day-circle-close-solid'" /&#62;
-            &#60;/day-close-button&#62;
-            &#60;h3&#62;Title&#60;/h3&#62;
-        &#60;/day-modal-header&#62;
-        &#60;day-modal-body&#62;
-            &#60;p&#62;Body&#60;/p&#62;
-        &#60;/day-modal-body&#62;
-        &#60;day-modal-footer&#62;
-            &#60;day-button (click)="closeModal()" [size]="'small'">Close&#60;/day-button&#62; 
-        &#60;/day-modal-footer&#62;
-    &#60;/day-modal&#62;
-            </code></pre>
-        </ng-template>                
-        
-        <ng-template #demo>
-            <ng-container>
-                <day-button (click)="showModalTmpl()" size="big">Show modal</day-button>
-            </ng-container>
-            <day-modal #dayModal>
-            <day-modal-header>
-                <day-close-button DAYCloseDialog>
-                    <day-icon [icon]="'day-circle-close-solid'" />
-                </day-close-button>
-                <h3> Title</h3>
-            </day-modal-header>
-            <day-modal-body>
-                ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-                of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-                during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-                section 1.10.32.
-
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-                source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-                of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-                during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-                section 1.10.32.
-
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </day-modal-body>
-            <day-modal-footer>
-                <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
-            </day-modal-footer>
-        </day-modal>
-        </ng-template>
-        
-    </day-card-body>
-</day-card>
 
 <h2>Description</h2>
 <div>

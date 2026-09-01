@@ -1,11 +1,9 @@
 import { Component, inject, viewChild } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYPopoverBodyComponent, DAYPopoverComponent, DAYPopoverContentComponent, DAYPopoverFooterComponent, DAYPopoverHeaderComponent, DAYPopoverService, DAYPopoverTriggerDirective, IPopoverConfiguration } from '@dayerlin-bustamante/popover';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 import { CustomPopoverComponent } from '../custom-popover/custom-popover.component';
@@ -14,7 +12,7 @@ import { CustomPopoverComponent } from '../custom-popover/custom-popover.compone
     selector: 'popover-examples',
     templateUrl: './popover-examples.component.html',
     styleUrls: ['./popover-examples.component.scss'],
-    imports: [DAYTabComponent, DAYTabsComponent, DAYButtonComponent, DAYPopoverHeaderComponent, DAYPopoverComponent, DAYPopoverBodyComponent, DAYPopoverFooterComponent, DAYPopoverContentComponent, DAYPopoverTriggerDirective, DAYCardBodyComponent, DAYCardComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
+    imports: [DAYButtonComponent, DAYPopoverHeaderComponent, DAYPopoverComponent, DAYPopoverBodyComponent, DAYPopoverFooterComponent, DAYPopoverContentComponent, DAYPopoverTriggerDirective, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent]
 })
 export class PopoverExamplesComponent {
     dayPopover = viewChild.required<DAYPopoverComponent>('dayPopover');

@@ -5,12 +5,12 @@
     functionality as a native <code> &lt;input&gt;</code>, enhanced with DAY Design styling.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Dependencies</h2>
-<p><code>'&#64;day/core'</code></p>
-<p><code>'&#64;day/icon'</code></p>
+<p><code>'/core'</code></p>
+<p><code>'/icon'</code></p>
 
-<div class="line-divider"></div>
+ 
 <h2>Example</h2>
 <day-card shadow="small">
     <day-card-body>
@@ -30,7 +30,7 @@
                 &lt;day-icon 
                     [icon]="'day-error'" 
                     [DAYTooltip]="'Mensaje de error'" 
-                    [DAYTooltipConfig]="tooltipConfig" /&gt;
+                    [DAYTooltipConfig]="tooltipConfig"/&gt;
             &lt;/day-label&gt;
         &lt;/day-input&gt;
     &lt;/div&gt;
@@ -50,7 +50,7 @@
                     <day-input [id]="'1'" formControlName="formControl" placeholder="Enter number" type="number">
                         <day-label>
                             <span class="label">Label example</span>
-                            <day-icon [icon]="'day-error'" [DAYTooltip]="'Mensaje de error'" [DAYTooltipConfig]="tooltipConfig" />
+                            <day-icon [icon]="'day-error'" [DAYTooltip]="'Mensaje de error'" [DAYTooltipConfig]="tooltipConfig"/>
                         </day-label>
                     </day-input>
                 </div>
@@ -65,19 +65,19 @@
     </day-card-body>
 </day-card>
 
-<div class="line-divider"></div>
+ 
 <h2>Description</h2>
 <p>
     A reusable input component that implements ControlValueAccessor to integrate with Angular reactive forms. It supports different types (text, number, email, etc.), input sizes, optional left/right slot content via content projection, and dynamic styling based on control state (e.g., disabled, filled, with slot). Class bindings and signal-based state make it reactive and easily extendable.
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Import</h2>
 <p>
     <code>import &#123; DAYInputComponent &#125; from '&#64;dayerlin-bustamante/input';</code>
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Selectors</h2>
 <p>Input: <code>day-input</code></p>
 
@@ -87,33 +87,33 @@
     <br>
     <pre><code>import {{ '{' }} DAYInputComponent {{ '}' }} from '@dayerlin-bustamante/input';</code></pre>
     <br>
-    <pre><code>&lt;day-input label="Label" /&gt;</code></pre>
+    <pre><code>&lt;day-input label="Label"/&gt;</code></pre>
 </div>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs</h2>
 <day-table [data]="dataInputs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="390" name="name" title="Name" />
-    <day-table-column [width]="460" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="390" name="name" title="Name"/>
+    <day-table-column [width]="460" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Output</h2>
 <p>Not included.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Computes and internal events</h2>
 <day-table [data]="dataComputedsEvent" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="250" name="name" title="Name" />
-    <day-table-column [width]="400" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="250" name="name" title="Name"/>
+    <day-table-column [width]="400" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Directives</h2>
 <p>Not included.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Public methods</h2>
 <p>Not included.</p>

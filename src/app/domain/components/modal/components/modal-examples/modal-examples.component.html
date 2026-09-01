@@ -1,35 +1,7 @@
 <h2>Size</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="small">Small</day-tab>
-            <day-tab [tabTmpl]="medium">Medium</day-tab>
-            <day-tab [tabTmpl]="large">Large</day-tab>
-        </day-tabs>
-        <ng-template #small>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlSmall">Html</day-tab>
-                <day-tab [tabTmpl]="tsSmall">TS</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoSmall">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #medium>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlMedium">Html</day-tab>
-                <day-tab [tabTmpl]="tsMedium">TS</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoMedium">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #large>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlLarge">Html</day-tab>
-                <day-tab [tabTmpl]="tsLarge">TS</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoLarge">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
 
-        <ng-template #htmlSmall>
-            <pre><code>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>
     &#60;day-modal #dayModal&#62;
         &#60;day-modal-header&#62;
             &#60;h3&#62;Title&#60;/h3&#62;
@@ -42,126 +14,76 @@
         &#60;/day-modal-footer&#62;
     &#60;/day-modal&#62;
             </code></pre>
-        </ng-template>     
-        <ng-template #tsSmall>
-            <pre ngNonBindable><code>
+
+<pre ngNonBindable><code>
 const modalConfig: IDAYModalConfiguration = &#123;
     size: small
 &#125;;    
             </code></pre>
-        </ng-template>         
-        <ng-template #demoSmall>
-            <ng-container>
-                <day-button (click)="showModalSmallTmpl()" size="big">Show modal</day-button>
-            </ng-container>
-            <day-modal #dayModalSmall>
-                <day-modal-header>
-                    <h3>Title</h3>
-                </day-modal-header>
-                <day-modal-body>
-                    <p>Body</p>
-                </day-modal-body>
-                <day-modal-footer>
-                    <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
-                </day-modal-footer>
-            </day-modal>
-        </ng-template>
+</div>
 
-        <ng-template #htmlMedium>
-            <pre><code>
-    &#60;day-modal #dayModal&#62;
-        &#60;day-modal-header&#62;
-            &#60;h3&#62;Title&#60;/h3&#62;
-        &#60;/day-modal-header&#62;
-        &#60;day-modal-body&#62;
-            &#60;p&#62;Body&#60;/p&#62;
-        &#60;/day-modal-body&#62;
-        &#60;day-modal-footer&#62;
-            &#60;day-button (click)="closeModal()" [size]="'small'">Close&#60;/day-button&#62; 
-        &#60;/day-modal-footer&#62;
-    &#60;/day-modal&#62;    
-            </code></pre>
-        </ng-template>        
-        <ng-template #tsMedium>
-            <pre ngNonBindable><code>
+<ng-container>
+    <day-button (click)="showModalSmallTmpl()" size="big">Show modal</day-button>
+</ng-container>
+<day-modal #dayModalSmall>
+    <day-modal-header>
+        <h3>Title</h3>
+    </day-modal-header>
+    <day-modal-body>
+        <p>Body</p>
+    </day-modal-body>
+    <day-modal-footer>
+        <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
+    </day-modal-footer>
+</day-modal>
+
+<div class="p-4 bg-gray-100 rounded-sm">
+<pre ngNonBindable><code>
 const modalConfig: IDAYModalConfiguration = &#123;
     size: medium
 &#125;;    
             </code></pre>
-        </ng-template>     
-        <ng-template #demoMedium>
-            <ng-container>
-                <day-button (click)="showModalMediumTmpl()" size="big">Show modal</day-button>
-            </ng-container>
-            <day-modal #dayModalMedium>
-                <day-modal-header>
-                    <h3>Title</h3>
-                </day-modal-header>
-                <day-modal-body>
-                    <p>Body</p>
-                </day-modal-body>
-                <day-modal-footer>
-                    <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
-                </day-modal-footer>
-            </day-modal>
-        </ng-template>
+</div>
+<ng-container>
+    <day-button (click)="showModalMediumTmpl()" size="big">Show modal</day-button>
+</ng-container>
+<day-modal #dayModalMedium>
+    <day-modal-header>
+        <h3>Title</h3>
+    </day-modal-header>
+    <day-modal-body>
+        <p>Body</p>
+    </day-modal-body>
+    <day-modal-footer>
+        <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
+    </day-modal-footer>
+</day-modal>
 
-        <ng-template #htmlLarge>
-            <pre><code>
-    &#60;day-modal #dayModal&#62;
-        &#60;day-modal-header&#62;
-            &#60;h3&#62;Title&#60;/h3&#62;
-        &#60;/day-modal-header&#62;
-        &#60;day-modal-body&#62;
-            &#60;p&#62;Body&#60;/p&#62;
-        &#60;/day-modal-body&#62;
-        &#60;day-modal-footer&#62;
-            &#60;day-button (click)="closeModal()" [size]="'small'">Close&#60;/day-button&#62; 
-        &#60;/day-modal-footer&#62;
-    &#60;/day-modal&#62;
-            </code></pre>
-        </ng-template>        
-        <ng-template #tsLarge>
-            <pre ngNonBindable><code>
+<div class="p-4 bg-gray-100 rounded-sm">
+<pre ngNonBindable><code>
 const modalConfig: IDAYModalConfiguration = &#123;
     size: large
 &#125;;    
             </code></pre>
-        </ng-template>     
-        <ng-template #demoLarge>
-            <ng-container>
-                <day-button (click)="showModalLargeTmpl()" size="big">Show modal</day-button>
-            </ng-container>
-            <day-modal #dayModalLarge>
-                <day-modal-header>
-                    <h3>Title</h3>
-                </day-modal-header>
-                <day-modal-body>
-                    <p>Body</p>
-                </day-modal-body>
-                <day-modal-footer>
-                    <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
-                </day-modal-footer>
-            </day-modal>
-        </ng-template>
-    </day-card-body>
-</day-card>
+</div>
+<ng-container>
+    <day-button (click)="showModalLargeTmpl()" size="big">Show modal</day-button>
+</ng-container>
+<day-modal #dayModalLarge>
+    <day-modal-header>
+        <h3>Title</h3>
+    </day-modal-header>
+    <day-modal-body>
+        <p>Body</p>
+    </day-modal-body>
+    <day-modal-footer>
+        <day-button (click)="closeModal()" [size]="'small'">Close</day-button>
+    </day-modal-footer>
+</day-modal>
 
 <h2>Component</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="component">Component</day-tab>
-        </day-tabs>
-        <ng-template #component>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="tsComponent">TS</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoComponent">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-  
-        <ng-template #tsComponent>
-            <pre ngNonBindable><code>
+ <div class="p-4 bg-gray-100 rounded-sm">
+<pre ngNonBindable><code>
 import &#123; CustomModalComponent &#125; from '..&#47;custom-modal&#47;custom-modal.component';
 const modalConfig: IDAYModalConfiguration = &#123;
             size: &#34;small&#34;,
@@ -169,35 +91,29 @@ const modalConfig: IDAYModalConfiguration = &#123;
         &#125;;
 this.modalService.create&#40;CustomModalComponent, modalConfig&#41;;                
             </code></pre>
-        </ng-template>         
-        <ng-template #demoComponent>
-            <ng-container>
-                <day-button (click)="showModalComponent()" size="big">Show modal</day-button>
-            </ng-container>
-        </ng-template>
-    </day-card-body>
-</day-card>
+</div>
+<ng-container>
+    <day-button (click)="showModalComponent()" size="big">Show modal</day-button>
+</ng-container>
 
-<div class="line-divider"></div>
+ 
 <h2>Custom CSS properties</h2>
-<p>Styles of day-modal, day-modal-body, day-modal-header and day-modal-footer can be customized overriding some of their CSS properties.</p>
-
-@for (table of tables;  let i = $index; track i) {
+@for (table of tables; let i = $index; track i) {
     <h3>{{ table.title }}</h3>
     <day-table [data]="table.data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
         <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)" />
+            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)"/>
         </ng-template>
-        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
-        <day-table-column [width]="250" name="description" title="Description" />
+        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true"/>
+        <day-table-column [width]="250" name="description" title="Description"/>
         <day-table-column name="default" title="Default">
             <ng-template DAYTableCellTmpl let-item="item">
                 <span [innerHTML]="item.default"></span>
             </ng-template>
         </day-table-column>
     </day-table>
-    @if (i < tables.length - 1) {
-        <div class="line-divider"></div>
+    @if (i < tables.length - 1) { 
+       <div> - - - </div>
     }
 }
 <day-toast #dayToastDirective>Text copied to clipboard</day-toast>

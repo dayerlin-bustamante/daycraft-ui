@@ -10,7 +10,7 @@
 
 <h2>Dependencies</h2>
 <code>'&#64;angular/forms': Required for integration with reactive forms (e.g. formGroup, formControlName)</code>
-<code>'&#64;day/core': Required for core functionalities and shared components</code>
+<code>'/core': Required for core functionalities and shared components</code>
 
 <h2>Selectors</h2>
 <p>Textarea: <code>day-textarea</code></p>
@@ -21,14 +21,14 @@
     <br>
     <pre><code>import {{ '{' }} DAYTextareaComponent {{ '}' }} from '@dayerlin-bustamante/textarea';</code></pre>
     <br>
-    <pre><code>&lt;day-textarea label="Label" /&gt;</code></pre>
+    <pre><code>&lt;day-textarea label="Label"/&gt;</code></pre>
 </div>
 
 <h2>Inputs</h2>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="400" name="name" title="Name" />
-    <day-table-column [width]="230" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="400" name="name" title="Name"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h2>Outputs</h2>
@@ -66,7 +66,7 @@
         </ng-template>
     </day-card-body>
 </day-card>
-<div class="line-divider"></div>
+ 
 
 <h2>Description</h2>
 <p>The <code>day-textarea</code> component provides a multi-line text input field, designed to easily integrate with Angular's reactive forms.</p>

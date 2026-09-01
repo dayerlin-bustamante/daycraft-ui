@@ -7,7 +7,7 @@
 <p>
     <code>import &#123; DAYTabsComponent &#125; and &#123; DAYTabComponent &#125; from '&#64;dayerlin-bustamante/tabs';</code>
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Selectors</h2>
 <p>Tabs: <code>day-tabs</code></p>
@@ -23,53 +23,53 @@
     &lt;day-tab [active]="true" [tabTmpl]="content"&gt;Tab 1&lt;/day-tab&gt;
 &lt;/day-tabs&gt;</code></pre>
 </div>
-<div class="line-divider"></div>
+ 
 
 <h2>Inputs</h2>
 <h3>DAYTabsComponent</h3>
 <day-table [data]="dataInputsTabs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="400" name="name" title="Name" />
-    <day-table-column [width]="230" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="400" name="name" title="Name"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
 <h3>DAYTabComponent</h3>
 <day-table [data]="dataInputsTab" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
-    <day-table-column [width]="230" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="300" name="name" title="Name"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Outputs</h2>
 <p>Not included</p>
-<div class="line-divider"></div>
+ 
 
 <h2>Computes and internal events</h2>
 <day-table [data]="dataComputedEvents" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
-    <day-table-column [width]="230" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="300" name="name" title="Name"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Directives</h2>
 <p>Not included</p>
-<div class="line-divider"></div>
+ 
 
 <h2>Public methods</h2>
 <day-table [data]="dataMethodsTabs" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="300" name="name" title="Name" />
-    <day-table-column [width]="230" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="300" name="name" title="Name"/>
+    <day-table-column [width]="230" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
-<div class="line-divider"></div>
+ 
 
 <h2>Dependencies</h2>
 <p>
-    <code>'&#64;day/core'</code>
+    <code>'/core'</code>
 </p>
-<div class="line-divider"></div>
+ 
 
 <h2>Example</h2>
 <day-card shadow="small">
@@ -83,7 +83,7 @@
             <pre><code class="code-html">
     &lt;day-tabs&gt;
         &lt;day-tab [active]="true" [tabTmpl]="tab1"&gt;
-            &lt;day-icon [icon]="'day-chat'" /&gt;    
+            &lt;day-icon [icon]="'day-chat'"/&gt;    
             &lt;span&gt;Tab 1&lt;/span&gt;
         &lt;/day-tab&gt;
 
@@ -108,7 +108,7 @@
         <ng-template #demo>
             <day-tabs>
                 <day-tab [active]="true" [tabTmpl]="tab1">
-                    <day-icon [icon]="'day-chat'" />
+                    <day-icon [icon]="'day-chat'"/>
                     <span>Tab 1</span>
                 </day-tab>
 
@@ -130,7 +130,7 @@
         </ng-template>
     </day-card-body>
 </day-card>
-<div class="line-divider"></div>
+ 
 
 <h2>Description</h2>
 <ul>

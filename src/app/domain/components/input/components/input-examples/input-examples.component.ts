@@ -1,11 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
-import { DAYCardBodyComponent, DAYCardComponent } from "@dayerlin-bustamante/card";
 import { DAYIconComponent } from "@dayerlin-bustamante/icon";
 import { DAYInputComponent } from "@dayerlin-bustamante/input";
 import { DAYLabelComponent } from "@dayerlin-bustamante/label";
 import { DAYTableActionsTmplDirective, DAYTableColumnComponent, DAYTableComponent } from "@dayerlin-bustamante/table";
-import { DAYTabComponent, DAYTabsComponent } from "@dayerlin-bustamante/tabs";
 import { DAYToastComponent, DAYToastTriggerDirective } from "@dayerlin-bustamante/toast";
 import { DAYTooltipTriggerDirective, ITooltipConfiguration } from "@dayerlin-bustamante/tooltip";
 import { IApiProperties } from "../../../../../core/interfaces/api-properties.interface";
@@ -14,7 +12,7 @@ import { IApiProperties } from "../../../../../core/interfaces/api-properties.in
     selector: 'input-examples',
     templateUrl: './input-examples.component.html',
     styleUrls: ['./input-examples.component.scss'],
-    imports: [ReactiveFormsModule, FormsModule, DAYCardComponent, DAYCardBodyComponent, DAYTabComponent, DAYTabsComponent, DAYInputComponent, DAYLabelComponent, DAYIconComponent, DAYTooltipTriggerDirective, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [ReactiveFormsModule, FormsModule, DAYInputComponent, DAYLabelComponent, DAYIconComponent, DAYTooltipTriggerDirective, DAYTableComponent, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class InputExamplesComponent implements OnInit {
 

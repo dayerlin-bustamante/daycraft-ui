@@ -1,59 +1,34 @@
 <h2>Tree</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs [type]="'tabular'">
-            <day-tab [active]="true" [tabTmpl]="withTemplate">With Template</day-tab>
-            <day-tab [tabTmpl]="withoutTemplate">Without Template</day-tab>
-        </day-tabs>        
-        <ng-template #withTemplate>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlWithTemplate">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoWithTemplate">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-        <ng-template #withoutTemplate>
-            <day-tabs class="light">
-                <day-tab [tabTmpl]="htmlWithoutTemplate">Html</day-tab>
-                <day-tab [active]="true" [tabTmpl]="demoWithoutTemplate">Demo</day-tab>
-            </day-tabs>
-        </ng-template>
-
-        <ng-template #htmlWithTemplate>
-            <pre ngNonBindable><code>
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre ngNonBindable><code>
     &#60;day-tree [data]="childItemsData" [childItems]="findItemChildren"&#62;
         &#60;ng-template DAYTreeItemTmpl let-node="item" let-level="level"&#62;
             &#60;span&#62;{{ node.name }}&#60;/span&#62;
         &#60;/&#60;ng-template&#62;
     &#60;/day-tree&#62;
             </code></pre>
-        </ng-template>          
-        <ng-template #demoWithTemplate>
-            <day-tree [data]="childItemsData" [childItems]="findItemChildren">
-                <ng-template DAYTreeItemTmpl let-node="item" let-level="level">
-                    <span>{{ node.name }}</span>
-                </ng-template>
-            </day-tree>
-        </ng-template>
+</div>
+<day-tree [data]="childItemsData" [childItems]="findItemChildren">
+    <ng-template DAYTreeItemTmpl let-node="item" let-level="level">
+        <span>{{ node.name }}</span>
+    </ng-template>
+</day-tree>
 
-        <ng-template #htmlWithoutTemplate>
-            <pre><code>
-    &#60;day-tree [data]="treeData" [childProperty]="'children'" [nameProperty]="'name'" /&#62;
+<div class="p-4 bg-gray-100 rounded-sm">
+    <pre><code>
+    &#60;day-tree [data]="treeData" [childProperty]="'children'" [nameProperty]="'name'"/&#62;
             </code></pre>
-        </ng-template>         
-        <ng-template #demoWithoutTemplate>
-            <day-tree [data]="treeData" [childProperty]="'children'" [nameProperty]="'name'" />
-        </ng-template>
-    </day-card-body>
-</day-card>
+</div>
+<day-tree [data]="treeData" [childProperty]="'children'" [nameProperty]="'name'"/>
 
 <h2>Custom CSS properties</h2>
 <p>Styles of day-tree can be customized overriding some of their CSS properties.</p>
 <day-table [data]="data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
     <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)" />
+        <day-icon [DAYToast]="dayToastDirective" [icon]="'day-content-copy'" (click)="copyToClipboard(item.name)"/>
     </ng-template>
-    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true" />
-    <day-table-column [width]="300" name="description" title="Description" />
+    <day-table-column [width]="200" name="name" title="Name" [hasActions]="true"/>
+    <day-table-column [width]="300" name="description" title="Description"/>
     <day-table-column name="default" title="Default">
         <ng-template DAYTableCellTmpl let-item="item">
             <span [innerHTML]="item.default"></span>

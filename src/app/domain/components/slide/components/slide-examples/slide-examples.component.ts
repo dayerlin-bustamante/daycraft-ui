@@ -1,11 +1,9 @@
 import { Component, inject, viewChild } from '@angular/core';
 import { DAYButtonComponent } from '@dayerlin-bustamante/button';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYDialogRef } from '@dayerlin-bustamante/core';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYSlideBodyComponent, DAYSlideComponent, DAYSlideFooterComponent, DAYSlideHeaderComponent, DAYSlideService, ISlideConfiguration } from '@dayerlin-bustamante/slide';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
@@ -13,7 +11,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'slide-examples',
     templateUrl: './slide-examples.component.html',
     styleUrls: ['./slide-examples.component.scss'],
-    imports: [DAYButtonComponent, DAYCardComponent, DAYCardBodyComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent, DAYTabComponent, DAYTabsComponent, DAYSlideComponent, DAYSlideHeaderComponent, DAYSlideBodyComponent, DAYSlideFooterComponent]
+    imports: [DAYButtonComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYIconComponent, DAYToastComponent, DAYSlideComponent, DAYSlideHeaderComponent, DAYSlideBodyComponent, DAYSlideFooterComponent]
 })
 export class SlideExamplesComponent {
     daySlideWithOverlay = viewChild.required<DAYSlideComponent>('daySlideWithOverlay');

@@ -1,13 +1,12 @@
-
+<h1>Datepicker component</h1>
 <p>
     The <code>day-datepicker</code> is a form control that provides the same functionality as input native, provides a flexible and customizable date selection interface, allowing users to choose dates in various formats and views. It supports features like date ranges, disabling specific dates, and highlighting important dates with custom styles.
 </p>
 
-<div class="line-divider"></div>
 <h2>Dependencies</h2>
 <p>
-    <code>'&#64;day/core'</code>, <code>'&#64;day/icon'</code>, <code>'&#64;day/input'</code>,
-    <code>'&#64;day/popover'</code>, <code>'&#64;day/calendar'</code>,  <code>'&#64;day/button'</code>
+    <code>'/core'</code>, <code>'/icon'</code>, <code>'/input'</code>,
+    <code>'/popover'</code>, <code>'/calendar'</code>,  <code>'/button'</code>
 </p>
 
 <h2>Selectors</h2>
@@ -19,92 +18,76 @@
     <br>
     <pre><code>import {{ '{' }} DAYDatepickerComponent {{ '}' }} from '@dayerlin-bustamante/datepicker';</code></pre>
     <br>
-    <pre><code>&lt;day-datepicker [placeholder]="'Select date'" /&gt;</code></pre>
+    <pre><code>&lt;day-datepicker [placeholder]="'Select date'"/&gt;</code></pre>
+</div>
+<div class="wrapper-datepickers flex gap-6 my-6 items-center">
+    <day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl"/>
+    <day-datepicker [iconOnly]="true" [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl1"/>
 </div>
 
-<div class="line-divider"></div>
-<h2>Example</h2>
-<day-card shadow="small">
-    <day-card-body>
-        <day-tabs class="light">
-            <day-tab [tabTmpl]="html">Html</day-tab>
-            <day-tab [active]="true" [tabTmpl]="demo">Demo</day-tab>
-        </day-tabs>
-
-        <ng-template #html>
-            <pre><code class="code-html">
+<div class="p-4 bg-gray-100 rounded-sm">
+        <pre><code class="code-html">
     &lt;day-datepicker [type]="'datetime'" [autoclose]="true" 
-    [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl" /&gt;
+    [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl"/&gt;
     &lt;day-datepicker [iconOnly]="true" [type]="'datetime'" [autoclose]="true" 
-    [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl" /&gt;
-            </code></pre>
-        </ng-template>
-
-        <ng-template #demo>
-            <div class="wrapper-datepickers">
-                <day-datepicker [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl" />
-                <day-datepicker [iconOnly]="true" [type]="'datetime'" [autoclose]="true" [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl1" />
-            </div>
-        </ng-template>
-        <p class="selected-date-text">{{ selectedDateText }}</p>
-    </day-card-body>
-</day-card>
-
-<div class="line-divider"></div>
+    [placeholder]="'selected date'" [rangeDate]="true" [formControl]="dateControl"/&gt;
+        </code></pre>
+</div>
+ 
 <h2>Description</h2>
 <p> Supports single-date and date-range selection. It is built using Angular signals and models, enabling real-time reactivity for date selection and view state. The component is initialized with a configuration object that defines key behavior such as view limits (time, days, months, years), range mode, and visual size.</p>
 <p> It supports disabling specific dates, highlighting important ones, and switching between calendar views dynamically. The highlightDates input allows custom styling of special dates (e.g., holidays), while disabledDates prevents user interaction with certain days. It intelligently chooses the initial view based on the config and provides a method to programmatically switch views (setView()).</p>
 <p>The component emits the selected date(s) through output controlValueAccessor, making it easy to integrate with parent forms or logic. It consists of modular day-calendar for rendering view-specific inside popover configuration.</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Import</h2>
 <p>
     <code>import &#123; DAYDatePickerComponent &#125; from '&#64;dayerlin-bustamante/datepicker';</code>
 </p>
 
-<div class="line-divider"></div>
+ 
 <h2>Selectors</h2>
 <p>Datepicker: <code>day-datepicker</code></p>
 
-<div class="line-divider"></div>
+ 
 <h2>Inputs</h2>
 <day-table [data]="dataInputsDatepicker" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Outputs</h2>
 <day-table [data]="dataOutputsDatepicker" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Computes and internal events</h2>
 <day-table [data]="dataComputedsDatepicker" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 
-<div class="line-divider"></div>
+ 
 <h2>Directives</h2>
 <p>Not included</p>
 
-<div class="line-divider"></div>
+ 
 <h2>Public methods</h2>
 <h3>Adapter methods</h3>
 <day-table [data]="dataMethodsDatepickerAdapter" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>
 <h3>Component methods</h3>
 <day-table [data]="dataMethodsDatepicker" [displayedColumns]="displayedColumns" [resizableColumns]="true">
-    <day-table-column [width]="450" name="name" title="Name" />
-    <day-table-column [width]="450" name="description" title="Description" />
-    <day-table-column name="default" title="Default" />
+    <day-table-column [width]="450" name="name" title="Name"/>
+    <day-table-column [width]="450" name="description" title="Description"/>
+    <day-table-column name="default" title="Default"/>
 </day-table>

@@ -1,20 +1,18 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYCompoundInputComponent } from '@dayerlin-bustamante/compound-input';
 import { DAYDropdownComponent, DAYDropdownItemTmplDirective, DAYDropdownSelectionTmplDirective } from '@dayerlin-bustamante/dropdown';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYInputComponent } from '@dayerlin-bustamante/input';
 import { DAYLabelComponent } from '@dayerlin-bustamante/label';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
 
 @Component({
     selector: 'compound-input-examples',
     templateUrl: './compound-input-examples.component.html',
-    imports: [ReactiveFormsModule, DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYCardComponent, DAYCardBodyComponent, DAYCompoundInputComponent, DAYLabelComponent, DAYDropdownComponent, DAYInputComponent, DAYTabsComponent, DAYTabComponent, DAYIconComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [ReactiveFormsModule, DAYDropdownSelectionTmplDirective, DAYDropdownItemTmplDirective, DAYCompoundInputComponent, DAYLabelComponent, DAYDropdownComponent, DAYInputComponent, DAYIconComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class CompoundInputExamplesComponent implements OnInit {
     form = inject(FormBuilder);

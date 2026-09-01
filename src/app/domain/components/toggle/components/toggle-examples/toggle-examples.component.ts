@@ -1,9 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DAYCardBodyComponent, DAYCardComponent } from '@dayerlin-bustamante/card';
 import { DAYIconComponent } from '@dayerlin-bustamante/icon';
 import { DAYTableActionsTmplDirective, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableComponent } from '@dayerlin-bustamante/table';
-import { DAYTabComponent, DAYTabsComponent } from '@dayerlin-bustamante/tabs';
 import { DAYToastComponent, DAYToastTriggerDirective } from '@dayerlin-bustamante/toast';
 import { DAYToggleComponent, DAYToggleItemTmplDirective } from '@dayerlin-bustamante/toggle';
 import { IApiProperties } from '../../../../../core/interfaces/api-properties.interface';
@@ -12,7 +10,7 @@ import { IApiProperties } from '../../../../../core/interfaces/api-properties.in
     selector: 'toggle-examples',
     templateUrl: './toggle-examples.component.html',
     styleUrls: ['./toggle-examples.component.scss'],
-    imports: [DAYToggleComponent, DAYCardComponent, DAYCardBodyComponent, DAYToggleItemTmplDirective, DAYIconComponent, FormsModule, DAYTabComponent, DAYTabsComponent, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
+    imports: [DAYToggleComponent, DAYToggleItemTmplDirective, DAYIconComponent, FormsModule, DAYTableComponent, DAYTableCellTmplDirective, DAYTableColumnComponent, DAYTableActionsTmplDirective, DAYToastTriggerDirective, DAYToastComponent]
 })
 export class ToggleExamplesComponent {
     optionsIcons = signal<string[]>(['day-mail', 'day-chat']);

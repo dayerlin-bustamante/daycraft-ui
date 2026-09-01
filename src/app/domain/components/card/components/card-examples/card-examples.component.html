@@ -4,10 +4,10 @@
     <h2>{{ table.title }}</h2>
     <day-table [data]="table.data" [displayedColumns]="displayedColumns" [resizableColumns]="true" [selectableRows]="true">
         <ng-template DAYTableActionsTmpl let-item="item" let-index="index">
-            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)" />
+            <day-icon [DAYToast]="dayToastDirective" icon="day-content-copy" (click)="copyToClipboard(item.name)"/>
         </ng-template>
-        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true" />
-        <day-table-column [width]="250" name="description" title="Description" />
+        <day-table-column [width]="250" name="name" title="Name" [hasActions]="true"/>
+        <day-table-column [width]="250" name="description" title="Description"/>
         <day-table-column name="default" title="Default">
             <ng-template DAYTableCellTmpl let-item="item">
                 <span [innerHTML]="item.default"></span>

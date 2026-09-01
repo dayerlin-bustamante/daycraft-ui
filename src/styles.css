@@ -27,3 +27,11 @@ h2 {
     margin-top: 20px;
     margin-bottom: 12px;
 }
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-primary-500);
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-xs);
+}
